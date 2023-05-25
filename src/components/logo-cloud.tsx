@@ -1,7 +1,7 @@
 function LogoCloud() {
   return (
-    <div className="relative bg-accent-900 py-24 sm:py-32">
-      <div className="absolute inset-0 ">
+    <div className="relative  py-24 sm:py-32">
+      <div className="absolute inset-0 rotate-180">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -57,7 +57,7 @@ function LogoCloud() {
               </a>
             </div>
           </div>
-          <div className="z-10 mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
+          <div className="z-10 mx-auto grid w-full max-w-xl grid-cols-1 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:pl-8">
             <svg
               viewBox="0 0 272 35"
               fill="white"

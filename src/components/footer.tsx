@@ -96,18 +96,48 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="relative " aria-labelledby="footer-heading">
+      <div className="absolute inset-0  ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          viewBox="0 0 500 500"
+        >
+          <rect fill="#1E3A8A" width="1600" height="800" />
+          <g stroke="#09090B" stroke-width="66.7" stroke-opacity="0.05">
+            <circle fill="#1E3A8A" cx="0" cy="0" r="1800" />
+            <circle fill="#213984" cx="0" cy="0" r="1700" />
+            <circle fill="#23387e" cx="0" cy="0" r="1600" />
+            <circle fill="#253778" cx="0" cy="0" r="1500" />
+            <circle fill="#273572" cx="0" cy="0" r="1400" />
+            <circle fill="#28346c" cx="0" cy="0" r="1300" />
+            <circle fill="#293367" cx="0" cy="0" r="1200" />
+            <circle fill="#2a3261" cx="0" cy="0" r="1100" />
+            <circle fill="#2a315b" cx="0" cy="0" r="1000" />
+            <circle fill="#2b3056" cx="0" cy="0" r="900" />
+            <circle fill="#2b2f50" cx="0" cy="0" r="800" />
+            <circle fill="#2b2e4a" cx="0" cy="0" r="700" />
+            <circle fill="#2a2d45" cx="0" cy="0" r="600" />
+            <circle fill="#2a2b3f" cx="0" cy="0" r="500" />
+            <circle fill="#292a3a" cx="0" cy="0" r="400" />
+            <circle fill="#292935" cx="0" cy="0" r="300" />
+            <circle fill="#28282f" cx="0" cy="0" r="200" />
+            <circle fill="#27272A" cx="0" cy="0" r="100" />
+          </g>
+        </svg>
+      </div>
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
 
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8  lg:pt-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8  lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Link href="/" className="">
               <Icons.logo className="h-8 w-auto" />
             </Link>
-            <p className="text-sm leading-6 text-accent-600">
+            <p className="text-sm leading-6 text-accent-300">
               At JWR's, we believe in offering our discerning customers nothing
               but the best. That's why we carefully select brands that epitomize
               exceptional style and craftsmanship.
@@ -117,7 +147,7 @@ export default function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-primary-900 hover:text-primary-800"
+                  className="text-accent-300 hover:text-accent-200"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -128,7 +158,7 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900">
+                <h3 className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-white">
                   Solutions
                 </h3>
                 <ul role="list" className="mt-4 space-y-2">
@@ -136,7 +166,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-accent-600 hover:text-accent-900"
+                        className="text-sm leading-6 text-accent-300 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -145,7 +175,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900">
+                <h3 className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-white">
                   Support
                 </h3>
                 <ul role="list" className="mt-4 space-y-2">
@@ -153,7 +183,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-accent-600 hover:text-accent-900"
+                        className="text-sm leading-6 text-accent-300 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -164,7 +194,7 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900">
+                <h3 className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-white">
                   Company
                 </h3>
                 <ul role="list" className="mt-4 space-y-2">
@@ -172,7 +202,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-accent-600 hover:text-accent-900"
+                        className="text-sm leading-6 text-accent-300 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -181,7 +211,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900">
+                <h3 className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-white">
                   Legal
                 </h3>
                 <ul role="list" className="mt-4 space-y-2">
@@ -189,7 +219,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-accent-600 hover:text-accent-900"
+                        className="text-sm leading-6 text-accent-300 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -200,8 +230,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-accent-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-accent-500">
+        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs leading-5 text-accent-400">
             &copy; 2020 Your Company, Inc. All rights reserved.
           </p>
         </div>

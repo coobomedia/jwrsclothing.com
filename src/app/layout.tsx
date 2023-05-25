@@ -4,7 +4,7 @@ import { Archivo, EB_Garamond, Nunito_Sans, Roboto } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 
 import { cn } from "@/lib/utils"
-import Footer from "@/components/footer"
+
 import { Toaster } from "@/components/ui/toaster"
 
 const archivo = Archivo({
@@ -47,13 +47,13 @@ export default function RootLayout({
       className={cn(
         ebGaramond.variable,
         nunitoSans.variable,
-        "scroll-smooth font-sans antialiased"
+        " font-sans antialiased"
       )}
       lang="en"
     >
-      <body className=" bg-white  ">
+      <body className=" bg-white">
         {children}
-        <Footer />
+
         <Toaster />
         <Analytics />
       </body>
