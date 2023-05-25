@@ -1,27 +1,22 @@
 async function getData() {
-  let posts = [];
-  let nextUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}`;
+  const res = await fetch(
+    `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}`
+  )
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
 
-  while (nextUrl) {
-    const res = await fetch(nextUrl);
-    // Recommendation: handle errors
-    if (!res.ok) {
-      // This will activate the closest `error.js` Error Boundary
-      throw new Error("Failed to fetch data");
-    }
-
-    const data = await res.json();
-    const filteredPosts = data.data.filter((post) => post.media_type !== "VIDEO");
-    posts = posts.concat(filteredPosts);
-    nextUrl = data.paging && data.paging.next ? data.paging.next : null;
+  // Recommendation: handle errors
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data")
   }
 
-  return posts;
+  return res.json()
 }
 
 export default async function Page() {
-  const images = await getData()
-
+  const feed = await getData()
+  const images = feed.data
 
   return (
     <main>
