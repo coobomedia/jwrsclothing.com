@@ -1,6 +1,6 @@
 async function getData() {
   const res = await fetch(
-    `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}`
+    `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`
   )
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -17,6 +17,7 @@ async function getData() {
 export default async function Page() {
   const feed = await getData()
   const images = feed.data
+  console.log(images)
 
   return (
     <main>
