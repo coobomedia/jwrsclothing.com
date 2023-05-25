@@ -1,29 +1,27 @@
 async function getData() {
-  let posts = []
-  let nextUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}`
+  let posts = [];
+  let nextUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}`;
 
   while (nextUrl) {
-    const res = await fetch(nextUrl)
+    const res = await fetch(nextUrl);
     // Recommendation: handle errors
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
-      throw new Error("Failed to fetch data")
+      throw new Error("Failed to fetch data");
     }
 
-    const data = await res.json()
-    const filteredPosts = data.data.filter(
-      (post) => post.media_type !== "VIDEO"
-    )
-    posts = posts.concat(filteredPosts)
-    nextUrl = data.paging && data.paging.next ? data.paging.next : null
+    const data = await res.json();
+    const filteredPosts = data.data.filter((post) => post.media_type !== "VIDEO");
+    posts = posts.concat(filteredPosts);
+    nextUrl = data.paging && data.paging.next ? data.paging.next : null;
   }
 
-  return posts
+  return posts;
 }
 
 export default async function Page() {
-  const feed = await getData()
-  const images = feed
+  const images = await getData()
+
 
   return (
     <main>
@@ -32,7 +30,7 @@ export default async function Page() {
         className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
       >
         {images.map((image) => (
-          <li key={image.id} className="relative">
+          <li key={image.source} className="relative">
             <div className="aspect-h-7 aspect-w-10 group block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
               <img
                 src={image.media_url}
