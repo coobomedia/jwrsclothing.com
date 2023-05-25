@@ -1,0 +1,18 @@
+- [ ] Optimize SEO
+- [ ] Breadcrumbs
+- [ ] Need to create dynamic link component
+- [ ] How to make search query categories/tags as well
+- [ ] Replace radix with headless ui
+- [ ] Extract resuable form elements/make conditional fields
+- [ ] Should start revert some of the colors back to primary colors/brand to make changing them out easier
+- [ ] Second slider doesnt fill out full width on transition
+- [ ] Extract out compoents from components page
+- [ ] Invstigate slider performance might have to switch to swiperjs
+- [ ] Clean up/add more button variations
+- [ ] Get rid of radix components
+- [ ] Investigate React Aria/Stately in comparision to headlessUI
+- [ ] start integrating sanity
+- [ ] Feel like dynamic hover image could be optimized
+- [x] add contact page
+- [x] add team page
+- [x] add about page
