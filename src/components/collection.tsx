@@ -33,9 +33,9 @@ const categories = [
 
 function Collections() {
   return (
-    <div className="relative bg-white">
+    <div className="relative  bg-white">
       <div className="mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-5xl tracking-tight text-accent-900">
+        <h2 className="text-4xl tracking-tight text-accent-900 lg:text-5xl">
           Shop by Collection
         </h2>
         <p className="mt-4 text-base text-accent-500">

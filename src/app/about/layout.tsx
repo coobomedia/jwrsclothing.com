@@ -1,4 +1,5 @@
-import Header from "@/components/header"
+import Footer from "@/components/footer"
+import JWRHeader from "@/components/jwr-header"
 
 export default function AboutLayout({
   children,
@@ -7,9 +8,9 @@ export default function AboutLayout({
 }) {
   return (
     <main>
-      <Header position="fixed" />
-
+      <JWRHeader className="sticky " />
       {children}
+      <Footer />
     </main>
   )
 }

@@ -61,7 +61,7 @@ function CustomFitting({ className }: CustomFittingProps) {
           {features.map((feature, featureIdx) => (
             <div
               key={feature.name}
-              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
+              className=" flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
             >
               <div
                 className={cn(
@@ -71,7 +71,7 @@ function CustomFitting({ className }: CustomFittingProps) {
                   "mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4"
                 )}
               >
-                <h3 className="text-xl font-medium text-accent-900">
+                <h3 className="text-xl  font-medium text-accent-900">
                   {feature.name}
                 </h3>
                 <p className="text-md mt-2 text-accent-500">
@@ -86,7 +86,7 @@ function CustomFitting({ className }: CustomFittingProps) {
                   "flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8"
                 )}
               >
-                <div className="aspect-h-2 aspect-w-5 relative overflow-hidden rounded-lg bg-accent-100">
+                <div className=" aspect-h-2 aspect-w-5 relative overflow-hidden rounded-lg bg-accent-100">
                   <div className="absolute inset-0 z-10 bg-primary-950/50" />
                   <img
                     src={feature.imageSrc}

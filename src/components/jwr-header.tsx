@@ -1,6 +1,7 @@
 "use client"
 
 import { Fragment, useState } from "react"
+import Link from "next/link"
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
 import {
   Bars3Icon,
@@ -138,8 +139,8 @@ const navigation = {
   ],
   pages: [
     { name: "Custom", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ],
 }
 
@@ -236,7 +237,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                   className="object-cover object-center"
                                 />
                               </div>
-                              <a
+                              <Link
                                 href={item.href}
                                 className="mt-6 block font-medium text-accent-900"
                               >
@@ -245,7 +246,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                              </a>
+                              </Link>
                               <p aria-hidden="true" className="mt-1">
                                 Shop now
                               </p>
@@ -267,12 +268,12 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                             >
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
-                                  <a
+                                  <Link
                                     href={item.href}
                                     className="-m-2 block p-2 text-accent-500"
                                   >
                                     {item.name}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -286,20 +287,20 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                 <div className="space-y-4 border-t border-accent-200 px-4 py-6">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
-                      <a
+                      <Link
                         href={page.href}
                         className="-m-2 block p-2 font-display font-medium tracking-wider text-accent-900"
                       >
                         {page.name}
-                      </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
 
                 <div className="border-t border-accent-200 px-4 py-6">
-                  <a
+                  <Link
                     href="#"
-                    className=" text-primary-900 hover:text-primary-800"
+                    className=" text-primary-950 hover:text-primary-900"
                   >
                     <span className="sr-only">Instagram</span>
 
@@ -315,7 +316,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
@@ -397,7 +398,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                               className="object-cover object-center"
                                             />
                                           </div>
-                                          <a
+                                          <Link
                                             href={item.href}
                                             className="mt-6 block font-display font-medium uppercase tracking-wider text-accent-900"
                                           >
@@ -406,7 +407,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                               aria-hidden="true"
                                             />
                                             {item.name}
-                                          </a>
+                                          </Link>
                                           <p
                                             aria-hidden="true"
                                             className="mt-1"
@@ -435,12 +436,12 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                                 key={item.name}
                                                 className="flex"
                                               >
-                                                <a
+                                                <Link
                                                   href={item.href}
                                                   className="hover:text-accent-800"
                                                 >
                                                   {item.name}
-                                                </a>
+                                                </Link>
                                               </li>
                                             ))}
                                           </ul>
@@ -458,53 +459,53 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   ))}
 
                   {navigation.pages.map((page) => (
-                    <a
+                    <Link
                       key={page.name}
                       href={page.href}
                       className="flex items-center font-display text-xs font-medium uppercase tracking-wider text-accent-700 hover:text-accent-800"
                     >
                       {page.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Group>
               {/* Logo */}
-              <a href="#" className="ml-auto flex">
+              <Link href="/" className="ml-auto flex">
                 <span className="sr-only">Your Company</span>
                 <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                   alt=""
                 />
-              </a>
+              </Link>
               {/* <div className="ml-4 flex lg:ml-10">
-                <a href="#">
+                <Link href="#">
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=primary&shade=600"
                     alt=""
                   />
-                </a>
+                </Link>
               </div> */}
 
               <div className="hidden flex-1 items-center justify-end lg:flex">
-                {/* <a
+                {/* <Link
                     href="#"
                     className="text-sm font-medium text-accent-700 hover:text-accent-800"
                   >
                     Sign in
-                  </a>
+                  </Link>
                   <span className="h-6 w-px bg-accent-200" aria-hidden="true" />
-                  <a
+                  <Link
                     href="#"
                     className="text-sm font-medium text-accent-700 hover:text-accent-800"
                   >
                     Create account
-                  </a> */}
-                <a
+                  </Link> */}
+                <Link
                   href="#"
-                  className=" text-primary-900 hover:text-primary-800"
+                  className=" text-primary-950 hover:text-primary-900"
                 >
                   <span className="sr-only">Instagram</span>
 
@@ -520,7 +521,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

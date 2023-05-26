@@ -1,3 +1,12 @@
+import Image from "next/image"
+
+import ag from "../../public/images/ag.png"
+import berg from "../../public/images/berg.png"
+import byron from "../../public/images/byron.png"
+import payne from "../../public/images/payne.png"
+import riomar from "../../public/images/riomar.png"
+import stenstroms from "../../public/images/stenstroms.png"
+
 function LogoCloud() {
   return (
     <div className="relative  py-24 sm:py-32">
@@ -34,7 +43,7 @@ function LogoCloud() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid  grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
           <div className="z-10 mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-5xl tracking-tight text-white">
+            <h2 className="text-4xl tracking-tight text-white lg:text-5xl">
               Premium Brands, Endless Style
             </h2>
             <p className="mt-6 text-lg leading-8 text-accent-300">
@@ -57,12 +66,12 @@ function LogoCloud() {
               </a>
             </div>
           </div>
-          <div className="z-10 mx-auto grid w-full max-w-xl grid-cols-1 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:pl-8">
+          <div className="z-10 mx-auto grid w-full max-w-xl  grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
             <svg
               viewBox="0 0 272 35"
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
-              width={200}
+              width={140}
               height={48}
             >
               <path
@@ -119,7 +128,7 @@ function LogoCloud() {
             <svg
               version="1.1"
               fill="white"
-              width={200}
+              width={140}
               height={48}
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -156,6 +165,12 @@ function LogoCloud() {
                 ></path>
               </g>
             </svg>
+            <Image src={ag} width={140} height={48} />
+            <Image src={berg} width={140} height={48} />
+            <Image src={byron} width={140} height={48} />
+            <Image src={payne} width={140} height={48} />
+            <Image src={riomar} width={140} height={48} />
+            <Image src={stenstroms} width={140} height={48} />
           </div>
         </div>
       </div>
