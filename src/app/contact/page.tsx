@@ -1,202 +1,355 @@
-import Image from "next/image"
+"use client"
+
+import { useToast } from "@/hooks/use-toast"
+import {
+  BuildingOffice2Icon,
+  EnvelopeIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Loader2 } from "lucide-react"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
+
+import { cn } from "@/lib/utils"
+
+type FormValues = {
+  firstName: string
+  lastName: string
+  email: string
+  phone: string
+  message: string
+}
+
+const schema = z.object({
+  firstName: z.string().nonempty({ message: "First name is required" }),
+  lastName: z.string().nonempty({ message: "Last name is required" }),
+  email: z.string().nonempty({ message: "Email is required" }).email(),
+  phone: z.string().nonempty({ message: "Phone is required" }),
+  message: z.string().nonempty({ message: "Message is required" }),
+})
 
 export default function ContactPage() {
+  const { toast } = useToast()
+
+  const {
+    register,
+    handleSubmit: handleFormSubmit,
+    reset,
+    watch,
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>({
+    resolver: zodResolver(schema),
+  })
+
+  // const watchAllFields = watch()
+
+  const onSubmit = async (data: any) => {
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      )
+      if (response.ok) {
+        console.log("Form submitted successfully")
+
+        toast({
+          title: "Form submitted successfully!",
+          description: "Thank you for your submission.",
+          duration: 5000,
+        })
+        reset()
+      } else {
+        const responseData = await response.json()
+        console.log("Form submission failed:", responseData)
+
+        if (responseData.error) {
+          toast({
+            title: "Uh oh! Something went wrong.",
+            description: responseData.error,
+            duration: 5000,
+            variant: "destructive",
+          })
+        }
+      }
+    } catch (error) {
+      console.log("Error submitting form:", error)
+    }
+  }
   return (
-    <div className="relative bg-white">
-      <div className="lg:absolute lg:inset-0 lg:left-1/2">
-        <Image
-          width={2560}
-          height={3413}
-          className="h-64 w-full bg-accent-50 object-cover sm:h-80 lg:absolute lg:h-full"
-          src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
-          alt=""
-        />
-      </div>
-      <div className="container pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:grid-cols-2 lg:pt-32">
-        <div className=" ">
+    <div className="relative isolate bg-white">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+        <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-accent-900">
-              Let&apos;s work together
+            <div className="jwr-bg  absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-accent-50 ring-1 ring-accent-900/10 lg:w-1/2"></div>
+            <h2 className="text-4xl tracking-tight text-accent-900 lg:text-5xl">
+              Get in touch
             </h2>
-            <p className="mt-2 text-lg leading-8 text-accent-600">
-              Proin volutpat consequat porttitor cras nullam gravida at orci
-              molestie a eu arcu sed ut tincidunt magna.
+            <p className="mt-6 text-lg leading-8 text-accent-600">
+              We value your feedback, inquiries, and suggestions. At JWR's, we
+              are committed to providing exceptional customer service and
+              ensuring your shopping experience with us is nothing short of
+              excellent. We encourage you to get in touch with us through the
+              form aside or any of the following channels:
             </p>
-            <form action="#" method="POST" className="mt-16">
-              <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="first-name"
-                    className="block text-sm font-semibold leading-6 text-accent-900"
-                  >
-                    First name
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      type="text"
-                      name="first-name"
-                      id="first-name"
-                      autoComplete="given-name"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="last-name"
-                    className="block text-sm font-semibold leading-6 text-accent-900"
-                  >
-                    Last name
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      autoComplete="family-name"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold leading-6 text-accent-900"
-                  >
-                    Email
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-semibold leading-6 text-accent-900"
-                  >
-                    Company
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      type="text"
-                      name="company"
-                      id="company"
-                      autoComplete="organization"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <div className="flex justify-between text-sm leading-6">
-                    <label
-                      htmlFor="phone"
-                      className="block font-semibold text-accent-900"
-                    >
-                      Phone
-                    </label>
-                    <p id="phone-description" className="text-accent-400">
-                      Optional
-                    </p>
-                  </div>
-                  <div className="mt-2.5">
-                    <input
-                      type="tel"
-                      name="phone"
-                      id="phone"
-                      autoComplete="tel"
-                      aria-describedby="phone-description"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <div className="flex justify-between text-sm leading-6">
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-semibold leading-6 text-accent-900"
-                    >
-                      How can we help you?
-                    </label>
-                    <p id="message-description" className="text-accent-400">
-                      Max 500 characters
-                    </p>
-                  </div>
-                  <div className="mt-2.5">
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      aria-describedby="message-description"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                      defaultValue={""}
-                    />
-                  </div>
-                </div>
-                <fieldset className="sm:col-span-2">
-                  <legend className="block text-sm font-semibold leading-6 text-accent-900">
-                    Expected budget
-                  </legend>
-                  <div className="mt-4 space-y-4 text-sm leading-6 text-accent-600">
-                    <div className="flex gap-x-2.5">
-                      <input
-                        id="budget-under-25k"
-                        name="budget"
-                        defaultValue="under_25k"
-                        type="radio"
-                        className="mt-1 h-4 w-4 border-accent-300 text-primary-600 shadow-sm focus:ring-primary-600"
-                      />
-                      <label htmlFor="budget-under-25k">Less than $25K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        id="budget-25k-50k"
-                        name="budget"
-                        defaultValue="25k-50k"
-                        type="radio"
-                        className="mt-1 h-4 w-4 border-accent-300 text-primary-600 shadow-sm focus:ring-primary-600"
-                      />
-                      <label htmlFor="budget-25k-50k">$25K – $50K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        id="budget-50k-100k"
-                        name="budget"
-                        defaultValue="50k-100k"
-                        type="radio"
-                        className="mt-1 h-4 w-4 border-accent-300 text-primary-600 shadow-sm focus:ring-primary-600"
-                      />
-                      <label htmlFor="budget-50k-100k">$50K – $100K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        id="budget-over-100k"
-                        name="budget"
-                        defaultValue="over_100k"
-                        type="radio"
-                        className="mt-1 h-4 w-4 border-accent-300 text-primary-600 shadow-sm focus:ring-primary-600"
-                      />
-                      <label htmlFor="budget-over-100k">$100K+</label>
-                    </div>
-                  </div>
-                </fieldset>
+            <dl className="mt-10 space-y-4 text-base leading-7 text-accent-600">
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Address</span>
+                  <BuildingOffice2Icon
+                    className="h-7 w-6 text-primary-950"
+                    aria-hidden="true"
+                  />
+                </dt>
+                <dd>505 University Dr. E. #305, College Station, TX 77840</dd>
               </div>
-              <div className="mt-10 flex justify-end border-t border-accent-900/10 pt-8">
-                <button
-                  type="submit"
-                  className="rounded-md bg-primary-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-                >
-                  Send message
-                </button>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Telephone</span>
+                  <PhoneIcon
+                    className="h-7 w-6 text-primary-950"
+                    aria-hidden="true"
+                  />
+                </dt>
+                <dd>
+                  <a
+                    className="hover:text-accent-900"
+                    href="tel:(979) 805-2495"
+                  >
+                    (979) 805-2495
+                  </a>
+                </dd>
               </div>
-            </form>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Email</span>
+                  <EnvelopeIcon
+                    className="h-7 w-6 text-primary-950"
+                    aria-hidden="true"
+                  />
+                </dt>
+                <dd>
+                  <a
+                    className="hover:text-accent-900"
+                    href="mailto:hello@example.com"
+                  >
+                    info@jwrsclothing.com
+                  </a>
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
+        <form
+          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+          onSubmit={handleFormSubmit(onSubmit)}
+        >
+          <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div className="">
+                <label
+                  htmlFor="first-name"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                >
+                  First Name
+                </label>
+                <div className="relative mt-2.5 rounded-md shadow-sm">
+                  <input
+                    type="text"
+                    id="first-name"
+                    {...register("firstName")}
+                    className={cn(
+                      "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                      {
+                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                          !errors["firstName"],
+                        "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                          errors["firstName"],
+                      }
+                    )}
+                    aria-invalid={errors.firstName ? "true" : "false"}
+                    aria-describedby="first-name-error"
+                  />
+                </div>
+
+                {errors["firstName"] && (
+                  <p
+                    className="mt-2.5 text-sm text-red-600"
+                    id="email-error"
+                    role="alert"
+                  >
+                    {errors["firstName"].message}
+                  </p>
+                )}
+              </div>
+              <div className="">
+                <label
+                  htmlFor="last-name"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                >
+                  Last Name
+                </label>
+                <div className="relative mt-2.5 rounded-md shadow-sm">
+                  <input
+                    type="text"
+                    id="last-name"
+                    {...register("lastName")}
+                    className={cn(
+                      "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                      {
+                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                          !errors["lastName"],
+                        "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                          errors["lastName"],
+                      }
+                    )}
+                    aria-invalid={errors.lastName ? "true" : "false"}
+                    aria-describedby="last-name-error"
+                  />
+                </div>
+
+                {errors["lastName"] && (
+                  <p
+                    className="mt-2.5 text-sm text-red-600"
+                    id="email-error"
+                    role="alert"
+                  >
+                    {errors["lastName"].message}
+                  </p>
+                )}
+              </div>
+
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="phone"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                >
+                  Phone
+                </label>
+                <div className="relative mt-2.5 rounded-md shadow-sm">
+                  <input
+                    type="tel"
+                    id="phone"
+                    {...register("phone")}
+                    className={cn(
+                      "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                      {
+                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                          !errors["phone"],
+                        "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                          errors["phone"],
+                      }
+                    )}
+                    aria-invalid={errors.phone ? "true" : "false"}
+                    aria-describedby="phone-error"
+                  />
+                </div>
+
+                {errors["phone"] && (
+                  <p
+                    className="mt-2.5 text-sm text-red-600"
+                    id="phone-error"
+                    role="alert"
+                  >
+                    {errors["phone"].message}
+                  </p>
+                )}
+              </div>
+
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="email"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                >
+                  Email
+                </label>
+                <div className="relative mt-2.5 rounded-md shadow-sm">
+                  <input
+                    type="email"
+                    id="email"
+                    {...register("email")}
+                    className={cn(
+                      "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                      {
+                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                          !errors["email"],
+                        "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                          errors["email"],
+                      }
+                    )}
+                    aria-invalid={errors.email ? "true" : "false"}
+                    aria-describedby="email-error"
+                  />
+                </div>
+
+                {errors["email"] && (
+                  <p
+                    className="mt-2.5 text-sm text-red-600"
+                    id="email-error"
+                    role="alert"
+                  >
+                    {errors["email"].message}
+                  </p>
+                )}
+              </div>
+
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="message"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                >
+                  Your Message
+                </label>
+                <div className="relative mt-2.5 rounded-md shadow-sm">
+                  <textarea
+                    aria-invalid={errors.message ? "true" : "false"}
+                    {...register("message")}
+                    rows={4}
+                    name="message"
+                    id="message"
+                    className={cn(
+                      "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                      {
+                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                          !errors["message"],
+                        "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                          errors["message"],
+                      }
+                    )}
+                    defaultValue={""}
+                  />
+                  {errors.message && (
+                    <p role="alert" className="mt-2.5 text-sm text-red-600">
+                      {errors.message?.message}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 flex justify-end">
+              <button
+                className="flex items-center rounded-md bg-primary-950 px-3.5 py-2.5 text-center font-display text-xs font-semibold uppercase tracking-widest text-white shadow-sm hover:bg-primary-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900"
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    {"Submitting"}
+                    <Loader2 className="ml-2 h-4 w-4 animate-spin" />
+                  </>
+                ) : (
+                  "Submit"
+                )}
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   )

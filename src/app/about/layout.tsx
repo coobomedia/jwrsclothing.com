@@ -7,7 +7,7 @@ export default function AboutLayout({
   children: React.ReactNode
 }) {
   return (
-    <main>
+    <main className="bg-accent-50">
       <JWRHeader className="sticky " />
       {children}
       <Footer />

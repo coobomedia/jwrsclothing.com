@@ -357,7 +357,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                             <Popover.Button
                               className={cn(
                                 open
-                                  ? "border-primary-800 text-primary-800"
+                                  ? "border-primary-950 text-primary-950"
                                   : "border-transparent text-accent-700 hover:text-accent-800",
                                 "relative z-10 -mb-px flex items-center border-b-2 pt-px font-display text-xs font-medium uppercase tracking-wider !outline-0 transition-colors duration-200 ease-out"
                               )}

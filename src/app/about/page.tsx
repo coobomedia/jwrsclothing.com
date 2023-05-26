@@ -12,7 +12,7 @@ import jwr9 from "../../../public/images/jwr-9.jpeg"
 
 export default function AboutPage() {
   return (
-    <main className="my-16 overflow-hidden sm:my-20">
+    <div className="my-16 overflow-hidden sm:my-20">
       <div className="mx-auto max-w-2xl px-4 pb-24  sm:px-6 lg:flex lg:max-w-7xl lg:px-8 ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
@@ -81,6 +81,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

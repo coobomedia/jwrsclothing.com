@@ -105,7 +105,7 @@ export default function Footer() {
           viewBox="0 0 500 500"
         >
           <rect fill="#1E3A8A" width="1600" height="800" />
-          <g stroke="#09090B" stroke-width="66.7" stroke-opacity="0.05">
+          <g stroke="#09090B" strokeWidth="66.7" strokeOpacity="0.05">
             <circle fill="#1E3A8A" cx="0" cy="0" r="1800" />
             <circle fill="#213984" cx="0" cy="0" r="1700" />
             <circle fill="#23387e" cx="0" cy="0" r="1600" />
