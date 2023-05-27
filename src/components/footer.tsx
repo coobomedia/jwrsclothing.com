@@ -135,7 +135,9 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Link href="/" className="">
-              <Icons.logo className="h-8 w-auto" />
+              <h1 className="text-4xl font-medium tracking-tighter text-white">
+                JwR's
+              </h1>
             </Link>
             <p className="text-sm leading-6 text-accent-300">
               At JWR's, we believe in offering our discerning customers nothing

@@ -1,6 +1,7 @@
 "use client"
 
 import { Fragment, useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
 import {
@@ -11,6 +12,7 @@ import {
 } from "@heroicons/react/24/outline"
 
 import { cn } from "@/lib/utils"
+import logo from "../../public/images/jwr-logo.png"
 
 const navigation = {
   categories: [
@@ -471,12 +473,11 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
               </Popover.Group>
               {/* Logo */}
               <Link href="/" className="ml-auto flex">
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
+                <h1 className="text-4xl font-medium tracking-tighter text-accent-900">
+                  JwR's
+                </h1>
+                {/* <span className="sr-only">Your Company</span>
+                <Image className="h-8 w-auto" src={logo} alt="" /> */}
               </Link>
               {/* <div className="ml-4 flex lg:ml-10">
                 <Link href="#">
