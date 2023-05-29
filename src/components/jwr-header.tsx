@@ -42,7 +42,7 @@ const navigation = {
           id: "clothing",
           name: "Clothing",
           items: [
-            { name: "Sports Coats", href: "#" },
+            { name: "Sports Coats", href: "/clothing/sports-coats" },
             { name: "Pants", href: "#" },
             { name: "Dress Shirts", href: "#" },
             { name: "Sports Shirts", href: "#" },

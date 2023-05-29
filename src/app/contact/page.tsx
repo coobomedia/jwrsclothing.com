@@ -159,7 +159,7 @@ export default function ContactPage() {
                 >
                   First Name
                 </label>
-                <div className="relative mt-2.5 rounded-md shadow-sm">
+                <div className="relative mt-2 rounded-md shadow-sm">
                   <input
                     type="text"
                     id="first-name"
@@ -180,7 +180,7 @@ export default function ContactPage() {
 
                 {errors["firstName"] && (
                   <p
-                    className="mt-2.5 text-sm text-red-600"
+                    className="mt-2 text-sm text-red-600"
                     id="email-error"
                     role="alert"
                   >
@@ -195,7 +195,7 @@ export default function ContactPage() {
                 >
                   Last Name
                 </label>
-                <div className="relative mt-2.5 rounded-md shadow-sm">
+                <div className="relative mt-2 rounded-md shadow-sm">
                   <input
                     type="text"
                     id="last-name"
@@ -216,7 +216,7 @@ export default function ContactPage() {
 
                 {errors["lastName"] && (
                   <p
-                    className="mt-2.5 text-sm text-red-600"
+                    className="mt-2 text-sm text-red-600"
                     id="email-error"
                     role="alert"
                   >
@@ -232,7 +232,7 @@ export default function ContactPage() {
                 >
                   Phone
                 </label>
-                <div className="relative mt-2.5 rounded-md shadow-sm">
+                <div className="relative mt-2 rounded-md shadow-sm">
                   <input
                     type="tel"
                     id="phone"
@@ -253,7 +253,7 @@ export default function ContactPage() {
 
                 {errors["phone"] && (
                   <p
-                    className="mt-2.5 text-sm text-red-600"
+                    className="mt-2 text-sm text-red-600"
                     id="phone-error"
                     role="alert"
                   >
@@ -269,7 +269,7 @@ export default function ContactPage() {
                 >
                   Email
                 </label>
-                <div className="relative mt-2.5 rounded-md shadow-sm">
+                <div className="relative mt-2 rounded-md shadow-sm">
                   <input
                     type="email"
                     id="email"
@@ -290,7 +290,7 @@ export default function ContactPage() {
 
                 {errors["email"] && (
                   <p
-                    className="mt-2.5 text-sm text-red-600"
+                    className="mt-2 text-sm text-red-600"
                     id="email-error"
                     role="alert"
                   >
@@ -306,7 +306,7 @@ export default function ContactPage() {
                 >
                   Your Message
                 </label>
-                <div className="relative mt-2.5 rounded-md shadow-sm">
+                <div className="relative mt-2 rounded-md shadow-sm">
                   <textarea
                     aria-invalid={errors.message ? "true" : "false"}
                     {...register("message")}
@@ -325,7 +325,7 @@ export default function ContactPage() {
                     defaultValue={""}
                   />
                   {errors.message && (
-                    <p role="alert" className="mt-2.5 text-sm text-red-600">
+                    <p role="alert" className="mt-2 text-sm text-red-600">
                       {errors.message?.message}
                     </p>
                   )}

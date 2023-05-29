@@ -15,6 +15,9 @@ module.exports = {
       },
     },
     extend: {
+      gridTemplateRows: {
+        "[auto,auto,1fr]": "auto auto 1fr",
+      },
       colors: {
         // brand: {
         //   50: "#FDEDE8",
@@ -61,5 +64,6 @@ module.exports = {
     require("@headlessui/tailwindcss"),
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
   ],
 }
