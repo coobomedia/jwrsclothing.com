@@ -1,4 +1,5 @@
 import Footer from "@/components/footer"
+import JWRFooter from "@/components/jwr-footer"
 import JWRHeader from "@/components/jwr-header"
 
 export default function ClothingLayout({
@@ -10,7 +11,7 @@ export default function ClothingLayout({
     <main className="">
       <JWRHeader className="sticky " />
       {children}
-      <Footer />
+      <JWRFooter />
     </main>
   )
 }

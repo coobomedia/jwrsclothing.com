@@ -32,9 +32,9 @@ function Hero() {
           </div>
         </div>
         <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-          <div className="absolute inset-0 z-10 bg-primary-950/50" />
+          {/* <div className="absolute inset-0 z-10 bg-primary-950/50" /> */}
           <Image
-            className="aspect-[3/2] w-full bg-accent-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
+            className="lg:aspect-auto aspect-[3/2] w-full bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
             src={jwrHero}
             alt=""
           />

@@ -12,7 +12,11 @@ import {
 } from "@heroicons/react/24/outline"
 
 import { cn } from "@/lib/utils"
+import featuredPromotion from "../../public/images/featured-promotion.jpeg"
 import logo from "../../public/images/jwr-logo.png"
+import newArrival from "../../public/images/new-arrival-feature.webp"
+
+console.log("logo", logo)
 
 const navigation = {
   categories: [
@@ -23,16 +27,14 @@ const navigation = {
         {
           name: "New Arrivals",
           href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
+          imageSrc: newArrival.src,
           imageAlt:
             "Models sitting back to back, wearing Basic Tee in accent-900 and bone.",
         },
         {
           name: "Featured Promotion",
           href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
+          imageSrc: featuredPromotion.src,
           imageAlt:
             "Close up of Basic Tee fall bundle with off-white, ochre, olive, and accent-900 tees.",
         },
@@ -63,8 +65,8 @@ const navigation = {
           ],
         },
         {
-          id: "branding",
-          name: "Branding",
+          id: "brands",
+          name: "Brands",
           items: [
             { name: "Byronn", href: "#" },
             { name: "L.B.M", href: "#" },

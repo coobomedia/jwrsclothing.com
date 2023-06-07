@@ -83,8 +83,8 @@ export default function ContactPage() {
     }
   }
   return (
-    <div className="relative isolate bg-white">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+    <div className="relative isolate  bg-white">
+      <div className="mx-auto grid  max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 ">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div className="jwr-bg  absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-accent-50 ring-1 ring-accent-900/10 lg:w-1/2"></div>

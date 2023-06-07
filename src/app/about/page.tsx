@@ -9,10 +9,11 @@ import jwr3 from "../../../public/images/jwr-3.jpeg"
 import jwr7 from "../../../public/images/jwr-7.jpeg"
 // import jwr8 from "../../../public/images/jwr-8.jpeg"
 import jwr9 from "../../../public/images/jwr-9.jpeg"
+import jwr11 from "../../../public/images/jwr-11.jpeg"
 
 export default function AboutPage() {
   return (
-    <div className="my-16 overflow-hidden sm:my-20">
+    <div className="my-16 overflow-hidden sm:my-32">
       <div className="mx-auto max-w-2xl px-4 pb-24  sm:px-6 lg:flex lg:max-w-7xl lg:px-8 ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
@@ -37,16 +38,16 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
             <div className=" relative w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-              <div className="absolute inset-0 z-10 rounded-2xl bg-primary-950/50" />
+              {/* <div className="absolute inset-0 z-10 rounded-2xl bg-primary-950/50" /> */}
               <Image
                 width={1152}
                 height={768}
-                src={jwr1}
+                src={jwr11}
                 alt=""
                 className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-accent-50 object-cover"
               />
             </div>
-            <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
+            {/* <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
               <div className="relative order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                 <div className="absolute inset-0 z-10 rounded-2xl bg-primary-950/50" />
                 <Image
@@ -77,7 +78,7 @@ export default function AboutPage() {
                   className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-accent-50 object-cover"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
