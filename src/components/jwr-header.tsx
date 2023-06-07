@@ -142,7 +142,7 @@ const navigation = {
     // },
   ],
   pages: [
-    { name: "Custom", href: "#" },
+    { name: "Custom", href: "/#custom" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ],

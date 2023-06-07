@@ -38,6 +38,10 @@
 
   /*Browsers default outline styles override*/
 
+  /* html {
+    scroll-behavior: smooth !important;
+  } */
+
   a,
   button:focus {
     @apply outline-1 outline-current outline-offset-1;

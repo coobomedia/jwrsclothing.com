@@ -4,7 +4,6 @@ import { Archivo, EB_Garamond, Nunito_Sans, Roboto } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 
 import { cn } from "@/lib/utils"
-
 import { Toaster } from "@/components/ui/toaster"
 
 const archivo = Archivo({
@@ -47,7 +46,7 @@ export default function RootLayout({
       className={cn(
         ebGaramond.variable,
         nunitoSans.variable,
-        " font-sans antialiased"
+        "scroll-smooth font-sans antialiased"
       )}
       lang="en"
     >
