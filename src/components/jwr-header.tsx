@@ -68,7 +68,7 @@ const navigation = {
           id: "brands",
           name: "Brands",
           items: [
-            { name: "Byronn", href: "#" },
+            { name: "Byron", href: "#" },
             { name: "L.B.M", href: "#" },
             { name: "Stenstroms", href: "#" },
             { name: "Stantt", href: "#" },
