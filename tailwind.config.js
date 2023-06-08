@@ -14,7 +14,11 @@ module.exports = {
         "2xl": "6rem",
       },
     },
+
     extend: {
+      maxWidth: {
+        "7xl": "1440px",
+      },
       gridTemplateRows: {
         "[auto,auto,1fr]": "auto auto 1fr",
       },
@@ -32,10 +36,10 @@ module.exports = {
         //   900: "#340F04",
         //   950: "#170702",
         // },
-        primary: colors.blue,
+        primary: colors.stone,
 
         secondary: colors.orange,
-        accent: colors.slate,
+        accent: colors.stone,
       },
       fontFamily: {
         // display: ["var(--font-roboto)", ...fontFamily.sans],

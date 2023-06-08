@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Balancer } from "react-wrap-balancer"
 
 import ag from "../../public/images/ag.png"
 import berg from "../../public/images/berg.png"
@@ -10,8 +11,36 @@ import stenstroms from "../../public/images/stenstroms.png"
 function LogoCloud() {
   return (
     <div className="relative  py-24 sm:py-32">
-      <div className="absolute inset-0 rotate-180">
+      <div className="absolute inset-0 ">
         <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          viewBox="0 0 05 500"
+        >
+          <rect fill="#44403C" width="1600" height="800" />
+          <g stroke="#0C0A09" strokeWidth="66.7" strokeOpacity="0.05">
+            <circle fill="#44403C" cx="0" cy="0" r="1800" />
+            <circle fill="#423e3a" cx="0" cy="0" r="1700" />
+            <circle fill="#3f3b37" cx="0" cy="0" r="1600" />
+            <circle fill="#3d3935" cx="0" cy="0" r="1500" />
+            <circle fill="#3a3633" cx="0" cy="0" r="1400" />
+            <circle fill="#383431" cx="0" cy="0" r="1300" />
+            <circle fill="#35322e" cx="0" cy="0" r="1200" />
+            <circle fill="#332f2c" cx="0" cy="0" r="1100" />
+            <circle fill="#312d2a" cx="0" cy="0" r="1000" />
+            <circle fill="#2e2b28" cx="0" cy="0" r="900" />
+            <circle fill="#2c2826" cx="0" cy="0" r="800" />
+            <circle fill="#2a2623" cx="0" cy="0" r="700" />
+            <circle fill="#272421" cx="0" cy="0" r="600" />
+            <circle fill="#25221f" cx="0" cy="0" r="500" />
+            <circle fill="#231f1d" cx="0" cy="0" r="400" />
+            <circle fill="#201d1b" cx="0" cy="0" r="300" />
+            <circle fill="#1e1b19" cx="0" cy="0" r="200" />
+            <circle fill="#1C1917" cx="0" cy="0" r="100" />
+          </g>
+        </svg>
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
           height="100%"
@@ -38,35 +67,11 @@ function LogoCloud() {
             <circle fill="#28282f" cx="0" cy="0" r="200" />
             <circle fill="#27272A" cx="0" cy="0" r="100" />
           </g>
-        </svg>
+        </svg> */}
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid  grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
-          <div className="z-10 mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-4xl tracking-tight text-white lg:text-5xl">
-              Premium Brands, Endless Style
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-accent-300">
-              Indulge in the finest craftsmanship and design with our collection
-              of prestigious brands. Elevate your wardrobe with timeless pieces
-              that embody sophistication, innovation, and unparalleled quality.
-            </p>
-            <div className="mt-8 flex items-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-white px-3.5 py-2.5 font-display text-xs font-semibold uppercase  tracking-wider text-primary-950 shadow-sm hover:bg-opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
-              >
-                Explore our store
-              </a>
-              <a
-                href="#"
-                className="font-display text-xs font-semibold uppercase  tracking-wider text-white"
-              >
-                Contact us <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-          <div className="z-10 mx-auto grid w-full max-w-xl  grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
+        <div className="grid  grid-cols-1 items-center gap-16 lg:grid-cols-2">
+          <div className="z-10 mx-auto grid w-full max-w-xl  grid-cols-3  items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none">
             <svg
               viewBox="0 0 272 35"
               fill="white"
@@ -171,6 +176,30 @@ function LogoCloud() {
             <Image src={payne} width={140} height={48} />
             <Image src={riomar} width={140} height={48} />
             <Image src={stenstroms} width={140} height={48} />
+          </div>
+          <div className="z-10 mx-auto w-full max-w-xl lg:mx-0">
+            <h2 className="text-4xl tracking-tight text-white lg:text-4xl">
+              <Balancer>Premium Brands, Endless Style</Balancer>
+            </h2>
+            <p className="mt-6 font-display text-lg leading-8 text-accent-300">
+              Indulge in the finest craftsmanship and design with our collection
+              of prestigious brands. Elevate your wardrobe with timeless pieces
+              that embody sophistication, innovation, and unparalleled quality.
+            </p>
+            <div className="mt-8 flex items-center gap-x-6">
+              <a
+                href="#"
+                className="rounded-md bg-white px-3.5 py-2.5 font-display text-xs font-semibold uppercase  tracking-wider text-primary-950 shadow-sm hover:bg-opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
+              >
+                Explore our store
+              </a>
+              <a
+                href="#"
+                className="font-display text-xs font-semibold uppercase  tracking-wider text-white"
+              >
+                Contact us <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -181,7 +181,7 @@ function SportsCoatsPage() {
 
         {/* Options */}
         <div className="mt-4 lg:row-span-3 lg:mt-0">
-          <div className="relative  mx-auto grid h-1/2 w-full max-w-xl grid-cols-1  items-center gap-y-4  py-8  lg:mx-0 lg:max-w-none lg:pl-8">
+          <div className="relative mx-auto  grid h-1/2 w-full max-w-xl grid-cols-1 place-items-center  items-center gap-y-4  py-8  lg:mx-0 lg:max-w-none lg:pl-8">
             <Image className="z-10 " src={byron} width={140} height={48} />
 
             <svg
@@ -257,7 +257,9 @@ function SportsCoatsPage() {
             <h3 className="sr-only">Description</h3>
 
             <div className="space-y-6">
-              <p className="text-base text-accent-900">{product.description}</p>
+              <p className="font-display text-base text-accent-900">
+                {product.description}
+              </p>
             </div>
           </div>
 

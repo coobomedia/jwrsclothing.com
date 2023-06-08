@@ -9,25 +9,25 @@ import jwr3 from "../../../public/images/jwr-3.jpeg"
 import jwr7 from "../../../public/images/jwr-7.jpeg"
 // import jwr8 from "../../../public/images/jwr-8.jpeg"
 import jwr9 from "../../../public/images/jwr-9.jpeg"
-import jwr11 from "../../../public/images/jwr-11.jpeg"
+import jwr11 from "../../../public/images/jwr-11-2.png"
 
 export default function AboutPage() {
   return (
-    <div className="my-16 overflow-hidden sm:my-32">
-      <div className="mx-auto max-w-2xl px-4 pb-24  sm:px-6 lg:flex lg:max-w-7xl lg:px-8 ">
+    <div className="my-16 min-h-[calc(100vh_-_454px)] overflow-hidden sm:my-32">
+      <div className="mx-auto max-w-2xl px-4   sm:px-6 lg:flex lg:max-w-7xl lg:px-8 ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
-          <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-            <h2 className="text-4xl  tracking-tight text-accent-900 sm:text-5xl">
+          <div className="lg:col-end-1 lg:w-full lg:max-w-2xl lg:pb-8">
+            <h2 className="text-4xl  tracking-tight text-accent-900 sm:text-4xl">
               About Us
             </h2>
-            <p className="mt-6 text-xl leading-8 text-accent-600">
+            <p className="mt-6 font-display text-xl leading-8 text-accent-600">
               At JWR's, we are passionate about men&apos;s fashion and providing
               our customers with the latest trends and timeless classics. Our
               mission is to empower men to express their unique style and
               confidence through our carefully curated collection of apparel and
               accessories.
             </p>
-            <p className="mt-6 text-base leading-7 text-accent-600">
+            <p className="mt-6 font-display text-base leading-7 text-accent-600">
               We value our customers and prioritize their satisfaction above all
               else. We continuously update our inventory to keep up with the
               latest fashion trends, ensuring that you&apos;ll always find
