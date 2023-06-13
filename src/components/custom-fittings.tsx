@@ -3,9 +3,9 @@ import Image from "next/image"
 // import fitting1 from "../../public/images/fitting-1.webp"
 // import fitting2 from "../../public/images/fitting-2.jpeg"
 // import fitting3 from "../../public/images/fitting-3.webp"
-import fitting1 from "public/images/jwr-cf-1.jpg"
-import fitting2 from "public/images/jwr-cf-2.jpg"
-import fitting3 from "public/images/jwr-cf-3.jpg"
+import fitting1 from "../../public/images/jwr-cf-1.jpg"
+import fitting2 from "../../public/images/jwr-cf-2.jpg"
+import fitting3 from "../../public/images/jwr-cf-3.jpg"
 
 const features = [
   {
