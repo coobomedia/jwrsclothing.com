@@ -44,11 +44,12 @@ const navigation = {
           id: "clothing",
           name: "Clothing",
           items: [
-            { name: "Sports Coats", href: "/clothing/sports-coats" },
-            { name: "Pants", href: "#" },
+            { name: "Suits/Sports Coats", href: "/clothing/sports-coats" },
             { name: "Dress Shirts", href: "#" },
+            { name: "Dress Pants", href: "#" },
             { name: "Sports Shirts", href: "#" },
             { name: "Polos", href: "#" },
+            { name: "Casual Pants", href: "#" },
             { name: "Jeans", href: "#" },
           ],
         },
@@ -56,29 +57,28 @@ const navigation = {
           id: "accessories",
           name: "Accessories",
           items: [
-            { name: "Ties", href: "#" },
+            { name: "Ties/Pocket Squares", href: "#" },
             { name: "Shoes", href: "#" },
-            { name: "Pocket Squares", href: "#" },
-            { name: "Money Clips", href: "#" },
             { name: "Belts", href: "#" },
-            { name: "SAXX", href: "#" },
+            { name: "Socks/Underwear", href: "#" },
+            { name: "Money Clips", href: "#" },
           ],
         },
-        {
-          id: "brands",
-          name: "Brands",
-          items: [
-            { name: "Byron", href: "#" },
-            { name: "L.B.M", href: "#" },
-            { name: "Stenstroms", href: "#" },
-            { name: "Stantt", href: "#" },
-            { name: "Alan Payne", href: "#" },
-            { name: "Riomar", href: "#" },
-            { name: "AG", href: "#" },
-            { name: "Emanuel Berg", href: "#" },
-            { name: "David Donahue", href: "#" },
-          ],
-        },
+        // {
+        //   id: "brands",
+        //   name: "Brands",
+        //   items: [
+        //     { name: "Byron", href: "#" },
+        //     { name: "L.B.M", href: "#" },
+        //     { name: "Stenstroms", href: "#" },
+        //     { name: "Stantt", href: "#" },
+        //     { name: "Alan Payne", href: "#" },
+        //     { name: "Riomar", href: "#" },
+        //     { name: "AG", href: "#" },
+        //     { name: "Emanuel Berg", href: "#" },
+        //     { name: "David Donahue", href: "#" },
+        //   ],
+        // },
       ],
     },
     // {
@@ -510,7 +510,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   >
                     Create account
                   </Link> */}
-                <p className="text-primary flex h-10 items-center  justify-end px-4 text-sm font-medium sm:px-6 lg:px-8">
+                <p className="text-primary flex  items-center  justify-end  text-sm font-medium  ">
                   979.704.5469
                   <span
                     className="mx-2 h-4 w-px bg-gray-200"
@@ -518,7 +518,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   />
                   info@jwrsclothing.com
                 </p>
-                <Link
+                {/* <Link
                   href="#"
                   className=" text-primary-950 hover:text-primary-900"
                 >
@@ -536,7 +536,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                       clipRule="evenodd"
                     />
                   </svg>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

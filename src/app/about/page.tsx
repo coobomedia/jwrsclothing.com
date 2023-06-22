@@ -44,7 +44,7 @@ export default function AboutPage() {
                 height={768}
                 src={jwr11}
                 alt=""
-                className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-accent-50 object-cover"
+                className="skewed-border aspect-[7/5] w-[37rem] max-w-none  bg-accent-50 object-cover"
               />
             </div>
             {/* <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">

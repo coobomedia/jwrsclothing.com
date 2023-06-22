@@ -30,7 +30,7 @@ const features = [
 export default function CustomFittings() {
   return (
     <div id="custom" className="!scroll-mt-[104px] bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4  sm:px-6  lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <div>
             <div className="border-b border-accent-200 pb-10">
