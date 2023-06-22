@@ -8,7 +8,7 @@ export default function ContactLayout({
   children: React.ReactNode
 }) {
   return (
-    <main className="  bg-accent-50 ">
+    <main className="flex min-h-screen flex-col  bg-accent-50 ">
       <JWRHeader className="sticky " />
       {children}
       <JWRFooter />

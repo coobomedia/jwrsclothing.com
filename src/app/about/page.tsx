@@ -13,7 +13,7 @@ import jwr11 from "../../../public/images/jwr-11-2.png"
 
 export default function AboutPage() {
   return (
-    <div className="my-16 min-h-[calc(100vh_-_454px)] overflow-hidden sm:my-32">
+    <div className="my-16 grow overflow-hidden sm:my-32">
       <div className="mx-auto max-w-2xl px-4   sm:px-6 lg:flex lg:max-w-7xl lg:px-8 ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-2xl lg:pb-8">
