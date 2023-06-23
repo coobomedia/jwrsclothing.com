@@ -5,7 +5,7 @@ import jwrHero from "../../public/images/jwr-hero.jpeg"
 
 function Hero() {
   return (
-    <div className="jwr-bg relative bg-white">
+    <div className=" relative bg-white shadow">
       <div className="mx-auto min-h-screen max-w-7xl  lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
         <div className="flex items-center px-6 py-10 lg:col-span-7 lg:p-0 xl:col-span-6">
           <div className="mx-auto max-w-2xl lg:mx-0">

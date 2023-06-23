@@ -142,8 +142,7 @@ const navigation = {
     // },
   ],
   pages: [
-    { name: "Custom", href: "/#custom" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "/about" }, // { name: "Custom", href: "/#custom" },
     { name: "Contact", href: "/contact" },
   ],
 }
@@ -261,7 +260,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                           <div key={section.name}>
                             <p
                               id={`${category.id}-${section.id}-heading-mobile`}
-                              className="font-display font-medium tracking-wider text-accent-900"
+                              className=" font-medium tracking-wider text-accent-900"
                             >
                               {section.name}
                             </p>
@@ -293,7 +292,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                     <div key={page.name} className="flow-root">
                       <Link
                         href={page.href}
-                        className="-m-2 block p-2 font-display font-medium tracking-wider text-accent-900"
+                        className="-m-2 block p-2 font-medium tracking-wider text-accent-900"
                       >
                         {page.name}
                       </Link>
@@ -360,7 +359,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                 open
                                   ? "border-primary-950 text-primary-950"
                                   : "border-transparent text-accent-700 hover:text-accent-800",
-                                "relative z-10 -mb-px flex items-center border-b-2 pt-px font-display text-xs font-medium uppercase tracking-wider !outline-0 transition-colors duration-200 ease-out"
+                                "relative z-10 -mb-px flex items-center border-b-2 pt-px  text-sm font-medium  tracking-wider !outline-0 transition-colors duration-200 ease-out"
                               )}
                             >
                               {category.name}
@@ -463,7 +462,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                     <Link
                       key={page.name}
                       href={page.href}
-                      className="flex items-center font-display text-xs font-medium uppercase tracking-wider text-accent-700 hover:text-accent-800"
+                      className="flex items-center text-sm font-medium  tracking-wider text-accent-700 hover:text-accent-800"
                     >
                       {page.name}
                     </Link>
