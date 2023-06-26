@@ -1,15 +1,16 @@
 import Image from "next/image"
 
-import jwr1 from "../../../public/images/jwr-1.jpeg"
+// import jwr1 from "../../../public/images/jwr-1.jpeg"
 // import jwr2 from "../../../public/images/jwr-2.jpeg"
-import jwr3 from "../../../public/images/jwr-3.jpeg"
+// import jwr3 from "../../../public/images/jwr-3.jpeg"
 // import jwr4 from "../../../public/images/jwr-4.jpeg"
 // import jwr5 from "../../../public/images/jwr-5.jpeg"
 // import jwr6 from "../../../public/images/jwr-6.jpeg"
-import jwr7 from "../../../public/images/jwr-7.jpeg"
+// import jwr7 from "../../../public/images/jwr-7.jpeg"
 // import jwr8 from "../../../public/images/jwr-8.jpeg"
-import jwr9 from "../../../public/images/jwr-9.jpeg"
-import jwr11 from "../../../public/images/jwr-11-2.png"
+// import jwr9 from "../../../public/images/jwr-9.jpeg"
+// import jwr11 from "../../../public/images/jwr-11-2.png"
+import jwr11 from "../../../public/images/about-dog.jpg"
 
 export default function AboutPage() {
   return (

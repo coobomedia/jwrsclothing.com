@@ -1,11 +1,12 @@
 import Link from "next/link"
 
-import { SiteHeader } from "@/components/site-header"
+import JWRFooter from "@/components/jwr-footer"
+import JWRHeader from "@/components/jwr-header"
 
 export default function NotFound() {
   return (
     <>
-      <SiteHeader />
+      <JWRHeader />
       <main className="container mx-auto flex w-full flex-auto flex-col justify-center  py-24 sm:py-64 ">
         <p className="text-base font-semibold leading-8 text-accent-600">404</p>
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-accent-900 sm:text-5xl">
@@ -23,6 +24,7 @@ export default function NotFound() {
           </Link>
         </div>
       </main>
+      <JWRFooter />
     </>
   )
 }

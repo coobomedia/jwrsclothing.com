@@ -11,7 +11,7 @@ import LogoCloud from "@/components/logo-cloud"
 
 const categories = [
   {
-    name: "About",
+    name: "About JWR",
     href: "#",
     cta: "Discover our story",
     imageSrc:
@@ -33,7 +33,7 @@ const categories = [
       "We think serving people is cool – so whether it’s full-service styling or simply hemming your jeans, consider us here to help you look your best. ",
   },
   {
-    name: "Visit",
+    name: "Testimonials",
     href: "#",
     cta: "Find our shop",
     imageSrc:
@@ -48,15 +48,15 @@ const categories = [
 export default function HomePage() {
   return (
     <main className="relative">
-      <JWRHeader className="sticky lg:fixed" />
+      <JWRHeader className="absolute top-0 " />
       <Hero />
       <div className="bg-white">
         <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl  tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl  tracking-tight text-primary-900 sm:text-4xl">
               <Balancer>Premium Brands, Endless Style</Balancer>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl font-display text-lg leading-8 text-gray-600">
+            <p className="mx-auto mt-6 max-w-xl font-display text-lg leading-8 text-primary-600">
               Indulge in the finest craftsmanship and design with our collection
               of prestigious brands. Elevate your wardrobe with timeless pieces
               that embody sophistication, innovation, and unparalleled quality.
@@ -108,7 +108,7 @@ export default function HomePage() {
                   <h3 className="mt-8 text-2xl  text-primary-900">
                     {category.name}
                   </h3>
-                  <p className="mt-4 text-sm text-primary-500">
+                  <p className="mt-4 font-display text-sm text-primary-500">
                     {category.description}
                   </p>
                 </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
                   <Balancer>Join us on Social Media</Balancer>
                 </h1>
                 <p className="relative mt-6 text-lg leading-8 text-primary-600 sm:max-w-md lg:max-w-none">
-                  Follow along with @jwrclothing
+                  Follow along with @jwrsclothing
                 </p>
               </div>
             </div>

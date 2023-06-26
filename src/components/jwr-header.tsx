@@ -1,8 +1,9 @@
 "use client"
 
-import { Fragment, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
 import {
   Bars3Icon,
@@ -44,24 +45,33 @@ const navigation = {
           id: "clothing",
           name: "Clothing",
           items: [
-            { name: "Suits/Sports Coats", href: "/clothing/sports-coats" },
-            { name: "Dress Shirts", href: "#" },
-            { name: "Dress Pants", href: "#" },
-            { name: "Sports Shirts", href: "#" },
-            { name: "Polos", href: "#" },
-            { name: "Casual Pants", href: "#" },
-            { name: "Jeans", href: "#" },
+            {
+              name: "Suits/Sports Coats",
+              href: "/clothing/suits-and-sports-coats",
+            },
+            { name: "Dress Shirts", href: "/clothing/dress-shirts" },
+            { name: "Dress Pants", href: "/clothing/dress-pants" },
+            { name: "Sports Shirts", href: "/clothing/sports-shirts" },
+            { name: "Polos", href: "/clothing/polos" },
+            { name: "Casual Pants", href: "/clothing/casual-pants" },
+            { name: "Jeans", href: "/clothing/jeans" },
           ],
         },
         {
           id: "accessories",
           name: "Accessories",
           items: [
-            { name: "Ties/Pocket Squares", href: "#" },
-            { name: "Shoes", href: "#" },
-            { name: "Belts", href: "#" },
-            { name: "Socks/Underwear", href: "#" },
-            { name: "Money Clips", href: "#" },
+            {
+              name: "Ties/Pocket Squares",
+              href: "/accessories/ties-and-pocket-squares",
+            },
+            { name: "Shoes", href: "/accessories/shoes" },
+            { name: "Belts", href: "/accessories/belts" },
+            {
+              name: "Socks/Underwear",
+              href: "/accessories/socks-and-underwear",
+            },
+            { name: "Money Clips", href: "/accessories/money-clips" },
           ],
         },
         // {
@@ -142,7 +152,8 @@ const navigation = {
     // },
   ],
   pages: [
-    { name: "About", href: "/about" }, // { name: "Custom", href: "/#custom" },
+    { name: "About", href: "/about" },
+    { name: "Testimonials", href: "/testimonials" }, // { name: "Custom", href: "/#custom" },
     { name: "Contact", href: "/contact" },
   ],
 }
@@ -154,6 +165,29 @@ interface SiteHeaderProps {
 
 export default function JWRHeader({ position, className }: SiteHeaderProps) {
   const [open, setOpen] = useState(false)
+  const router = useRouter()
+
+  // useEffect(() => {
+  //   const handleRouteChange = () => {
+  //     // Close the popover when a navigation occurs
+  //     // You can use any state management technique to handle the popover visibility state
+  //     // For simplicity, let's assume you're using React state
+  //     setOpen(false)
+  //   }
+
+  //   router.events.on("routeChangeStart", handleRouteChange)
+
+  //   return () => {
+  //     router.events.off("routeChangeStart", handleRouteChange)
+  //   }
+  // }, [])
+
+  useEffect(() => {
+    window.onpopstate = function (event) {
+      // Code to run when the URL path changes
+      setOpen(false)
+    }
+  }, [])
 
   return (
     <header
@@ -436,12 +470,12 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                                 key={item.name}
                                                 className="flex"
                                               >
-                                                <Link
+                                                <a
                                                   href={item.href}
                                                   className="hover:text-accent-800"
                                                 >
                                                   {item.name}
-                                                </Link>
+                                                </a>
                                               </li>
                                             ))}
                                           </ul>

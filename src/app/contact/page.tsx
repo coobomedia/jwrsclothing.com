@@ -97,7 +97,7 @@ export default function ContactPage() {
       <div className="mx-auto grid  max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 ">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <div className="jwr-bg  absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-accent-50 ring-1 ring-accent-900/10 lg:w-1/2"></div>
+            <div className=" absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-accent-50 ring-1 ring-accent-900/10 lg:w-1/2"></div>
             <h2 className="mb-2 text-4xl tracking-tight text-accent-900 lg:text-4xl">
               Get in touch
             </h2>
@@ -234,11 +234,8 @@ export default function ContactPage() {
                   </svg>
                 </dt>
                 <dd>
-                  <a
-                    className="hover:text-accent-900 "
-                    href="tel:(979) 805-2495"
-                  >
-                    (979) 805-2495
+                  <a className="hover:text-accent-900 " href="tel:9797045469">
+                    979.704.5469
                   </a>
                 </dd>
               </div>

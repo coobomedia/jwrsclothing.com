@@ -97,8 +97,8 @@ function SportsCoatsPage() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
 
   return (
-    <main className="py-10 sm:py-16">
-      <nav aria-label="Breadcrumb">
+    <main className="grow py-10 sm:py-16">
+      {/* <nav aria-label="Breadcrumb">
         <ol
           role="list"
           className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
@@ -135,10 +135,10 @@ function SportsCoatsPage() {
             </a>
           </li>
         </ol>
-      </nav>
+      </nav> */}
 
       {/* Image gallery */}
-      <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+      {/* <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
         <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
           <img
             src={product.images[0].src}
@@ -169,7 +169,7 @@ function SportsCoatsPage() {
             className="h-full w-full object-cover object-center"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Product info */}
       <div className="mx-auto max-w-2xl px-4 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16">
