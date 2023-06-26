@@ -48,7 +48,7 @@ const categories = [
 export default function HomePage() {
   return (
     <main className="relative">
-      <JWRHeader className="absolute top-0 " />
+      <JWRHeader className="absolute  " />
       <Hero />
       <div className="bg-white">
         <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">

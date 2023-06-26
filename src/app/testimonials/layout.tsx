@@ -9,7 +9,7 @@ export default function AboutLayout({
 }) {
   return (
     <main className="flex min-h-screen flex-col bg-accent-50">
-      <JWRHeader className="sticky " />
+      <JWRHeader className="relative " />
       {children}
       <JWRFooter />
     </main>

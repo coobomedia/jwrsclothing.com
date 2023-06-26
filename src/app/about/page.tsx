@@ -14,11 +14,11 @@ import jwr11 from "../../../public/images/about-dog.jpg"
 
 export default function AboutPage() {
   return (
-    <div className="my-16 grow overflow-hidden sm:my-32">
+    <div className=" grow overflow-hidden py-24">
       <div className="mx-auto max-w-2xl px-4   sm:px-6 lg:flex lg:max-w-7xl lg:px-8 ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-2xl lg:pb-8">
-            <h2 className="text-4xl  tracking-tight text-accent-900 sm:text-4xl">
+            <h2 className="text-4xl  tracking-tight text-primary-900 sm:text-4xl">
               About Us
             </h2>
             <p className="mt-6 font-display text-xl leading-8 text-accent-600">

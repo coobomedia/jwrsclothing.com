@@ -14,9 +14,9 @@ import jwr11 from "../../../public/images/about-dog.jpg"
 
 export default function AboutPage() {
   return (
-    <section className="grow bg-white py-24 sm:py-32">
+    <section className="grow bg-white py-24 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-4xl  tracking-tight text-accent-900 sm:text-4xl">
+        <h2 className="text-center text-4xl  tracking-tight text-primary-900 sm:text-4xl">
           Testimonials
         </h2>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -51,7 +51,7 @@ export default function AboutPage() {
               </figcaption>
             </figure>
           </div>
-          <div className=" skewed-border flex flex-col  p-10 ">
+          <div className=" skewed-border  flex flex-col  p-10 ">
             <img
               className="h-12 self-start"
               src="https://tailwindui.com/img/logos/reform-logo-gray-900.svg"
