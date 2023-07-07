@@ -269,8 +269,8 @@ export default function ContactPage() {
                 </dt>
                 <dd>
                   <a
-                    className="hover:text-accent-900 "
-                    href="mailto:hello@example.com"
+                    target="_blank"
+                    href="https://www.instagram.com/jwrsclothing/"
                   >
                     Instagram
                   </a>
@@ -304,7 +304,8 @@ export default function ContactPage() {
                 <dd>
                   <a
                     className="hover:text-accent-900"
-                    href="mailto:hello@example.com"
+                    target="_blank"
+                    href="https://www.facebook.com/thesquireshopcstat"
                   >
                     Facebook
                   </a>

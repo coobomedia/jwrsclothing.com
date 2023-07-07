@@ -93,14 +93,14 @@ const navigation = {
       featured: [
         {
           name: "New Arrivals",
-          href: "#",
+          href: "/contact",
           imageSrc: newArrival.src,
           imageAlt:
             "Models sitting back to back, wearing Basic Tee in accent-900 and bone.",
         },
         {
           name: "Featured Promotion",
-          href: "#",
+          href: "/contact",
           imageSrc: featuredPromotion.src,
           imageAlt:
             "Close up of Basic Tee fall bundle with off-white, ochre, olive, and accent-900 tees.",
@@ -302,7 +302,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
 
                 {/* Links */}
                 <Tab.Group as="div" className="mt-2">
-                  <div className="border-b border-accent-200">
+                  {/* <div className="border-b border-accent-200">
                     <Tab.List className="-mb-px flex space-x-8 px-4">
                       {navigation.categories.map((category) => (
                         <Tab
@@ -320,42 +320,13 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                         </Tab>
                       ))}
                     </Tab.List>
-                  </div>
+                  </div> */}
                   <Tab.Panels as={Fragment}>
                     {navigation.categories.map((category) => (
                       <Tab.Panel
                         key={category.name}
                         className="space-y-6 px-4 pb-8 pt-10"
                       >
-                        <div className="grid grid-cols-2 gap-x-4">
-                          {category.featured.map((item) => (
-                            <div
-                              key={item.name}
-                              className="group relative text-sm"
-                            >
-                              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-accent-100 group-hover:opacity-75">
-                                <img
-                                  src={item.imageSrc}
-                                  alt={item.imageAlt}
-                                  className="object-cover object-center"
-                                />
-                              </div>
-                              <Link
-                                href={item.href}
-                                className="mt-6 block font-medium text-accent-900"
-                              >
-                                <span
-                                  className="absolute inset-0 z-10"
-                                  aria-hidden="true"
-                                />
-                                {item.name}
-                              </Link>
-                              {/* <p aria-hidden="true" className="mt-1">
-                                Shop now
-                              </p> */}
-                            </div>
-                          ))}
-                        </div>
                         {category.sections.map((section) => (
                           <div key={section.name}>
                             <p
@@ -512,7 +483,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                             aria-hidden="true"
                                             className="mt-1"
                                           >
-                                            Shop now
+                                            Contact us for availability
                                           </p>
                                         </div>
                                       ))}
@@ -611,7 +582,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   >
                     Create account
                   </Link> */}
-                <p className="text-primary flex  items-center  justify-end  text-sm font-medium  ">
+                <p className="text-primary  flex  items-center justify-end  text-sm font-medium  ">
                   979.704.5469
                   <span
                     className="mx-2 h-4 w-px bg-gray-200"
