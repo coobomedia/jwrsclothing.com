@@ -34,8 +34,8 @@ const categories = [
   },
   {
     name: "Testimonials",
-    href: "#",
-    cta: "Find our shop",
+    href: "/testimonials",
+    cta: "See our testimonials",
     imageSrc:
       "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg",
     imageAlt:

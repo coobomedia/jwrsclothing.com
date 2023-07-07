@@ -6,9 +6,19 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
 import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+  RectangleGroupIcon,
+} from "@heroicons/react/20/solid"
+import {
   Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
   MagnifyingGlassIcon,
   ShoppingBagIcon,
+  SquaresPlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline"
 
@@ -18,6 +28,62 @@ import logo from "../../public/images/jwr-logo.png"
 import newArrival from "../../public/images/new-arrival-feature.webp"
 
 console.log("logo", logo)
+
+const solutions = [
+  {
+    name: "Suits/Sports Coats",
+    description: "L.B.M 1911, Byron, Paul Betenly",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Dress Shirts",
+    description: "Stenstroms, Stantt Custom, David Donahue",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Dress Pants",
+    description: "Meyer, Paul Betenly",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Sports Shirts",
+    description: "Stenstroms, Emauel Berg, Calder, Stantt Custom ",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Polos",
+    description: "Peter Millar, Johnnie-O, Travis Mathew",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Casual Pants",
+    description: "Meyer, AG Jeans, Peter Millar",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Jeans",
+    description: "AG Jeans, Meyer, Travis Mathew",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Ties/Pockets Squares",
+    description: "Edward Armah, David",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+]
+const callsToAction = [
+  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact sales", href: "#", icon: PhoneIcon },
+  { name: "View all products", href: "#", icon: RectangleGroupIcon },
+]
 
 const navigation = {
   categories: [
@@ -74,21 +140,21 @@ const navigation = {
             { name: "Money Clips", href: "/accessories/money-clips" },
           ],
         },
-        // {
-        //   id: "brands",
-        //   name: "Brands",
-        //   items: [
-        //     { name: "Byron", href: "#" },
-        //     { name: "L.B.M", href: "#" },
-        //     { name: "Stenstroms", href: "#" },
-        //     { name: "Stantt", href: "#" },
-        //     { name: "Alan Payne", href: "#" },
-        //     { name: "Riomar", href: "#" },
-        //     { name: "AG", href: "#" },
-        //     { name: "Emanuel Berg", href: "#" },
-        //     { name: "David Donahue", href: "#" },
-        //   ],
-        // },
+        {
+          id: "brands",
+          name: "Brands",
+          items: [
+            { name: "Byron", href: "#" },
+            { name: "L.B.M", href: "#" },
+            { name: "Stenstroms", href: "#" },
+            { name: "Stantt", href: "#" },
+            { name: "Alan Payne", href: "#" },
+            { name: "Riomar", href: "#" },
+            { name: "AG", href: "#" },
+            { name: "Emanuel Berg", href: "#" },
+            { name: "David Donahue", href: "#" },
+          ],
+        },
       ],
     },
     // {
@@ -153,7 +219,7 @@ const navigation = {
   ],
   pages: [
     { name: "About", href: "/about" },
-    { name: "Testimonials", href: "/testimonials" }, // { name: "Custom", href: "/#custom" },
+    // { name: "Custom", href: "/#custom" },
     { name: "Contact", href: "/contact" },
   ],
 }
@@ -284,9 +350,9 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                 />
                                 {item.name}
                               </Link>
-                              <p aria-hidden="true" className="mt-1">
+                              {/* <p aria-hidden="true" className="mt-1">
                                 Shop now
-                              </p>
+                              </p> */}
                             </div>
                           ))}
                         </div>
@@ -451,6 +517,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                         </div>
                                       ))}
                                     </div>
+
                                     <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
                                       {category.sections.map((section) => (
                                         <div key={section.name}>
@@ -503,6 +570,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   ))}
                 </div>
               </Popover.Group>
+
               {/* Logo */}
               <Link
                 href="/"

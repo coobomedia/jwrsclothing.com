@@ -35,7 +35,7 @@ import sport4 from "../../../../public/images/sports-coats-4.jpeg"
 import stenstroms from "../../../../public/images/stenstroms.png"
 
 const product = {
-  name: "Sports Coats",
+  name: "Dress Shirts",
   price: "$192",
   href: "#",
   breadcrumbs: [

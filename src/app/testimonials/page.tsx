@@ -19,13 +19,13 @@ export default function AboutPage() {
         <h2 className="text-center text-4xl  tracking-tight text-primary-900 sm:text-4xl">
           Testimonials
         </h2>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div className="skewed-border  flex  flex-col p-10 ">
-            <img
+            {/* <img
               className="h-12 self-start"
               src="https://tailwindui.com/img/logos/tuple-logo-gray-900.svg"
               alt=""
-            />
+            /> */}
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="font-display text-lg leading-8 text-primary-900">
                 <p>
@@ -52,11 +52,11 @@ export default function AboutPage() {
             </figure>
           </div>
           <div className=" skewed-border  flex flex-col  p-10 ">
-            <img
+            {/* <img
               className="h-12 self-start"
               src="https://tailwindui.com/img/logos/reform-logo-gray-900.svg"
               alt=""
-            />
+            /> */}
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="font-display text-lg leading-8 text-primary-900">
                 <p>
@@ -82,11 +82,11 @@ export default function AboutPage() {
             </figure>
           </div>
           <div className="skewed-border  flex  flex-col p-10 ">
-            <img
+            {/* <img
               className="h-12 self-start"
               src="https://tailwindui.com/img/logos/tuple-logo-gray-900.svg"
               alt=""
-            />
+            /> */}
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="font-display text-lg leading-8 text-primary-900">
                 <p>
@@ -112,7 +112,7 @@ export default function AboutPage() {
               </figcaption>
             </figure>
           </div>
-          <div className=" skewed-border flex flex-col  p-10 ">
+          {/* <div className=" skewed-border flex flex-col  p-10 ">
             <img
               className="h-12 self-start"
               src="https://tailwindui.com/img/logos/reform-logo-gray-900.svg"
@@ -141,7 +141,7 @@ export default function AboutPage() {
                 </div>
               </figcaption>
             </figure>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
