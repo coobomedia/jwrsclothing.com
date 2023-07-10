@@ -1,16 +1,7 @@
 import Image from "next/image"
 
-// import jwr1 from "../../../public/images/jwr-1.jpeg"
-// import jwr2 from "../../../public/images/jwr-2.jpeg"
-// import jwr3 from "../../../public/images/jwr-3.jpeg"
-// import jwr4 from "../../../public/images/jwr-4.jpeg"
-// import jwr5 from "../../../public/images/jwr-5.jpeg"
-// import jwr6 from "../../../public/images/jwr-6.jpeg"
-// import jwr7 from "../../../public/images/jwr-7.jpeg"
-// import jwr8 from "../../../public/images/jwr-8.jpeg"
-// import jwr9 from "../../../public/images/jwr-9.jpeg"
-// import jwr11 from "../../../public/images/jwr-11-2.png"
 import jwr11 from "../../../public/images/about-dog.jpg"
+import about from "../../../public/images/about-us.jpg"
 
 export default function AboutPage() {
   return (
@@ -22,19 +13,25 @@ export default function AboutPage() {
               About Us
             </h2>
             <p className="mt-6 font-display text-xl leading-8 text-accent-600">
-              At JWR's, we are passionate about men&apos;s fashion and providing
-              our customers with the latest trends and timeless classics. Our
-              mission is to empower men to express their unique style and
-              confidence through our carefully curated collection of apparel and
-              accessories.
+              Joshua Rankins, Owner, and Operator of JWR’s Clothing has been in
+              the men’s clothing business for over 20 years.
             </p>
             <p className="mt-6 font-display text-base leading-7 text-accent-600">
-              We value our customers and prioritize their satisfaction above all
-              else. We continuously update our inventory to keep up with the
-              latest fashion trends, ensuring that you&apos;ll always find
-              something new and exciting with each visit. Whether you&apos;re a
-              fashion-forward trendsetter or prefer a classic and timeless look,
-              we have something for everyone.
+              Joshua got his start with Harley’s for Men in Tyler in 2002. When
+              Harley’s opened a branch in College Station in 2010, Josh made the
+              move to the Brazos Valley to help start the new store. Shortly
+              after Harley’s closed its College Station location, Joshua was
+              able to realize his dream of owning his own upscale men’s clothing
+              establishment.
+            </p>
+            <p className="mt-6 font-display text-base leading-7 text-accent-600">
+              A second-generation men’s clothier, Joshua is dedicated to
+              impeccable customer service coupled with carrying the finest
+              brands available.
+            </p>
+            <p className="mt-6 font-display text-base leading-7 text-accent-600">
+              Visit JWR’s Clothing and experience the Brazos Valley’s Premier
+              Men’s Clothier!
             </p>
           </div>
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
@@ -43,7 +40,7 @@ export default function AboutPage() {
               <Image
                 width={1152}
                 height={768}
-                src={jwr11}
+                src={about}
                 alt=""
                 className="skewed-border aspect-[7/5] w-[37rem] max-w-none  bg-accent-50 object-cover"
               />

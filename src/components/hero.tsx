@@ -1,10 +1,57 @@
+"use client"
+
 import Image from "next/image"
 import Balancer from "react-wrap-balancer"
 
+import "keen-slider/keen-slider.min.css"
+import { useKeenSlider } from "keen-slider/react"
+
+import jwrHero2 from "../../public/images/hero-2.jpg"
+import jwrHero3 from "../../public/images/hero-3.jpeg"
+import jwrHero4 from "../../public/images/hero-4.jpeg"
+import jwrHero5 from "../../public/images/hero-5.jpeg"
+import jwrHero6 from "../../public/images/hero-6.jpeg"
 import jwrHero from "../../public/images/jwr-hero.jpeg"
+
 // import jwrHero from "../../public/images/storefront.jpg"
 
 function Hero() {
+  const [sliderRef] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 3000)
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on("dragStarted", clearNextTimeout)
+        slider.on("animationEnded", nextTimeout)
+        slider.on("updated", nextTimeout)
+      },
+    ]
+  )
+
   return (
     <div className=" relative border-b border-accent-200 ">
       <div className="mx-auto min-h-screen max-w-7xl  lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
@@ -19,26 +66,50 @@ function Hero() {
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
-                href="#"
+                href="/"
                 className="rounded-md bg-primary-950 px-3.5 py-2.5 font-display text-xs font-semibold uppercase tracking-wider text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800"
               >
-                Explore Our Store
-              </a>
-              <a
-                href="#"
-                className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900"
-              >
-                Learn more <span aria-hidden="true">→</span>
+                Learn More
               </a>
             </div>
           </div>
         </div>
-        <div className="relative  lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-          <Image
-            className="lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
-            src={jwrHero}
-            alt=""
-          />
+        <div
+          ref={sliderRef}
+          className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0"
+        >
+          <div className="keen-slider h-full">
+            <Image
+              className=" keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              src={jwrHero}
+              alt=""
+            />
+            <Image
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              src={jwrHero2}
+              alt=""
+            />
+            <Image
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              src={jwrHero3}
+              alt=""
+            />
+            <Image
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              src={jwrHero4}
+              alt=""
+            />
+            <Image
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              src={jwrHero5}
+              alt=""
+            />
+            <Image
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              src={jwrHero6}
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>

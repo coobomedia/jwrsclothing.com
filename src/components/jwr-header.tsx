@@ -24,7 +24,7 @@ import {
 
 import { cn } from "@/lib/utils"
 import featuredPromotion from "../../public/images/featured-promotion.jpeg"
-// import logo from "../../public/images/jwr-logo.png"
+import circlelogo from "../../public/images/jwr-logo.png"
 import newArrival from "../../public/images/new-arrival-feature.webp"
 import logo from "../../public/jwr-letters-logo.svg"
 
@@ -34,49 +34,49 @@ const solutions = [
   {
     name: "Suits/Sports Coats",
     description: "L.B.M 1911, Byron, Paul Betenly",
-    href: "#",
+    href: "/clothing",
     icon: ChartPieIcon,
   },
   {
     name: "Dress Shirts",
     description: "Stenstroms, Stantt Custom, David Donahue",
-    href: "#",
+    href: "/clothing",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Dress Pants",
     description: "Meyer, Paul Betenly",
-    href: "#",
+    href: "/clothing",
     icon: FingerPrintIcon,
   },
   {
     name: "Sports Shirts",
     description: "Stenstroms, Emauel Berg, Calder, Stantt Custom ",
-    href: "#",
+    href: "/clothing",
     icon: SquaresPlusIcon,
   },
   {
     name: "Polos",
     description: "Peter Millar, Johnnie-O, Travis Mathew",
-    href: "#",
+    href: "/clothing",
     icon: SquaresPlusIcon,
   },
   {
     name: "Casual Pants",
     description: "Meyer, AG Jeans, Peter Millar",
-    href: "#",
+    href: "/clothing",
     icon: SquaresPlusIcon,
   },
   {
     name: "Jeans",
     description: "AG Jeans, Meyer, Travis Mathew",
-    href: "#",
+    href: "/clothing",
     icon: SquaresPlusIcon,
   },
   {
     name: "Ties/Pockets Squares",
     description: "Edward Armah, David",
-    href: "#",
+    href: "/clothing",
     icon: SquaresPlusIcon,
   },
 ]
@@ -114,14 +114,14 @@ const navigation = {
           items: [
             {
               name: "Suits/Sports Coats",
-              href: "/clothing/suits-and-sports-coats",
+              href: "/clothing",
             },
-            { name: "Dress Shirts", href: "/clothing/dress-shirts" },
-            { name: "Dress Pants", href: "/clothing/dress-pants" },
-            { name: "Sports Shirts", href: "/clothing/sports-shirts" },
-            { name: "Polos", href: "/clothing/polos" },
-            { name: "Casual Pants", href: "/clothing/casual-pants" },
-            { name: "Jeans", href: "/clothing/jeans" },
+            { name: "Dress Shirts", href: "/clothing" },
+            { name: "Dress Pants", href: "/clothing" },
+            { name: "Sports Shirts", href: "/clothing" },
+            { name: "Polos", href: "/clothing" },
+            { name: "Casual Pants", href: "/clothing" },
+            { name: "Jeans", href: "/clothing" },
           ],
         },
         {
@@ -453,8 +453,55 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                 className="absolute inset-0 top-1/2 bg-white shadow"
                                 aria-hidden="true"
                               />
-
                               <div className="relative bg-white">
+                                <div className="mx-auto max-w-7xl px-8">
+                                  <div className="grid grid-cols-6 gap-x-8 gap-y-10 py-10">
+                                    <div className="col-span-5">
+                                      <div className="grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                                        {category.sections.map((section) => (
+                                          <div key={section.name}>
+                                            <p
+                                              id={`${section.name}-heading`}
+                                              className="font-display text-xs font-medium uppercase tracking-wider text-accent-900"
+                                            >
+                                              {section.name}
+                                            </p>
+                                            <ul
+                                              role="list"
+                                              aria-labelledby={`${section.name}-heading`}
+                                              className="mt-6  space-y-6 sm:mt-4 sm:space-y-2"
+                                            >
+                                              {section.items.map((item) => (
+                                                <li
+                                                  key={item.name}
+                                                  className="flex"
+                                                >
+                                                  <a
+                                                    href={item.href}
+                                                    className="hover:text-accent-800"
+                                                  >
+                                                    {item.name}
+                                                  </a>
+                                                </li>
+                                              ))}
+                                            </ul>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </div>
+                                    <div className="col-span-1">
+                                      <Image
+                                        // className="h-20 w-20 "
+                                        width={200}
+                                        height={200}
+                                        src={circlelogo}
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* <div className="relative bg-white">
                                 <div className="mx-auto max-w-7xl px-8">
                                   <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-10">
                                     <div className="col-start-2 grid grid-cols-2 gap-x-8">
@@ -488,6 +535,16 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                           </p>
                                         </div>
                                       ))}
+                                    </div>
+                                    <div className="relative col-start-2 mx-auto flex items-center  ">
+                                      <div className="">
+                                        <Image
+                                          // className="h-20 w-20 "
+                                          width={200}
+                                          height={200}
+                                          src={circlelogo}
+                                        />
+                                      </div>
                                     </div>
 
                                     <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
@@ -523,7 +580,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div> */}
                             </Popover.Panel>
                           </Transition>
                         </>

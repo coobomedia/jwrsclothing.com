@@ -14,6 +14,8 @@ import insta2 from "../../public/images/insta-2.jpeg"
 import insta3 from "../../public/images/insta-3.jpeg"
 import insta4 from "../../public/images/insta-4.jpeg"
 import insta5 from "../../public/images/insta-5.jpeg"
+import instapost1a from "../../public/images/insta-post1a.jpg"
+import instatest from "../../public/images/insta-test.jpeg"
 import fitting1 from "../../public/images/jwr-custom-fittings-1.jpg"
 import testimonials from "../../public/images/testimonials-home.jpeg"
 
@@ -142,7 +144,8 @@ export default function HomePage() {
                 <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                   <div className="relative">
                     <img
-                      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                      // src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                      src={instapost1a.src}
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-primary-900/5 object-cover shadow-lg"
                     />
@@ -152,7 +155,8 @@ export default function HomePage() {
                 <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                   <div className="relative">
                     <img
-                      src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                      // src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                      src={instapost1a.src}
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-primary-900/5 object-cover shadow-lg"
                     />
@@ -160,7 +164,8 @@ export default function HomePage() {
                   </div>
                   <div className="relative">
                     <img
-                      src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+                      // src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+                      src={instapost1a.src}
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-primary-900/5 object-cover shadow-lg"
                     />
