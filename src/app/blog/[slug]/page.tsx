@@ -82,13 +82,13 @@ export default async function Blog({ params }: BlogProps) {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           <Balancer>{post.title}</Balancer>
         </h1>
-        <small className="italic text-accent-500">{post.publishedAt}</small>
+        <small className="italic text-primary-500">{post.publishedAt}</small>
       </section>
       <Separator className="my-4" />
       <Mdx code={post.body.code} />
       <Link
         href="/blog"
-        className="mt-4 inline-flex h-11 max-w-fit items-center justify-center rounded-md  bg-accent-900 px-8 text-sm font-medium text-white transition-colors hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 active:scale-95   disabled:pointer-events-none  disabled:opacity-50  data-[state=open]:bg-accent-100"
+        className="mt-4 inline-flex h-11 max-w-fit items-center justify-center rounded-md  bg-primary-900 px-8 text-sm font-medium text-white transition-colors hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 active:scale-95   disabled:pointer-events-none  disabled:opacity-50  data-[state=open]:bg-primary-100"
       >
         Back to Blog
       </Link>

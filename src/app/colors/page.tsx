@@ -24,8 +24,8 @@ function ColorsPage() {
   const secondaryColors = Object.keys(themeColors).filter((name) =>
     name.startsWith("secondary")
   )
-  const accentColors = Object.keys(themeColors).filter((name) =>
-    name.startsWith("accent")
+  const primaryColors = Object.keys(themeColors).filter((name) =>
+    name.startsWith("primary")
   )
 
   // const tailwindColors = Object.keys(colors).slice(5)
@@ -56,12 +56,12 @@ function ColorsPage() {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Colors
         </h1>
-        <p className="text-lg text-accent-700 sm:text-xl">
+        <p className="text-lg text-primary-700 sm:text-xl">
           Custom default color palette for your project. Edit these colors in
           the tailwind.config.js file. Reference this{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="underline underline-offset-2 hover:text-primary-500"
             href="https://tailwindcss.com/docs/customizing-colors"
           >
             link
@@ -123,8 +123,8 @@ function ColorsPage() {
                     </Tooltip>
                   </TooltipProvider>
 
-                  <p className="mt-1 text-sm text-accent-900">{key}</p>
-                  <p className="text-xs lowercase text-accent-500">
+                  <p className="mt-1 text-sm text-primary-900">{key}</p>
+                  <p className="text-xs lowercase text-primary-500">
                     {hexValue}
                   </p>
                 </div>
@@ -184,8 +184,8 @@ function ColorsPage() {
                     </Tooltip>
                   </TooltipProvider>
 
-                  <p className="mt-1 text-sm text-accent-900">{key}</p>
-                  <p className="text-xs lowercase text-accent-500">
+                  <p className="mt-1 text-sm text-primary-900">{key}</p>
+                  <p className="text-xs lowercase text-primary-500">
                     {hexValue}
                   </p>
                 </div>
@@ -196,10 +196,10 @@ function ColorsPage() {
       </section>
       <section className=" mt-10">
         <div className="body">
-          <h2>Accent Pallete</h2>
+          <h2>primary Pallete</h2>
         </div>
         <div className="mx-auto mt-3 grid grid-cols-3 gap-x-2 gap-y-3 sm:mt-2 sm:grid-cols-11 2xl:mt-0">
-          {accentColors.map((colorName) => {
+          {primaryColors.map((colorName) => {
             // Get the shade object for the current color
             const shades = themeColors[colorName]
 
@@ -244,8 +244,8 @@ function ColorsPage() {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                  <p className="mt-1 text-sm text-accent-900">{key}</p>
-                  <p className="text-xs lowercase text-accent-500">
+                  <p className="mt-1 text-sm text-primary-900">{key}</p>
+                  <p className="text-xs lowercase text-primary-500">
                     {hexValue}
                   </p>
                 </div>

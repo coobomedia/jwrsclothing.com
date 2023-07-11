@@ -37,7 +37,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code)
 
   return (
-    <article className="prose-quoteless prose-accent prose  lg:prose-lg">
+    <article className="prose-quoteless prose-primary prose  lg:prose-lg">
       <Component components={{ ...components }} />
     </article>
   )

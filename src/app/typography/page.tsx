@@ -12,30 +12,30 @@ function TypographyPage() {
         <h1 className=" text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Typography
         </h1>
-        <p className="text-lg text-accent-700 sm:text-xl">
+        <p className="text-lg text-primary-700 sm:text-xl">
           Custom styles for headings, paragraphs, lists, fonts, etc.{" "}
         </p>
-        <small className="italic text-accent-500">
+        <small className="italic text-primary-500">
           * Update/optimize font familes by referencing this{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="underline underline-offset-2 hover:text-primary-500"
             href="https://beta.nextjs.org/docs/optimizing/fonts"
           >
             link
           </a>
           .
         </small>
-        <small className="italic text-accent-500">
+        <small className="italic text-primary-500">
           * To utlize these typography styles each element must be a child of
           the body class. This can be edited in the global.css file within the
           styles folder.
         </small>
-        <small className="italic text-accent-500">
+        <small className="italic text-primary-500">
           * Should be noted that Tailwind has a{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="underline underline-offset-2 hover:text-primary-500"
             href="https://tailwindcss.com/docs/typography-plugin"
           >
             plugin
@@ -44,14 +44,14 @@ function TypographyPage() {
           typography. See the{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="underline underline-offset-2 hover:text-primary-500"
             href="https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js"
           >
             default styles
           </a>{" "}
           this plugin provides for a more in-depth analysis and checkout the{" "}
           <Link
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="underline underline-offset-2 hover:text-primary-500"
             href="/blog"
           >
             blog

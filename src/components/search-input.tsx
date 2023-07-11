@@ -25,7 +25,7 @@ const SearchInput = () => {
     <form onSubmit={onSearch}>
       <label
         htmlFor="search"
-        className="block text-lg font-medium text-accent-900"
+        className="block text-lg font-medium text-primary-900"
       >
         Search
       </label>
@@ -37,7 +37,7 @@ const SearchInput = () => {
           value={searchQuery || ""}
           onChange={(event) => setSearchQuery(event.target.value.toLowerCase())}
           id="search"
-          className="block w-full rounded-md border-0 py-1.5 pr-14 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-accent-600 sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 pr-14 text-primary-900 shadow-sm ring-1 ring-inset ring-primary-300 placeholder:text-primary-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
         />
       </div>
     </form>

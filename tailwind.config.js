@@ -23,27 +23,10 @@ module.exports = {
         "[auto,auto,1fr]": "auto auto 1fr",
       },
       colors: {
-        // brand: {
-        //   50: "#FDEDE8",
-        //   100: "#FBDED5",
-        //   200: "#F7B9A6",
-        //   300: "#F4987C",
-        //   400: "#F07651",
-        //   500: "#EC5324",
-        //   600: "#CA3D12",
-        //   700: "#962D0D",
-        //   800: "#631E09",
-        //   900: "#340F04",
-        //   950: "#170702",
-        // },
         primary: colors.stone,
-
         secondary: colors.orange,
-        accent: colors.stone,
       },
       fontFamily: {
-        // display: ["var(--font-roboto)", ...fontFamily.sans],
-        // sans: ["var(--font-archivo)", ...fontFamily.sans],
         sans: ["var(--font-eb-garamond)", ...fontFamily.sans],
         display: ["var(--font-nunito-sans)", ...fontFamily.sans],
       },

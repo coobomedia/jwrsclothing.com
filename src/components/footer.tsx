@@ -139,7 +139,7 @@ export default function Footer() {
                 JwR's
               </h1>
             </Link>
-            <p className="text-sm leading-6 text-accent-300">
+            <p className="text-sm leading-6 text-primary-300">
               At JWR's, we believe in offering our discerning customers nothing
               but the best. That's why we carefully select brands that epitomize
               exceptional style and craftsmanship.
@@ -149,7 +149,7 @@ export default function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-accent-300 hover:text-accent-200"
+                  className="text-primary-300 hover:text-primary-200"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -168,7 +168,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-accent-300 hover:text-white"
+                        className="text-sm leading-6 text-primary-300 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -185,7 +185,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-accent-300 hover:text-white"
+                        className="text-sm leading-6 text-primary-300 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -204,7 +204,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-accent-300 hover:text-white"
+                        className="text-sm leading-6 text-primary-300 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -221,7 +221,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm leading-6 text-accent-300 hover:text-white"
+                        className="text-sm leading-6 text-primary-300 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -233,7 +233,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-accent-400">
+          <p className="text-xs leading-5 text-primary-400">
             &copy; 2020 Your Company, Inc. All rights reserved.
           </p>
         </div>

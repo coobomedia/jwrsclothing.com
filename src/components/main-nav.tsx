@@ -60,7 +60,7 @@ function GlobalNavItem({ item }: { item: NavItem }) {
       className={cn(
         "flex items-center text-lg font-semibold sm:text-sm",
         {
-          "text-accent-600 hover:text-accent-900": !isActive,
+          "text-primary-600 hover:text-primary-900": !isActive,
           "underline decoration-2 underline-offset-8": isActive,
         },
         item.disabled && "cursor-not-allowed opacity-80"

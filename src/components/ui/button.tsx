@@ -11,7 +11,7 @@ const buttonVariants = cva(" font-semibold shadow-sm  ", {
       onDark:
         "hover:bg-primary-400 bg-primary-500 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500",
       secondary:
-        "bg-white text-acccent-900 ring-1 ring-inset ring-accent-300 hover:bg-accent-50 ",
+        "bg-white text-acccent-900 ring-1 ring-inset ring-primary-300 hover:bg-primary-50 ",
       soft: "bg-primary-50 text-primary-600 shadow-sm hover:bg-primary-100",
       withIcon:
         "inline-flex items-center rounded-md bg-primary-600  text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600",

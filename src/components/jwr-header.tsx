@@ -23,14 +23,14 @@ const navigation = {
           href: "/contact",
           imageSrc: newArrival.src,
           imageAlt:
-            "Models sitting back to back, wearing Basic Tee in accent-900 and bone.",
+            "Models sitting back to back, wearing Basic Tee in primary-900 and bone.",
         },
         {
           name: "Featured Promotion",
           href: "/contact",
           imageSrc: featuredPromotion.src,
           imageAlt:
-            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and accent-900 tees.",
+            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and primary-900 tees.",
         },
       ],
       sections: [
@@ -116,7 +116,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="bg-opacity/25 fixed inset-0 bg-accent-900" />
+            <div className="bg-opacity/25 fixed inset-0 bg-primary-900" />
           </Transition.Child>
 
           <div className="fixed inset-0 z-40 flex">
@@ -130,30 +130,50 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
               leaveTo="-translate-x-full"
             >
               <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
-                <div className="flex px-4 pb-2 pt-5">
+                <div className="flex justify-between px-4 py-6 ">
+                  <Image
+                    className="h-10 w-auto lg:h-16"
+                    alt="JWR's logo"
+                    src={logo}
+                  />
                   <button
                     type="button"
-                    className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-accent-400"
+                    className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-primary-400"
                     onClick={() => setOpen(false)}
                   >
                     <span className="sr-only">Close menu</span>
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon
+                      className="h-6 w-6 stroke-primary-900"
+                      aria-hidden="true"
+                    />
                   </button>
+                </div>
+                <div className="space-y-4 border-y border-primary-200 px-4 py-6">
+                  {navigation.pages.map((page) => (
+                    <div key={page.name} className="flow-root">
+                      <Link
+                        href={page.href}
+                        className="-m-2 block p-2 font-medium tracking-wider text-primary-900"
+                      >
+                        {page.name}
+                      </Link>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Links */}
-                <Tab.Group as="div" className="mt-2">
+                <Tab.Group as="div" className="pt-8">
                   <Tab.Panels as={Fragment}>
                     {navigation.categories.map((category) => (
                       <Tab.Panel
                         key={category.name}
-                        className="space-y-6 px-4 pb-8 pt-10"
+                        className="space-y-6 px-4 pb-8"
                       >
                         {category.sections.map((section) => (
                           <div key={section.name}>
                             <p
                               id={`${category.id}-${section.id}-heading-mobile`}
-                              className=" font-medium tracking-wider text-accent-900"
+                              className=" font-medium tracking-wider text-primary-900"
                             >
                               {section.name}
                             </p>
@@ -166,7 +186,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                 <li key={item.name} className="flow-root">
                                   <Link
                                     href={item.href}
-                                    className="-m-2 block p-2 text-accent-500"
+                                    className="-m-2 block p-2 text-primary-500"
                                   >
                                     {item.name}
                                   </Link>
@@ -180,20 +200,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   </Tab.Panels>
                 </Tab.Group>
 
-                <div className="space-y-4 border-t border-accent-200 px-4 py-6">
-                  {navigation.pages.map((page) => (
-                    <div key={page.name} className="flow-root">
-                      <Link
-                        href={page.href}
-                        className="-m-2 block p-2 font-medium tracking-wider text-accent-900"
-                      >
-                        {page.name}
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="border-t border-accent-200 px-4 py-6">
+                <div className="border-t border-primary-200 px-4 py-6">
                   <Link
                     href="#"
                     className=" text-primary-950 hover:text-primary-900"
@@ -221,16 +228,19 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
       </Transition.Root>
 
       <div className="relative bg-white">
-        <nav aria-label="Top" className="mx-auto max-w-7xl p-4 sm:px-6 lg:px-8">
+        <nav aria-label="Top" className="container mx-auto py-4">
           <div className="">
             <div className="flex  items-center">
               <button
                 type="button"
-                className="rounded-md bg-white p-2 text-accent-400 lg:hidden"
+                className="rounded-md bg-white p-2 text-primary-400 lg:hidden"
                 onClick={() => setOpen(true)}
               >
                 <span className="sr-only">Open menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                <Bars3Icon
+                  className="h-6 w-6 stroke-primary-900 "
+                  aria-hidden="true"
+                />
               </button>
 
               {/* Flyout menus */}
@@ -245,7 +255,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                               className={cn(
                                 open
                                   ? " text-primary-950"
-                                  : " text-accent-700 hover:text-accent-800",
+                                  : " text-primary-700 hover:text-primary-800",
                                 "relative z-10 -mb-px flex items-center  pt-px  text-sm font-medium  tracking-wider !outline-0 transition-colors duration-200 ease-out"
                               )}
                             >
@@ -262,41 +272,42 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                           >
-                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-accent-500">
+                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-primary-500">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div
                                 className="absolute inset-0 top-1/2 bg-white shadow"
                                 aria-hidden="true"
                               />
                               <div className="relative bg-white">
-                                <div className="mx-auto max-w-7xl px-8">
-                                  <div className="grid grid-cols-6 gap-x-8 gap-y-10 py-10">
+                                <div className="container mx-auto">
+                                  <div className="grid grid-cols-6 gap-x-8 gap-y-10 pb-10 pt-4">
                                     <div className="col-span-5">
                                       <div className="grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
                                         {category.sections.map((section) => (
                                           <div key={section.name}>
                                             <p
                                               id={`${section.name}-heading`}
-                                              className="font-display text-xs font-medium uppercase tracking-wider text-accent-900"
+                                              className="font-display text-xs font-medium uppercase tracking-wider text-primary-900"
                                             >
                                               {section.name}
                                             </p>
                                             <ul
                                               role="list"
                                               aria-labelledby={`${section.name}-heading`}
-                                              className="mt-6  space-y-6 sm:mt-4 sm:space-y-2"
+                                              className="mt-6 space-y-6 sm:mt-4 sm:space-y-2"
                                             >
                                               {section.items.map((item) => (
                                                 <li
                                                   key={item.name}
                                                   className="flex"
                                                 >
-                                                  <a
+                                                  <Popover.Button
+                                                    as={Link}
                                                     href={item.href}
-                                                    className="hover:text-accent-800"
+                                                    className="hover:text-primary-800"
                                                   >
                                                     {item.name}
-                                                  </a>
+                                                  </Popover.Button>
                                                 </li>
                                               ))}
                                             </ul>
@@ -326,7 +337,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                     <Link
                       key={page.name}
                       href={page.href}
-                      className="flex items-center text-sm font-medium  tracking-wider text-accent-700 hover:text-accent-800"
+                      className="flex items-center text-sm font-medium  tracking-wider text-primary-700 hover:text-primary-800"
                     >
                       {page.name}
                     </Link>
@@ -335,11 +346,12 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
               </Popover.Group>
 
               {/* Logo */}
-              <Link
-                href="/"
-                className="ml-auto  text-3xl   leading-none text-accent-900  lg:text-4xl  "
-              >
-                <Image className="h-16 w-auto" alt="JWR's logo" src={logo} />
+              <Link href="/" className="ml-auto">
+                <Image
+                  className="h-10 w-auto lg:h-16"
+                  alt="JWR's logo"
+                  src={logo}
+                />
               </Link>
 
               <div className="hidden flex-1 items-center justify-end lg:flex">

@@ -54,14 +54,14 @@ function Hero() {
   )
 
   return (
-    <div className=" relative border-b border-accent-200 ">
+    <div className=" relative border-b border-primary-200 ">
       <div className="mx-auto min-h-screen max-w-7xl  lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
         <div className="flex items-center px-6 py-10  lg:col-span-7 lg:p-0 xl:col-span-6">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h1 className="text-5xl tracking-tight  text-accent-900 sm:mt-10  ">
+            <h1 className="text-5xl tracking-tight  text-primary-900 sm:mt-10  ">
               <Balancer>Brazos Valley’s Premiere Men’s Clothier</Balancer>
             </h1>
-            <p className="mt-6 font-display text-lg leading-8 text-accent-600">
+            <p className="mt-6 font-display text-lg leading-8 text-primary-600">
               Elevate your style game with our curated selection of premium
               menswear.
             </p>
@@ -81,32 +81,32 @@ function Hero() {
         >
           <div className="keen-slider h-full">
             <Image
-              className=" keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              className=" keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
               src={jwrHero}
               alt=""
             />
             <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
               src={jwrHero2}
               alt=""
             />
             <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
               src={jwrHero3}
               alt=""
             />
             <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
               src={jwrHero4}
               alt=""
             />
             <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
               src={jwrHero5}
               alt=""
             />
             <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-accent-50 object-cover lg:absolute lg:inset-0 lg:h-full"
+              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
               src={jwrHero6}
               alt=""
             />

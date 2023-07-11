@@ -2,21 +2,13 @@ import Image from "next/image"
 import Link from "next/link"
 import Balancer from "react-wrap-balancer"
 
-import Collections from "@/components/collection"
 import CustomFittings from "@/components/custom-fittings"
-import Footer from "@/components/footer"
 import Hero from "@/components/hero"
 import JWRFooter from "@/components/jwr-footer"
 import JWRHeader from "@/components/jwr-header"
-import LogoCloud from "@/components/logo-cloud"
 import about from "../../public/images/about-home.jpeg"
-import insta1 from "../../public/images/insta-1.jpeg"
-import insta2 from "../../public/images/insta-2.jpeg"
-import insta3 from "../../public/images/insta-3.jpeg"
-import insta4 from "../../public/images/insta-4.jpeg"
-import insta5 from "../../public/images/insta-5.jpeg"
+
 import instapost1a from "../../public/images/insta-post1a.jpg"
-import instatest from "../../public/images/insta-test.jpeg"
 import fitting1 from "../../public/images/jwr-custom-fittings-1.jpg"
 import testimonials from "../../public/images/testimonials-home.jpeg"
 
@@ -55,10 +47,13 @@ const categories = [
 
 export default function HomePage() {
   return (
-    <main className="relative">
+    <main className="relative flex min-h-screen flex-col">
       <JWRHeader className="sticky lg:absolute" />
       <Hero />
-      <div id="learn-more" className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div
+        id="learn-more"
+        className="container relative  mx-auto py-24 sm:py-32 "
+      >
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl  tracking-tight text-primary-900 sm:text-4xl">
             <Balancer>Premium Brands, Endless Style</Balancer>
@@ -69,15 +64,15 @@ export default function HomePage() {
             that embody sophistication, innovation, and unparalleled quality.
           </p>
           <div className="mx-auto mt-10 flex items-center justify-center gap-x-6">
-            <Link
+            <a
               href="/clothing"
               className="rounded-md bg-primary-950 px-3.5 py-2.5 font-display text-xs font-semibold uppercase tracking-wider text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800"
             >
               Explore Our Store
-            </Link>
+            </a>
             <Link
               href="/contact"
-              className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900"
+              className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-primary-900"
             >
               Contact Us <span aria-hidden="true">→</span>
             </Link>
@@ -85,9 +80,9 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div id="custom-fitting" className="bg-white">
-        <div className="mx-auto max-w-xl px-4 pb-16 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8">
-          <div className="space-y-12 lg:mx-[-3vw] lg:grid lg:grid-cols-3 lg:space-y-0 lg:divide-x lg:divide-accent-200">
+      <div className="relative bg-white">
+        <div className=" container mx-auto pb-16 sm:pb-24 ">
+          <div className="space-y-12 lg:mx-[-3vw] lg:grid lg:grid-cols-3 lg:space-y-0 lg:divide-x lg:divide-primary-200">
             {categories.map((category) => (
               <div
                 key={category.name}
@@ -115,7 +110,7 @@ export default function HomePage() {
 
                 <Link
                   href={category.href}
-                  className="align-self-end mt-6 block font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900 hover:text-accent-700 hover:underline hover:underline-offset-4"
+                  className="align-self-end mt-6 block font-display text-xs font-semibold uppercase leading-6 tracking-wider text-primary-900 hover:text-primary-700 hover:underline hover:underline-offset-4"
                 >
                   {category.cta}
                 </Link>
@@ -127,9 +122,9 @@ export default function HomePage() {
 
       <CustomFittings />
 
-      <div className="relative ">
+      <div className="relative py-24 sm:py-32 ">
         <div className="overflow-hidden">
-          <div className="mx-auto max-w-7xl px-4 py-32 sm:px-6  lg:px-8 ">
+          <div className="container mx-auto   ">
             <div className="mx-auto flex max-w-2xl flex-col justify-between gap-x-16  lg:flex lg:max-w-none lg:flex-row lg:items-center">
               <div className="order-2 mt-14 flex w-full justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:order-1 lg:mt-0 lg:pl-0">
                 <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
@@ -183,15 +178,16 @@ export default function HomePage() {
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                   <div className="relative">
-                    <Image
-                      width={176}
-                      height={264}
-                      className="rounded-xl bg-primary-900/5  shadow-lg"
-                      src={instapost1a}
-                      alt=""
-                    />
+                    <div className="aspect-[2/3] w-full ">
+                      <Image
+                        fill
+                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
+                        src={instapost1a}
+                        alt=""
+                      />
+                    </div>
+                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
-                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                 </div>
               </div>
               <div className="order-1 w-full lg:order-2">

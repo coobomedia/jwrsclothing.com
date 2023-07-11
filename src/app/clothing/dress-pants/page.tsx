@@ -45,7 +45,7 @@ const product = {
   images: [
     {
       src: sport1.src,
-      alt: "Two each of accent, white, and black shirts laying flat.",
+      alt: "Two each of primary, white, and black shirts laying flat.",
     },
     {
       src: sport2.src,
@@ -53,7 +53,7 @@ const product = {
     },
     {
       src: sport3.src,
-      alt: "Model wearing plain accent basic tee.",
+      alt: "Model wearing plain primary basic tee.",
     },
     {
       src: sport4.src,
@@ -61,13 +61,17 @@ const product = {
     },
   ],
   colors: [
-    { name: "White", class: "bg-white", selectedClass: "ring-accent-400" },
+    { name: "White", class: "bg-white", selectedClass: "ring-primary-400" },
     {
-      name: "accent",
-      class: "bg-accent-200",
-      selectedClass: "ring-accent-400",
+      name: "primary",
+      class: "bg-primary-200",
+      selectedClass: "ring-primary-400",
     },
-    { name: "Black", class: "bg-accent-900", selectedClass: "ring-accent-900" },
+    {
+      name: "Black",
+      class: "bg-primary-900",
+      selectedClass: "ring-primary-900",
+    },
   ],
   sizes: [
     { name: "XXS", inStock: false },
@@ -88,7 +92,7 @@ const product = {
     "Ultra-soft 100% cotton",
   ],
   details:
-    'The 6-Pack includes two black, two white, and two heather accent Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal accent" limited release.',
+    'The 6-Pack includes two black, two white, and two heather primary Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal primary" limited release.',
 }
 
 function DressPantsPage() {
@@ -108,7 +112,7 @@ function DressPantsPage() {
               <div className="flex items-center">
                 <a
                   href={breadcrumb.href}
-                  className="mr-2 text-sm font-medium text-accent-900"
+                  className="mr-2 text-sm font-medium text-primary-900"
                 >
                   {breadcrumb.name}
                 </a>
@@ -118,7 +122,7 @@ function DressPantsPage() {
                   viewBox="0 0 16 20"
                   fill="currentColor"
                   aria-hidden="true"
-                  className="h-5 w-4 text-accent-300"
+                  className="h-5 w-4 text-primary-300"
                 >
                   <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
                 </svg>
@@ -129,7 +133,7 @@ function DressPantsPage() {
             <a
               href={product.href}
               aria-current="page"
-              className="font-medium text-accent-500 hover:text-accent-600"
+              className="font-medium text-primary-500 hover:text-primary-600"
             >
               {product.name}
             </a>
@@ -173,8 +177,8 @@ function DressPantsPage() {
 
       {/* Product info */}
       <div className="mx-auto max-w-2xl px-4 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16">
-        <div className="lg:col-span-2 lg:border-r lg:border-accent-200 lg:pr-8">
-          <h1 className="text-2xl   text-accent-900 sm:text-3xl">
+        <div className="lg:col-span-2 lg:border-r lg:border-primary-200 lg:pr-8">
+          <h1 className="text-2xl   text-primary-900 sm:text-3xl">
             {product.name}
           </h1>
         </div>
@@ -251,26 +255,26 @@ function DressPantsPage() {
           </div>
         </div>
 
-        <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-accent-200 lg:pb-16 lg:pr-8 lg:pt-6">
+        <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-primary-200 lg:pb-16 lg:pr-8 lg:pt-6">
           {/* Description and details */}
           <div>
             <h3 className="sr-only">Description</h3>
 
             <div className="space-y-6">
-              <p className="font-display text-base text-accent-900">
+              <p className="font-display text-base text-primary-900">
                 {product.description}
               </p>
             </div>
           </div>
 
           {/* <div className="mt-10">
-            <h3 className="text-sm font-medium text-accent-900">Highlights</h3>
+            <h3 className="text-sm font-medium text-primary-900">Highlights</h3>
 
             <div className="mt-4">
               <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
                 {product.highlights.map((highlight) => (
-                  <li key={highlight} className="text-accent-400">
-                    <span className="text-accent-600">{highlight}</span>
+                  <li key={highlight} className="text-primary-400">
+                    <span className="text-primary-600">{highlight}</span>
                   </li>
                 ))}
               </ul>
@@ -280,13 +284,13 @@ function DressPantsPage() {
           <section aria-labelledby="shipping-heading" className="mt-10">
             <h2
               id="shipping-heading"
-              className="text-sm font-medium text-accent-900"
+              className="text-sm font-medium text-primary-900"
             >
               Details
             </h2>
 
             <div className="mt-4 space-y-6">
-              <p className="text-sm text-accent-600">{product.details}</p>
+              <p className="text-sm text-primary-600">{product.details}</p>
             </div>
           </section> */}
         </div>

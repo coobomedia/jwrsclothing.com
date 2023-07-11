@@ -97,7 +97,7 @@ export default function ContactPage() {
       <div className="mx-auto grid  max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 lg:static lg:px-8 ">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <div className=" absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-accent-50 ring-1 ring-accent-900/10 lg:w-1/2"></div>
+            <div className=" absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-primary-50 ring-1 ring-primary-900/10 lg:w-1/2"></div>
             <h2 className="mb-2 text-4xl tracking-tight text-primary-900 lg:text-4xl">
               Get in touch
             </h2>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                 </svg>
               </Link>
             </div> */}
-            <p className="mt-6 font-display text-lg leading-8 text-accent-600">
+            <p className="mt-6 font-display text-lg leading-8 text-primary-600">
               We value your feedback, inquiries, and suggestions. At JWR's, we
               are committed to providing exceptional customer service and
               ensuring your shopping experience with us is nothing short of
@@ -140,7 +140,7 @@ export default function ContactPage() {
               form aside or any of the following channels:
             </p>
 
-            <dl className="mt-10 space-y-6  text-sm leading-7 text-accent-500">
+            <dl className="mt-10 space-y-6  text-sm leading-7 text-primary-500">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
@@ -200,7 +200,7 @@ export default function ContactPage() {
                 </dt>
                 <dd>
                   <a
-                    className="hover:text-accent-900"
+                    className="hover:text-primary-900"
                     href="mailto:hello@example.com"
                   >
                     info@jwrsclothing.com
@@ -234,7 +234,7 @@ export default function ContactPage() {
                   </svg>
                 </dt>
                 <dd>
-                  <a className="hover:text-accent-900 " href="tel:9797045469">
+                  <a className="hover:text-primary-900 " href="tel:9797045469">
                     979.704.5469
                   </a>
                 </dd>
@@ -303,7 +303,7 @@ export default function ContactPage() {
                 </dt>
                 <dd>
                   <a
-                    className="hover:text-accent-900"
+                    className="hover:text-primary-900"
                     target="_blank"
                     href="https://www.facebook.com/thesquireshopcstat"
                   >
@@ -323,7 +323,7 @@ export default function ContactPage() {
               <div className="">
                 <label
                   htmlFor="first-name"
-                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-primary-900"
                 >
                   First Name
                 </label>
@@ -335,7 +335,7 @@ export default function ContactPage() {
                     className={cn(
                       "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
                       {
-                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                        "text-primary-900  ring-primary-300 placeholder:text-primary-400 focus:ring-2  focus:ring-primary-900 ":
                           !errors["firstName"],
                         "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
                           errors["firstName"],
@@ -359,7 +359,7 @@ export default function ContactPage() {
               <div className="">
                 <label
                   htmlFor="last-name"
-                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-primary-900"
                 >
                   Last Name
                 </label>
@@ -371,7 +371,7 @@ export default function ContactPage() {
                     className={cn(
                       "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
                       {
-                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                        "text-primary-900  ring-primary-300 placeholder:text-primary-400 focus:ring-2  focus:ring-primary-900 ":
                           !errors["lastName"],
                         "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
                           errors["lastName"],
@@ -396,7 +396,7 @@ export default function ContactPage() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="phone"
-                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-primary-900"
                 >
                   Phone
                 </label>
@@ -408,7 +408,7 @@ export default function ContactPage() {
                     className={cn(
                       "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
                       {
-                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                        "text-primary-900  ring-primary-300 placeholder:text-primary-400 focus:ring-2  focus:ring-primary-900 ":
                           !errors["phone"],
                         "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
                           errors["phone"],
@@ -433,7 +433,7 @@ export default function ContactPage() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="email"
-                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-primary-900"
                 >
                   Email
                 </label>
@@ -445,7 +445,7 @@ export default function ContactPage() {
                     className={cn(
                       "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
                       {
-                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                        "text-primary-900  ring-primary-300 placeholder:text-primary-400 focus:ring-2  focus:ring-primary-900 ":
                           !errors["email"],
                         "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
                           errors["email"],
@@ -470,7 +470,7 @@ export default function ContactPage() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="message"
-                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-accent-900"
+                  className="block font-display text-xs font-medium uppercase leading-6 tracking-wider text-primary-900"
                 >
                   Your Message
                 </label>
@@ -484,7 +484,7 @@ export default function ContactPage() {
                     className={cn(
                       "block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
                       {
-                        "text-accent-900  ring-accent-300 placeholder:text-accent-400 focus:ring-2  focus:ring-primary-900 ":
+                        "text-primary-900  ring-primary-300 placeholder:text-primary-400 focus:ring-2  focus:ring-primary-900 ":
                           !errors["message"],
                         "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
                           errors["message"],

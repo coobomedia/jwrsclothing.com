@@ -9,7 +9,7 @@ export default function ClothingLayout({
 }) {
   return (
     <main className="flex min-h-screen flex-col">
-      <JWRHeader className="sticky" />
+      <JWRHeader className="" />
       {children}
       <JWRFooter />
     </main>

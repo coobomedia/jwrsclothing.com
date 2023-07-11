@@ -153,7 +153,7 @@ function LogoCloud() {
     //         <h2 className="text-4xl tracking-tight text-white lg:text-4xl">
     //           <Balancer>Premium Brands, Endless Style</Balancer>
     //         </h2>
-    //         <p className="mt-6 font-display text-lg leading-8 text-accent-300">
+    //         <p className="mt-6 font-display text-lg leading-8 text-primary-300">
     //           Indulge in the finest craftsmanship and design with our collection
     //           of prestigious brands. Elevate your wardrobe with timeless pieces
     //           that embody sophistication, innovation, and unparalleled quality.
@@ -333,7 +333,7 @@ function LogoCloud() {
               </a>
               <a
                 href="#"
-                className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900"
+                className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-primary-900"
               >
                 Contact Us <span aria-hidden="true">→</span>
               </a>

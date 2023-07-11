@@ -37,11 +37,11 @@ function BlogPage() {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Blog
         </h1>
-        <p className="text-lg text-accent-700 sm:text-xl">
+        <p className="text-lg text-primary-700 sm:text-xl">
           Demonstrating the use of the{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="underline underline-offset-2 hover:text-primary-500"
             href="https://www.contentlayer.dev/"
           >
             Contentlayer
@@ -49,7 +49,7 @@ function BlogPage() {
           and it&apos;s{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="underline underline-offset-2 hover:text-primary-500"
             href="https://mdxjs.com/"
           >
             MDX
@@ -57,14 +57,14 @@ function BlogPage() {
           support via the{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="underline underline-offset-2 hover:text-primary-500"
             href=" https://github.com/kentcdodds/mdx-bundler"
           >
             MDX Bundler
           </a>{" "}
           package.
         </p>
-        <small className="italic text-accent-500">
+        <small className="italic text-primary-500">
           * This solution is meant to be used if client does not require a CMS
           yet would still like some sort of blog functionality we can update
           easily.

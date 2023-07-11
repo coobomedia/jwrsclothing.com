@@ -55,7 +55,7 @@ export default function Header({ position, className }: SiteHeaderProps) {
       className={cn(
         position,
         className,
-        "top-0 isolate z-20 w-full border-b border-b-accent-200 bg-white "
+        "top-0 isolate z-20 w-full border-b border-b-primary-200 bg-white "
       )}
     >
       <nav
@@ -74,7 +74,7 @@ export default function Header({ position, className }: SiteHeaderProps) {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-accent-900"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-primary-900"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -88,10 +88,10 @@ export default function Header({ position, className }: SiteHeaderProps) {
                 item.slug && <GlobalNavItem key={index} item={item} />
             )}
             <Popover>
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-accent-600 hover:text-accent-900">
+              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-primary-600 hover:text-primary-900">
                 Theme
                 <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-accent-400"
+                  className="h-5 w-5 flex-none text-primary-400"
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -105,43 +105,43 @@ export default function Header({ position, className }: SiteHeaderProps) {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 -translate-y-1"
               >
-                <Popover.Panel className="absolute inset-x-0 top-0 -z-20 bg-white pt-14 shadow-lg ring-1 ring-accent-900/5">
+                <Popover.Panel className="absolute inset-x-0 top-0 -z-20 bg-white pt-14 shadow-lg ring-1 ring-primary-900/5">
                   <div className="container mx-auto grid grid-cols-4 gap-x-4  py-10  xl:gap-x-8">
                     {products.map((item) => (
                       <div
                         key={item.name}
-                        className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-accent-50"
+                        className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-primary-50"
                       >
-                        <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent-50 group-hover:bg-white">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary-50 group-hover:bg-white">
                           <item.icon
-                            className="h-6 w-6 text-accent-600 group-hover:text-primary-600"
+                            className="h-6 w-6 text-primary-600 group-hover:text-primary-600"
                             aria-hidden="true"
                           />
                         </div>
                         <a
                           href={item.href}
-                          className="mt-6 block font-semibold text-accent-900"
+                          className="mt-6 block font-semibold text-primary-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-accent-600">
+                        <p className="mt-1 text-primary-600">
                           {item.description}
                         </p>
                       </div>
                     ))}
                   </div>
-                  {/* <div className="bg-accent-50">
+                  {/* <div className="bg-primary-50">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                      <div className="grid grid-cols-3 divide-x divide-accent-900/5 border-x border-accent-900/5">
+                      <div className="grid grid-cols-3 divide-x divide-primary-900/5 border-x border-primary-900/5">
                         {callsToAction.map((item) => (
                           <a
                             key={item.name}
                             href={item.href}
-                            className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-accent-900 hover:bg-accent-100"
+                            className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-primary-900 hover:bg-primary-100"
                           >
                             <item.icon
-                              className="h-5 w-5 flex-none text-accent-400"
+                              className="h-5 w-5 flex-none text-primary-400"
                               aria-hidden="true"
                             />
                             {item.name}
@@ -154,10 +154,10 @@ export default function Header({ position, className }: SiteHeaderProps) {
               </Transition>
             </Popover>
             <Popover>
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-accent-600 hover:text-accent-900">
+              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-primary-600 hover:text-primary-900">
                 Mega 2
                 <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-accent-400"
+                  className="h-5 w-5 flex-none text-primary-400"
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -171,7 +171,7 @@ export default function Header({ position, className }: SiteHeaderProps) {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 -translate-y-1"
               >
-                <Popover.Panel className="absolute inset-x-0 top-0 -z-20 bg-white pt-14 shadow-lg ring-1 ring-accent-900/5">
+                <Popover.Panel className="absolute inset-x-0 top-0 -z-20 bg-white pt-14 shadow-lg ring-1 ring-primary-900/5">
                   <div className="container mx-auto grid grid-cols-1 gap-x-8 gap-y-10  py-10 lg:grid-cols-2 ">
                     <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
                       <div>
@@ -329,7 +329,7 @@ export default function Header({ position, className }: SiteHeaderProps) {
               className={buttonVariants({
                 size: "sm",
                 variant: "ghost",
-                className: "text-accent-700 ",
+                className: "text-primary-700 ",
               })}
             >
               <Icons.facebook className="h-5 w-5" />
@@ -345,7 +345,7 @@ export default function Header({ position, className }: SiteHeaderProps) {
               className={buttonVariants({
                 size: "sm",
                 variant: "ghost",
-                className: "text-accent-700 ",
+                className: "text-primary-700 ",
               })}
             >
               <Icons.linkedin className="h-5 w-5 " />
@@ -361,14 +361,14 @@ export default function Header({ position, className }: SiteHeaderProps) {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-20" />
-        <Dialog.Panel className="container fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white py-6 sm:max-w-sm sm:ring-1 sm:ring-accent-900/10">
+        <Dialog.Panel className="container fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white py-6 sm:max-w-sm sm:ring-1 sm:ring-primary-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <Icons.logo className="h-8 w-auto" />
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-accent-700"
+              className="-m-2.5 rounded-md p-2.5 text-primary-700"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -376,42 +376,42 @@ export default function Header({ position, className }: SiteHeaderProps) {
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-accent-500/10">
+            <div className="-my-6 divide-y divide-primary-500/10">
               <div className="space-y-2 py-6">
                 <Link
                   href="/typography"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-accent-900 hover:bg-accent-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-50"
                 >
                   Typography
                 </Link>
                 <Link
                   href="/components"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-accent-900 hover:bg-accent-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-50"
                 >
                   Components
                 </Link>
                 <Link
                   href="/colors"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-accent-900 hover:bg-accent-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-50"
                 >
                   Colors
                 </Link>
                 <Link
                   href="/forms"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-accent-900 hover:bg-accent-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-50"
                 >
                   Forms
                 </Link>
                 <Link
                   href="/blog"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-accent-900 hover:bg-accent-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-50"
                 >
                   Blog
                 </Link>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-accent-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-primary-50">
                         Product
                         <ChevronDownIcon
                           className={cn(
@@ -427,7 +427,7 @@ export default function Header({ position, className }: SiteHeaderProps) {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-accent-900 hover:bg-accent-50"
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-primary-900 hover:bg-primary-50"
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -440,7 +440,7 @@ export default function Header({ position, className }: SiteHeaderProps) {
               <div className="py-6">
                 <Link
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-accent-900 hover:bg-accent-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-50"
                 >
                   Log in
                 </Link>
@@ -465,7 +465,7 @@ function GlobalNavItem({ item }: { item: NavItem }) {
       className={cn(
         "text-sm font-semibold leading-6 ",
         {
-          "text-accent-600 hover:text-accent-900": !isActive,
+          "text-primary-600 hover:text-primary-900": !isActive,
           "underline decoration-2 underline-offset-8": isActive,
         },
         item.disabled && "cursor-not-allowed opacity-80"

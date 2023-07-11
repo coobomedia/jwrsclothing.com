@@ -35,10 +35,10 @@ function Collections() {
   return (
     <div className="relative  bg-white">
       <div className="mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-4xl tracking-tight text-accent-900 lg:text-5xl">
+        <h2 className="text-4xl tracking-tight text-primary-900 lg:text-5xl">
           Shop by Collection
         </h2>
-        <p className="mt-4 text-base text-accent-500">
+        <p className="mt-4 text-base text-primary-500">
           Each season, we collaborate with world-class designers to create a
           collection inspired by the natural world.
         </p>
@@ -48,7 +48,7 @@ function Collections() {
             <a key={category.name} href={category.href} className="group block">
               <div
                 aria-hidden="true"
-                className="aspect-h-2 aspect-w-3 lg:aspect-h-6 lg:aspect-w-5 relative overflow-hidden rounded-lg group-hover:opacity-75"
+                className="aspect-h-2 aspect-w-3 relative overflow-hidden rounded-lg lg:aspect-h-6 lg:aspect-w-5 group-hover:opacity-75"
               >
                 <div className="absolute inset-0 z-10 bg-primary-950/50" />
                 <img
@@ -57,10 +57,10 @@ function Collections() {
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <h3 className="mt-4 text-xl font-medium text-accent-900">
+              <h3 className="mt-4 text-xl font-medium text-primary-900">
                 {category.name}
               </h3>
-              <p className="text-md mt-2 text-accent-500">
+              <p className="text-md mt-2 text-primary-500">
                 {category.description}
               </p>
             </a>

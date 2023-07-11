@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+import fittingCoat from "../../public/images/blue-sports-coat.jpg"
 import fitting1 from "../../public/images/jwr-custom-fittings-1.jpg"
 import fitting2 from "../../public/images/jwr-custom-fittings-2.jpg"
 import fitting3 from "../../public/images/jwr-custom-fittings-3.jpg"
@@ -29,17 +30,16 @@ const features = [
 
 export default function CustomFittings() {
   return (
-    <div id="custom" className="!scroll-mt-[104px] bg-white">
-      <div className="mx-auto max-w-2xl px-4  sm:px-6  lg:max-w-7xl lg:px-8">
+    <div className="relative bg-white">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <div>
-            <div className="border-b border-accent-200 pb-10">
-              {/* <h2 className="font-medium text-accent-500">Machined Kettle</h2> */}
-              <p className="mt-2 text-4xl   text-accent-900 sm:text-4xl">
+            <div className="border-b border-primary-200 pb-10">
+              <p className="mt-2 text-4xl text-primary-900 sm:text-4xl">
                 Custom Fitting
               </p>
 
-              <p className="mt-4 font-display text-lg text-accent-500">
+              <p className="mt-4 font-display text-lg text-primary-500">
                 Discover the luxury of custom fitting and elevate your style to
                 new heights. Experience clothing that fits you perfectly,
                 enhances your silhouette, and showcases your individuality.
@@ -49,10 +49,10 @@ export default function CustomFittings() {
             <dl className="mt-10 space-y-10">
               {features.map((feature) => (
                 <div key={feature.name}>
-                  <dt className="text-md font-medium text-accent-900">
+                  <dt className="text-md font-medium text-primary-900">
                     {feature.name}
                   </dt>
-                  <dd className="mt-3 font-display text-sm text-accent-500">
+                  <dd className="mt-3 font-display text-sm text-primary-500">
                     {feature.description}
                   </dd>
                 </div>
@@ -61,7 +61,7 @@ export default function CustomFittings() {
           </div>
 
           <div>
-            <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-accent-100">
+            <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-primary-100">
               <Image
                 src={fitting2}
                 // alt="Black kettle with long pour spot and angled body on marble counter next to coffee mug and pour-over system."
@@ -69,16 +69,16 @@ export default function CustomFittings() {
               />
             </div>
             <div className="mt-4 grid grid-cols-2 gap-4 sm:mt-6 sm:gap-6 lg:mt-8 lg:gap-8">
-              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-accent-100">
+              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-primary-100">
                 <Image
                   src={fitting3}
                   // alt="Detail of temperature setting button on kettle bass with digital degree readout."
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-accent-100">
+              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-primary-100">
                 <Image
-                  src={fitting1}
+                  src={fittingCoat}
                   // alt="Kettle spout pouring boiling water into coffee grounds in pour-over mug."
                   className="h-full w-full object-cover object-center"
                 />
