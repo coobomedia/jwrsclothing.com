@@ -4,6 +4,7 @@ import Image from "next/image"
 import Balancer from "react-wrap-balancer"
 
 import "keen-slider/keen-slider.min.css"
+import Link from "next/link"
 import { useKeenSlider } from "keen-slider/react"
 
 import jwrHero2 from "../../public/images/hero-2.jpg"
@@ -65,12 +66,12 @@ function Hero() {
               menswear.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
-              <a
-                href="/"
+              <Link
+                href="/#learn-more"
                 className="rounded-md bg-primary-950 px-3.5 py-2.5 font-display text-xs font-semibold uppercase tracking-wider text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

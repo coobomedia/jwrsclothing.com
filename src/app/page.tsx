@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import Balancer from "react-wrap-balancer"
 
@@ -55,47 +56,38 @@ const categories = [
 export default function HomePage() {
   return (
     <main className="relative">
-      <JWRHeader className="sticky lg:absolute  " />
+      <JWRHeader className="sticky lg:absolute" />
       <Hero />
-      <div className="bg-white">
-        <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl  tracking-tight text-primary-900 sm:text-4xl">
-              <Balancer>Premium Brands, Endless Style</Balancer>
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl font-display text-lg leading-8 text-primary-600">
-              Indulge in the finest craftsmanship and design with our collection
-              of prestigious brands. Elevate your wardrobe with timeless pieces
-              that embody sophistication, innovation, and unparalleled quality.
-            </p>
-            <div className="mx-auto mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-primary-950 px-3.5 py-2.5 font-display text-xs font-semibold uppercase tracking-wider text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800"
-              >
-                Explore Our Store
-              </a>
-              <a
-                href="#"
-                className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900"
-              >
-                Contact Us <span aria-hidden="true">→</span>
-              </a>
-            </div>
+      <div id="learn-more" className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl  tracking-tight text-primary-900 sm:text-4xl">
+            <Balancer>Premium Brands, Endless Style</Balancer>
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl font-display text-lg leading-8 text-primary-600">
+            Indulge in the finest craftsmanship and design with our collection
+            of prestigious brands. Elevate your wardrobe with timeless pieces
+            that embody sophistication, innovation, and unparalleled quality.
+          </p>
+          <div className="mx-auto mt-10 flex items-center justify-center gap-x-6">
+            <Link
+              href="/clothing"
+              className="rounded-md bg-primary-950 px-3.5 py-2.5 font-display text-xs font-semibold uppercase tracking-wider text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800"
+            >
+              Explore Our Store
+            </Link>
+            <Link
+              href="/contact"
+              className="font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900"
+            >
+              Contact Us <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </div>
+
       <div id="custom-fitting" className="bg-white">
         <div className="mx-auto max-w-xl px-4 pb-16 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8">
-          {/* <h2 className="text-4xl  tracking-tight text-primary-900">
-            Shop by Collection
-          </h2>
-          <p className="mt-4 text-base text-primary-500">
-            Each season, we collaborate with world-class designers to create a
-            collection inspired by the natural world.
-          </p> */}
-
-          <div className="space-y-12 lg:-mx-[3vw] lg:grid lg:grid-cols-3 lg:space-y-0 lg:divide-x lg:divide-accent-200">
+          <div className="space-y-12 lg:mx-[-3vw] lg:grid lg:grid-cols-3 lg:space-y-0 lg:divide-x lg:divide-accent-200">
             {categories.map((category) => (
               <div
                 key={category.name}
@@ -105,7 +97,8 @@ export default function HomePage() {
                   aria-hidden="true"
                   className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:aspect-h-6 lg:aspect-w-5 "
                 >
-                  <img
+                  <Image
+                    fill
                     src={category.imageSrc}
                     alt={category.imageAlt}
                     className="h-full w-full object-cover object-center"
@@ -119,9 +112,7 @@ export default function HomePage() {
                     {category.description}
                   </p>
                 </div>
-                {/* <Link className="pt-6" href="#">
-                  test
-                </Link> */}
+
                 <Link
                   href={category.href}
                   className="align-self-end mt-6 block font-display text-xs font-semibold uppercase leading-6 tracking-wider text-accent-900 hover:text-accent-700 hover:underline hover:underline-offset-4"
@@ -143,52 +134,64 @@ export default function HomePage() {
               <div className="order-2 mt-14 flex w-full justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:order-1 lg:mt-0 lg:pl-0">
                 <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                   <div className="relative">
-                    <img
-                      // src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                      src={instapost1a.src}
-                      alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-primary-900/5 object-cover shadow-lg"
-                    />
+                    <div className="aspect-[2/3] w-full ">
+                      <Image
+                        fill
+                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
+                        src={instapost1a}
+                        alt=""
+                      />
+                    </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                 </div>
                 <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                  <div className="relative">
-                    <img
-                      // src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                      src={instapost1a.src}
-                      alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-primary-900/5 object-cover shadow-lg"
-                    />
+                  <div className=" relative">
+                    <div className="aspect-[2/3] w-full ">
+                      <Image
+                        fill
+                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
+                        src={instapost1a}
+                        alt=""
+                      />
+                    </div>
+
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                   <div className="relative">
-                    <img
-                      // src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
-                      src={instapost1a.src}
-                      alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-primary-900/5 object-cover shadow-lg"
-                    />
+                    <div className="aspect-[2/3] w-full ">
+                      <Image
+                        fill
+                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
+                        src={instapost1a}
+                        alt=""
+                      />
+                    </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                 </div>
                 <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                   <div className="relative">
-                    <img
-                      src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
-                      alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-primary-900/5 object-cover shadow-lg"
-                    />
+                    <div className="aspect-[2/3] w-full ">
+                      <Image
+                        fill
+                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
+                        src={instapost1a}
+                        alt=""
+                      />
+                    </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                   <div className="relative">
-                    <img
-                      src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                    <Image
+                      width={176}
+                      height={264}
+                      className="rounded-xl bg-primary-900/5  shadow-lg"
+                      src={instapost1a}
                       alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-primary-900/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
+                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                 </div>
               </div>
               <div className="order-1 w-full lg:order-2">

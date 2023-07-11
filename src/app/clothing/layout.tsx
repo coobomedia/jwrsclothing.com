@@ -8,8 +8,8 @@ export default function ClothingLayout({
   children: React.ReactNode
 }) {
   return (
-    <main className="flex min-h-screen flex-col ">
-      <JWRHeader className="sticky  " />
+    <main className="flex min-h-screen flex-col">
+      <JWRHeader className="sticky" />
       {children}
       <JWRFooter />
     </main>
