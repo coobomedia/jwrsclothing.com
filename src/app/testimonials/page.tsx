@@ -1,22 +1,13 @@
 import Image from "next/image"
 
-// import jwr1 from "../../../public/images/jwr-1.jpeg"
-// import jwr2 from "../../../public/images/jwr-2.jpeg"
-// import jwr3 from "../../../public/images/jwr-3.jpeg"
-// import jwr4 from "../../../public/images/jwr-4.jpeg"
-// import jwr5 from "../../../public/images/jwr-5.jpeg"
-// import jwr6 from "../../../public/images/jwr-6.jpeg"
-// import jwr7 from "../../../public/images/jwr-7.jpeg"
-// import jwr8 from "../../../public/images/jwr-8.jpeg"
-// import jwr9 from "../../../public/images/jwr-9.jpeg"
-// import jwr11 from "../../../public/images/jwr-11-2.png"
+
 import jwr11 from "../../../public/images/about-dog.jpg"
 
 export default function AboutPage() {
   return (
     <section className="grow bg-white py-24 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-4xl  tracking-tight text-primary-900 sm:text-4xl">
+        <h2 className="text-center text-4xl  tracking-tight text-primary-900">
           Testimonials
         </h2>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">

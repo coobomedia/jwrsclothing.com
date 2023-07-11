@@ -40,7 +40,7 @@ const navigation = {
           items: [
             {
               name: "Suits/Sports Coats",
-              href: "/clothing#suits-and-sports-coats",
+              href: "/clothing",
             },
             { name: "Dress Shirts", href: "/clothing#dress-shirts" },
             { name: "Dress Pants", href: "/clothing#dress-pants" },
@@ -56,30 +56,30 @@ const navigation = {
           items: [
             {
               name: "Ties/Pocket Squares",
-              href: "/accessories/ties-and-pocket-squares",
+              href: "/accessories",
             },
-            { name: "Shoes", href: "/accessories/shoes" },
-            { name: "Belts", href: "/accessories/belts" },
+            { name: "Shoes", href: "/accessories" },
+            { name: "Belts", href: "/accessories" },
             {
               name: "Socks/Underwear",
-              href: "/accessories/socks-and-underwear",
+              href: "/accessories",
             },
-            { name: "Money Clips", href: "/accessories/money-clips" },
+            { name: "Money Clips", href: "/accessories" },
           ],
         },
         {
           id: "brands",
           name: "Brands",
           items: [
-            { name: "Byron", href: "#" },
-            { name: "L.B.M", href: "#" },
-            { name: "Stenstroms", href: "#" },
-            { name: "Stantt", href: "#" },
-            { name: "Alan Payne", href: "#" },
-            { name: "Riomar", href: "#" },
-            { name: "AG", href: "#" },
-            { name: "Emanuel Berg", href: "#" },
-            { name: "David Donahue", href: "#" },
+            { name: "Byron", href: "/brands" },
+            { name: "L.B.M", href: "/brands" },
+            { name: "Stenstroms", href: "/brands" },
+            { name: "Stantt", href: "/brands" },
+            { name: "Alan Payne", href: "/brands" },
+            { name: "Riomar", href: "/brands" },
+            { name: "AG", href: "/brands" },
+            { name: "Emanuel Berg", href: "/brands" },
+            { name: "David Donahue", href: "/brands" },
           ],
         },
       ],
@@ -294,7 +294,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                             <ul
                                               role="list"
                                               aria-labelledby={`${section.name}-heading`}
-                                              className="mt-6 space-y-6 sm:mt-4 sm:space-y-2"
+                                              className="mt-6  space-y-6 sm:mt-4 sm:space-y-2"
                                             >
                                               {section.items.map((item) => (
                                                 <li

@@ -1,7 +1,7 @@
 import JWRFooter from "@/components/jwr-footer"
 import JWRHeader from "@/components/jwr-header"
 
-export default function AccessoriesLayout({
+export default function BrandsLayout({
   children,
 }: {
   children: React.ReactNode

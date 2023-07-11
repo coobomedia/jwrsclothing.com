@@ -118,9 +118,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
       <CustomFittings />
-
       <div className="relative py-24 sm:py-32 ">
         <div className="overflow-hidden">
           <div className="container mx-auto   ">
