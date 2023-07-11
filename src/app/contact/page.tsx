@@ -1,21 +1,9 @@
 "use client"
 
-import Link from "next/link"
+
 import { useToast } from "@/hooks/use-toast"
-import {
-  BuildingOffice2Icon,
-  EnvelopeIcon,
-  MapPinIcon,
-  PaperAirplaneIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline"
-// import {
-//   BuildingOffice2Icon,
-//   EnvelopeIcon,
-//   MapPinIcon,
-//   PaperAirplaneIcon,
-//   PhoneIcon,
-// } from "@heroicons/react/24/solid"
+
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader2 } from "lucide-react"
 import { useForm } from "react-hook-form"
@@ -101,39 +89,9 @@ export default function ContactPage() {
             <h2 className="mb-2 text-4xl tracking-tight text-primary-900 lg:text-4xl">
               Get in touch
             </h2>
-            {/* <div className="flex gap-2">
-              <Link
-                href="#"
-                className="  text-primary-800 hover:text-primary-900"
-              >
-                <span className="sr-only">Instagram</span>
-                <svg
-                  className="h-5 w-5"
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </Link>
-              <Link
-                href="#"
-                className="  text-primary-800 hover:text-primary-900"
-              >
-                <span className="sr-only">Facebook</span>
 
-                <svg
-                  className="h-5 w-5"
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                </svg>
-              </Link>
-            </div> */}
             <p className="mt-6 font-display text-lg leading-8 text-primary-600">
-              We value your feedback, inquiries, and suggestions. At JWR's, we
+              We value your feedback, inquiries, and suggestions. At JWR&apos;s, we
               are committed to providing exceptional customer service and
               ensuring your shopping experience with us is nothing short of
               excellent. We encourage you to get in touch with us through the
@@ -144,20 +102,13 @@ export default function ContactPage() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
-                  {/* <MapPinIcon
-                    className="h-6 w-7 stroke-[.5px] text-primary-950"
-                    aria-hidden="true"
-                  /> */}
+
                   <svg
                     className="h-7  w-10 fill-transparent stroke-primary-950 stroke-[.25px] "
                     id="Layer_1"
                     viewBox="0 0 28.33 19.62"
                   >
-                    {/* <defs>
-    <style>
-      .cls-1{fill:none}.cls-2{fill:#202020}
-    </style>
-  </defs> */}
+
                     <path d="M8.31 7.11c-.03.26.06.5.1.75.06.32.14.63.23.94.16.51.33 1.01.54 1.49.17.41.36.81.55 1.22.25.54.54 1.06.82 1.59.23.44.48.86.73 1.29.38.65.77 1.3 1.18 1.93l.96 1.44c.19.28.38.55.56.82.04.06.07.06.11 0 .1-.15.2-.29.3-.43.41-.62.82-1.24 1.24-1.85.21-.32.41-.65.61-.98.18-.29.35-.57.52-.86.23-.41.48-.81.7-1.23.32-.61.67-1.21.95-1.84.28-.64.59-1.27.81-1.93.12-.36.26-.72.34-1.09.05-.21.08-.43.14-.64.1-.35.08-.72.11-1.08.02-.3-.03-.62-.08-.92-.08-.48-.24-.94-.43-1.38-.17-.4-.4-.76-.66-1.1-.18-.25-.39-.48-.61-.68-.25-.23-.52-.45-.81-.65-.47-.32-.99-.53-1.53-.71-.41-.14-.84-.18-1.26-.22-.4-.04-.81 0-1.21.05-.43.05-.84.19-1.25.34-.61.22-1.14.57-1.63.98-.25.22-.5.45-.7.7-.2.25-.4.52-.56.81-.31.53-.51 1.1-.64 1.7-.08.34-.1.69-.13 1.04v.13c.03.13.04.26.04.39Z" />
                     <path
                       d="m8.84 7.12.03-.03-.09-.07.06.1zM8.62 6.68s-.04.01-.05.03c.09.07.17.15.26.24.12-.15-.29-.18-.21-.27ZM8.64 6.63c.06 0-.06-.02-.09-.05.08.06-.02.06.09.05ZM12.39 1.53s-.02 0-.02.01c.01 0 .02 0 .02-.01Z"

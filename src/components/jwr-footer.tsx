@@ -68,20 +68,10 @@ export default function JWRFooter() {
       <div className="mx-auto max-w-7xl p-8 md:flex md:items-center md:justify-between lg:px-8">
         <div className=" ">
           <p className="text-center text-xs leading-5 text-primary-500">
-            &copy; 2023 JwR's Clothing. All rights reserved.
+            &copy; 2023 JwR&apos;s Clothing. All rights reserved.
           </p>
         </div>
         <div className="mt-4 flex justify-center space-x-6 md:mt-0 ">
-          {/* {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-primary-400 hover:text-primary-500"
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
-          ))} */}
           <p className="text-center text-xs leading-5 text-primary-500">
             Site by Coobo Media.
           </p>

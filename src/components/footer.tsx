@@ -136,13 +136,13 @@ export default function Footer() {
           <div className="space-y-8">
             <Link href="/" className="">
               <h1 className="text-4xl font-medium tracking-tighter text-white">
-                JwR's
+                JwR&apos;s
               </h1>
             </Link>
             <p className="text-sm leading-6 text-primary-300">
-              At JWR's, we believe in offering our discerning customers nothing
-              but the best. That's why we carefully select brands that epitomize
-              exceptional style and craftsmanship.
+              At JWR&apos;s, we believe in offering our discerning customers
+              nothing but the best. That&apos;s why we carefully select brands
+              that epitomize exceptional style and craftsmanship.
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (

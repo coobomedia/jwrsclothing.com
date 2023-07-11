@@ -7,7 +7,6 @@ import Hero from "@/components/hero"
 import JWRFooter from "@/components/jwr-footer"
 import JWRHeader from "@/components/jwr-header"
 import about from "../../public/images/about-home.jpeg"
-
 import instapost1a from "../../public/images/insta-post1a.jpg"
 import fitting1 from "../../public/images/jwr-custom-fittings-1.jpg"
 import testimonials from "../../public/images/testimonials-home.jpeg"
