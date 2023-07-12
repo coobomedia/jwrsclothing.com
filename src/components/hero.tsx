@@ -80,36 +80,60 @@ function Hero() {
           className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0"
         >
           <div className="keen-slider h-full">
-            <Image
-              className=" keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
-              src={jwrHero}
-              alt=""
-            />
-            <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
-              src={jwrHero2}
-              alt=""
-            />
-            <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
-              src={jwrHero3}
-              alt=""
-            />
-            <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
-              src={jwrHero4}
-              alt=""
-            />
-            <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
-              src={jwrHero5}
-              alt=""
-            />
-            <Image
-              className=" keen-slider__slide lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 object-cover lg:absolute lg:inset-0 lg:h-full"
-              src={jwrHero6}
-              alt=""
-            />
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+              <Image
+                className="object-cover "
+                sizes="50vw"
+                fill
+                src={jwrHero}
+                alt=""
+              />
+            </div>
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 lg:absolute lg:inset-0 lg:h-full">
+              <Image
+                className="object-cover "
+                sizes="50vw"
+                fill
+                src={jwrHero2}
+                alt=""
+              />
+            </div>
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+              <Image
+                className="object-cover "
+                sizes="50vw"
+                fill
+                src={jwrHero3}
+                alt=""
+              />
+            </div>
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+              <Image
+                className="object-cover "
+                sizes="50vw"
+                fill
+                src={jwrHero4}
+                alt=""
+              />
+            </div>
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+              <Image
+                className="object-cover "
+                sizes="50vw"
+                fill
+                src={jwrHero5}
+                alt=""
+              />
+            </div>
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+              <Image
+                className="object-cover "
+                sizes="50vw"
+                fill
+                src={jwrHero6}
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
