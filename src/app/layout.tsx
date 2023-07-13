@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | JwR's Clothing",
   },
   description:
-    "A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.",
+    "Elevate your style game with our curated selection of premium menswear.",
 }
 
 export default function RootLayout({
