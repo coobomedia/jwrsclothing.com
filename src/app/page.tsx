@@ -7,7 +7,11 @@ import Hero from "@/components/hero"
 import JWRFooter from "@/components/jwr-footer"
 import JWRHeader from "@/components/jwr-header"
 import about from "../../public/images/about-home.jpeg"
-import insta1 from "../../public/images/insta1.jpg"
+import ig3 from "../../public/images/ig-3.jpeg"
+import ig4 from "../../public/images/ig-4.jpeg"
+import ig5 from "../../public/images/ig-5.jpeg"
+import ig6 from "../../public/images/ig-6.jpeg"
+import ig7 from "../../public/images/ig-7.jpeg"
 import instapost1a from "../../public/images/insta-post1a.jpg"
 import fitting1 from "../../public/images/jwr-custom-fittings-1.jpg"
 import testimonials from "../../public/images/testimonials-home.jpeg"
@@ -130,34 +134,33 @@ export default function HomePage() {
                     <div className="aspect-[2/3] w-full ">
                       <Image
                         fill
-                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
-                        src={instapost1a}
-                        alt=""
+                        className="rounded-xl  object-contain "
+                        src={ig6}
+                        alt="JWR's Insta Post"
                       />
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                 </div>
                 <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                  <div className=" relative">
+                  <div className="relative">
                     <div className="aspect-[2/3] w-full ">
                       <Image
                         fill
-                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
-                        src={instapost1a}
-                        alt=""
+                        className="rounded-xl  object-contain "
+                        src={ig7}
+                        alt="JWR's Insta Post"
                       />
                     </div>
-
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                   <div className="relative">
                     <div className="aspect-[2/3] w-full ">
                       <Image
                         fill
-                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
-                        src={instapost1a}
-                        alt=""
+                        className="rounded-xl  object-contain "
+                        src={ig3}
+                        alt="JWR's Insta Post"
                       />
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
@@ -168,9 +171,9 @@ export default function HomePage() {
                     <div className="aspect-[2/3] w-full ">
                       <Image
                         fill
-                        className="object-contain "
-                        src={instapost1a}
-                        alt=""
+                        className="rounded-xl  object-contain "
+                        src={ig4}
+                        alt="JWR's Insta Post"
                       />
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
@@ -179,8 +182,8 @@ export default function HomePage() {
                     <div className="aspect-[2/3] w-full ">
                       <Image
                         fill
-                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
-                        src={instapost1a}
+                        className="rounded-xl  object-contain "
+                        src={ig5}
                         alt=""
                       />
                     </div>
