@@ -80,7 +80,7 @@ function Hero() {
           className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0"
         >
           <div className="keen-slider h-full">
-            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full  overflow-hidden bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
               <Image
                 className="object-cover "
                 sizes="50vw"
@@ -89,7 +89,7 @@ function Hero() {
                 alt=""
               />
             </div>
-            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50 lg:absolute lg:inset-0 lg:h-full">
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   overflow-hidden bg-primary-50 lg:absolute lg:inset-0 lg:h-full">
               <Image
                 className="object-cover "
                 sizes="50vw"
@@ -98,7 +98,7 @@ function Hero() {
                 alt=""
               />
             </div>
-            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   overflow-hidden bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
               <Image
                 className="object-cover "
                 sizes="50vw"
@@ -107,7 +107,7 @@ function Hero() {
                 alt=""
               />
             </div>
-            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   overflow-hidden bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
               <Image
                 className="object-cover "
                 sizes="50vw"
@@ -116,7 +116,7 @@ function Hero() {
                 alt=""
               />
             </div>
-            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   overflow-hidden bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
               <Image
                 className="object-cover "
                 sizes="50vw"
@@ -125,7 +125,7 @@ function Hero() {
                 alt=""
               />
             </div>
-            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   overflow-hidden bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
               <Image
                 className="object-cover "
                 sizes="50vw"

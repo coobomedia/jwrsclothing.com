@@ -1,14 +1,17 @@
-"use client"
-
-import { useState } from "react"
 import Image from "next/image"
 
-import { cn } from "@/lib/utils"
 import donahue from "../../../public/images/donahue-color.png"
+import armah from "../../../public/images/edward-armah.png"
 import gator from "../../../public/images/gator-cigar.jpg"
 import money from "../../../public/images/hero-5.jpeg"
+import jm from "../../../public/images/j-m.png"
+import lu from "../../../public/images/lu.jpg"
+import mclip from "../../../public/images/mclip.png"
+import saxx from "../../../public/images/saxx.jpeg"
+import sb from "../../../public/images/sb.png"
 import shoes from "../../../public/images/shoes.jpg"
 import ties from "../../../public/images/ties.jpg"
+import torino from "../../../public/images/torino.webp"
 
 const product = {
   name: "Accessories",
@@ -32,12 +35,46 @@ const product = {
   ],
 
   description:
-    "Made from the finest materials, our Sports Coat embodies the perfect balance of durability, breathability, and elegance. The carefully selected fabrics ensure a comfortable fit, allowing you to move with ease without compromising on style. Whether you're attending a business meeting or social event, our Sports Coat will effortlessly exude confidence and sophistication.",
+    "Elevate your look with fashionable accessories that accentuate your style. Well-crafted leather belts, intricately patterned ties, high-quality dress shoes and loafers, detailed money clips, and sophisticated pocket squares can all complement your style and show off your savvy fashion sense.",
 }
 
-function BrandsPage() {
-  const [open, setOpen] = useState(false)
+const brands = [
+  {
+    alt: "Donahue",
+    imageSrc: donahue,
+  },
 
+  {
+    alt: "Edward Armah",
+    imageSrc: armah,
+  },
+  {
+    alt: "Johnston & Murphy",
+    imageSrc: jm,
+  },
+  {
+    alt: "Torino Leather Company",
+    imageSrc: torino,
+  },
+  {
+    alt: "Smathers & Branson",
+    imageSrc: sb,
+  },
+  {
+    alt: "Lorenzo Uomo",
+    imageSrc: lu,
+  },
+  {
+    alt: "SAXX",
+    imageSrc: saxx,
+  },
+  {
+    alt: "M-Clip",
+    imageSrc: mclip,
+  },
+]
+
+function BrandsPage() {
   return (
     <main className="py-16 lg:py-24">
       {/* Image gallery */}
@@ -49,35 +86,18 @@ function BrandsPage() {
 
         {/* Options */}
         <div className="mt-4 flex items-center lg:row-span-3 lg:mt-0">
-          <div className="relative mx-auto  grid h-1/2 w-full max-w-xl grid-cols-2 place-items-center  items-center gap-y-8   lg:mx-0 lg:max-w-none">
-            <Image
-              className="z-10 grayscale "
-              src={donahue}
-              alt="Donahue"
-              width={140}
-              height={48}
-            />
-            <Image
-              className="z-10 grayscale "
-              src={donahue}
-              alt="Donahue"
-              width={140}
-              height={48}
-            />
-            <Image
-              className="z-10 grayscale "
-              src={donahue}
-              alt="Donahue"
-              width={140}
-              height={48}
-            />
-            <Image
-              className="z-10 grayscale "
-              src={donahue}
-              alt="Donahue"
-              width={140}
-              height={48}
-            />
+          <div className="relative mx-auto  grid  w-full max-w-xl grid-cols-2 place-items-center  items-center gap-y-8   lg:mx-0 lg:max-w-none">
+            {brands.map((brand, index) => (
+              <div key={index} className="">
+                <Image
+                  className="z-10 grayscale "
+                  src={brand.imageSrc}
+                  alt={brand.alt}
+                  width={140}
+                  height={48}
+                />
+              </div>
+            ))}
           </div>
         </div>
 

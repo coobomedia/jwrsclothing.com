@@ -7,6 +7,7 @@ import Hero from "@/components/hero"
 import JWRFooter from "@/components/jwr-footer"
 import JWRHeader from "@/components/jwr-header"
 import about from "../../public/images/about-home.jpeg"
+import insta1 from "../../public/images/insta1.jpg"
 import instapost1a from "../../public/images/insta-post1a.jpg"
 import fitting1 from "../../public/images/jwr-custom-fittings-1.jpg"
 import testimonials from "../../public/images/testimonials-home.jpeg"
@@ -167,7 +168,7 @@ export default function HomePage() {
                     <div className="aspect-[2/3] w-full ">
                       <Image
                         fill
-                        className="rounded-xl bg-primary-900/5 object-cover shadow-lg"
+                        className="object-contain "
                         src={instapost1a}
                         alt=""
                       />

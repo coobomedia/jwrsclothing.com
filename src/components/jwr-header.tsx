@@ -44,7 +44,7 @@ const navigation = {
             },
             { name: "Dress Shirts", href: "/clothing#dress-shirts" },
             { name: "Dress Pants", href: "/clothing#dress-pants" },
-            { name: "Sports Shirts", href: "/clothing" },
+            { name: "Sports Shirts", href: "/clothing#sports-shirts" },
             { name: "Polos", href: "/clothing#polos" },
             { name: "Casual Pants", href: "/clothing#casual-pants" },
             { name: "Jeans", href: "/clothing#jeans" },
@@ -79,7 +79,20 @@ const navigation = {
             { name: "Riomar", href: "/brands" },
             { name: "AG", href: "/brands" },
             { name: "Emanuel Berg", href: "/brands" },
-            { name: "David Donahue", href: "/brands" },
+            { name: "Calder", href: "/brands" },
+            { name: "Johnnie-O", href: "/brands" },
+            { name: "Peter Millar", href: "/brands" },
+            { name: "Travis Mathew", href: "/brands" },
+            { name: "Emauel Berg", href: "/brands" },
+            { name: "Meyer", href: "/brands" },
+            { name: "Edward Armah", href: "/brands" },
+            { name: "Johnston & Murphy", href: "/brands" },
+            { name: "Torino Leather Company", href: "/brands" },
+            { name: "Smathers & Branson", href: "/brands" },
+            { name: "Lorenzon Uomo", href: "/brands" },
+            { name: "Saxx", href: "/brands" },
+            { name: "M-Clip", href: "/brands" },
+            { name: "Paul Bentenly", href: "/brands" },
           ],
         },
       ],
@@ -282,7 +295,10 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                 <div className="container mx-auto">
                                   <div className="grid grid-cols-6 gap-x-8 gap-y-10 pb-10 pt-4">
                                     <div className="col-span-5">
-                                      <div className="grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                                      <div
+                                        id="mega-menu"
+                                        className="grid grid-cols-4 gap-x-8 gap-y-10 text-sm"
+                                      >
                                         {category.sections.map((section) => (
                                           <div key={section.name}>
                                             <p
