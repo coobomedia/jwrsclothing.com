@@ -17,6 +17,8 @@ import jwrHero from "../../public/images/jwr-hero.jpeg"
 
 // import jwrHero from "../../public/images/storefront.jpg"
 
+const images = [jwrHero, jwrHero2, jwrHero3, jwrHero4, jwrHero5, jwrHero6]
+
 function Hero() {
   const [opacities, setOpacities] = React.useState<number[]>([])
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
@@ -92,7 +94,7 @@ function Hero() {
           className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0"
         >
           <div className="keen-slider h-full">
-            <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full  overflow-hidden bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
+            {/* <div className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full  overflow-hidden bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
               <Image
                 className="object-cover "
                 sizes="50vw"
@@ -145,7 +147,22 @@ function Hero() {
                 src={jwrHero6}
                 alt=""
               />
-            </div>
+            </div> */}
+            {images.map((src, idx) => (
+              <div
+                key={idx}
+                className="keen-slider__slide  lg:aspect-auto aspect-[3/2] w-full   overflow-hidden bg-primary-50 lg:absolute lg:inset-0 lg:h-full"
+                style={{ opacity: opacities[idx] }}
+              >
+                <Image
+                  className="h-full w-full bg-transparent object-cover "
+                  sizes="50vw"
+                  fill
+                  src={src}
+                  alt="Hero Slide Image"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
