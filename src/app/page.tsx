@@ -131,61 +131,86 @@ export default function HomePage() {
               <div className="order-2 mt-14 flex w-full justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:order-1 lg:mt-0 lg:pl-0">
                 <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                   <div className="relative">
-                    <div className="aspect-[2/3] w-full ">
-                      <Image
-                        fill
-                        className="rounded-xl  object-contain "
-                        src={ig6}
-                        alt="JWR's Insta Post"
-                      />
+                    <div className="aspect-[2/3] w-full hover:opacity-80  ">
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/p/CpLMhj5Of8x/"
+                      >
+                        <Image
+                          fill
+                          className="rounded-xl  object-contain "
+                          src={ig6}
+                          alt="Instagram Pictures"
+                        />
+                      </a>
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                 </div>
                 <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                   <div className="relative">
-                    <div className="aspect-[2/3] w-full ">
-                      <Image
-                        fill
-                        className="rounded-xl  object-contain "
-                        src={ig7}
-                        alt="JWR's Insta Post"
-                      />
+                    <div className="aspect-[2/3] w-full hover:opacity-80  ">
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/p/Cp5fsvDO2S6/"
+                      >
+                        <Image
+                          fill
+                          className="rounded-xl  object-contain "
+                          src={ig7}
+                          alt="Instagram Pictures"
+                        />
+                      </a>
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                   <div className="relative">
-                    <div className="aspect-[2/3] w-full ">
-                      <Image
-                        fill
-                        className="rounded-xl  object-contain "
-                        src={ig3}
-                        alt="JWR's Insta Post"
-                      />
+                    <div className="aspect-[2/3] w-full hover:opacity-80  ">
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/p/CtUGD6tu2Ru/"
+                      >
+                        <Image
+                          fill
+                          className="rounded-xl  object-contain "
+                          src={ig3}
+                          alt="Instagram Pictures"
+                        />
+                      </a>
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                 </div>
                 <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                   <div className="relative">
-                    <div className="aspect-[2/3] w-full ">
-                      <Image
-                        fill
-                        className="rounded-xl  object-contain "
-                        src={ig4}
-                        alt="JWR's Insta Post"
-                      />
+                    <div className="aspect-[2/3] w-full hover:opacity-80  ">
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/p/CryaFRWu1e2/"
+                      >
+                        <Image
+                          fill
+                          className="rounded-xl  object-contain "
+                          src={ig4}
+                          alt="Instagram Pictures"
+                        />
+                      </a>
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
                   <div className="relative">
-                    <div className="aspect-[2/3] w-full ">
-                      <Image
-                        fill
-                        className="rounded-xl  object-contain "
-                        src={ig5}
-                        alt=""
-                      />
+                    <div className="aspect-[2/3] w-full hover:opacity-80  ">
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/p/Cs6N8p0uy1S/"
+                      >
+                        <Image
+                          fill
+                          className="rounded-xl  object-contain "
+                          src={ig5}
+                          alt="Instagram Pictures"
+                        />
+                      </a>
                     </div>
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-primary-900/10" />
                   </div>
@@ -194,6 +219,7 @@ export default function HomePage() {
               <div className="order-1 w-full lg:order-2">
                 <div className="flex gap-4">
                   <a
+                    className="hover:animate-spin"
                     target="_blank"
                     href="https://www.facebook.com/thesquireshopcstat"
                   >
@@ -221,6 +247,7 @@ export default function HomePage() {
                     </svg>
                   </a>
                   <a
+                    className="hover:animate-spin"
                     target="_blank"
                     href="https://www.instagram.com/jwrsclothing/"
                   >
@@ -254,9 +281,9 @@ export default function HomePage() {
                 <h1 className="mt-10 text-4xl  tracking-tight text-primary-900 ">
                   <Balancer>Join us on Social Media</Balancer>
                 </h1>
-                <p className="relative mt-6 text-lg leading-8 text-primary-600 sm:max-w-md lg:max-w-none">
+                {/* <p className="relative mt-6 text-lg leading-8 text-primary-600 sm:max-w-md lg:max-w-none">
                   Follow along with @jwrsclothing
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

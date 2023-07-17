@@ -4,6 +4,7 @@ import fittingCoat from "../../public/images/blue-sports-coat.jpg"
 import fitting1 from "../../public/images/jwr-custom-fittings-1.jpg"
 import fitting2 from "../../public/images/jwr-custom-fittings-2.jpg"
 import fitting3 from "../../public/images/jwr-custom-fittings-3.jpg"
+import maroon from "../../public/images/maroon-sports-coat.jpg"
 
 const features = [
   {
@@ -14,12 +15,13 @@ const features = [
   },
   {
     name: "Fabric Selection",
-    description: "Shaped for steady pours and insulated to prevent burns.",
+    description:
+      "Discover a world of exceptional fabrics with our curated fabric selection.",
   },
   {
     name: "Design & Styling",
     description:
-      "Collaborate with our experienced team to customize the design details of your garment. From lapel styles to button choices, make it truly yours..",
+      "Collaborate with our experienced team to customize the design details of your garment. From lapel styles to button choices, make it truly yours.",
   },
   {
     name: "Expert Tailoring",
@@ -66,14 +68,16 @@ export default function CustomFittings() {
                 src={fitting2}
                 // alt="Black kettle with long pour spot and angled body on marble counter next to coffee mug and pour-over system."
                 className="h-full w-full object-cover object-center"
+                alt="Custom Fitting Pictures"
               />
             </div>
             <div className="mt-4 grid grid-cols-2 gap-4 sm:mt-6 sm:gap-6 lg:mt-8 lg:gap-8">
               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-primary-100">
                 <Image
-                  src={fitting3}
+                  src={maroon}
                   // alt="Detail of temperature setting button on kettle bass with digital degree readout."
                   className="h-full w-full object-cover object-center"
+                  alt="Custom Fitting Pictures"
                 />
               </div>
               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-primary-100">
@@ -81,6 +85,7 @@ export default function CustomFittings() {
                   src={fittingCoat}
                   // alt="Kettle spout pouring boiling water into coffee grounds in pour-over mug."
                   className="h-full w-full object-cover object-center"
+                  alt="Custom Fitting Pictures"
                 />
               </div>
             </div>
