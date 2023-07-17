@@ -1,5 +1,6 @@
 "use client"
 
+import * as React from "react"
 import Image from "next/image"
 import Balancer from "react-wrap-balancer"
 
@@ -17,9 +18,20 @@ import jwrHero from "../../public/images/jwr-hero.jpeg"
 // import jwrHero from "../../public/images/storefront.jpg"
 
 function Hero() {
+  const [opacities, setOpacities] = React.useState<number[]>([])
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
+      slides: 6,
       loop: true,
+      defaultAnimation: {
+        duration: 2500,
+      },
+      detailsChanged(s) {
+        const new_opacities = s.track.details.slides.map(
+          (slide) => slide.portion
+        )
+        setOpacities(new_opacities)
+      },
     },
     [
       (slider) => {
@@ -33,7 +45,7 @@ function Hero() {
           if (mouseOver) return
           timeout = setTimeout(() => {
             slider.next()
-          }, 3000)
+          }, 5000)
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {

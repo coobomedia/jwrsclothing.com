@@ -45,7 +45,7 @@ const categories = [
     imageAlt:
       "Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.",
     description:
-      "Our brick-and-mortar shop is the a place to pick up a pair of jeans but also to play ping-pong, listen to records, drink a Coke, and be properly taken care of in every way.",
+      "Customers consistently praise the JWR's for its exceptional quality, wide range of options, and outstanding customer service.",
   },
 ]
 
