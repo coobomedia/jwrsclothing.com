@@ -45,7 +45,7 @@ const categories = [
     imageAlt:
       "Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.",
     description:
-      "Customers consistently praise the JWR's for its exceptional quality, wide range of options, and outstanding customer service.",
+      "Customers consistently praise JWR's for its exceptional quality, wide range of options, and outstanding customer service.",
   },
 ]
 
