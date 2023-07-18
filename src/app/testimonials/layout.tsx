@@ -1,17 +1,21 @@
-import Footer from "@/components/footer"
 import JWRFooter from "@/components/jwr-footer"
 import JWRHeader from "@/components/jwr-header"
+import ScrollUp from "@/components/scroll-up"
 
-export default function AboutLayout({
+export default function ClothingLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <main className="flex min-h-screen flex-col bg-primary-50">
-      <JWRHeader className="relative" />
-      {children}
+    <>
+      <JWRHeader className="sticky " />
+      <main className="flex min-h-[calc(100vh-179.98px)] flex-col">
+        {children}
+      </main>
       <JWRFooter />
-    </main>
+      {/* Workaround: scroll to top on route change */}
+      <ScrollUp />
+    </>
   )
 }

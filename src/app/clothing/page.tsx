@@ -182,7 +182,7 @@ const features = [
 function ClothingPage() {
   return (
     <main className="container mx-auto py-10 sm:py-16">
-      <div className="my-16 space-y-24">
+      <div className="space-y-24">
         {features.map((feature, featureIdx) => (
           <div
             id={feature.id}

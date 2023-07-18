@@ -67,34 +67,34 @@ const navigation = {
             { name: "Money Clips", href: "/accessories" },
           ],
         },
-        {
-          id: "brands",
-          name: "Brands",
-          items: [
-            { name: "Byron", href: "/brands" },
-            { name: "L.B.M", href: "/brands" },
-            { name: "Stenstroms", href: "/brands" },
-            { name: "Stantt", href: "/brands" },
-            { name: "Alan Payne", href: "/brands" },
-            { name: "Riomar", href: "/brands" },
-            { name: "AG", href: "/brands" },
-            { name: "Emanuel Berg", href: "/brands" },
-            { name: "Calder", href: "/brands" },
-            { name: "Johnnie-O", href: "/brands" },
-            { name: "Peter Millar", href: "/brands" },
-            { name: "Travis Mathew", href: "/brands" },
-            { name: "Emauel Berg", href: "/brands" },
-            { name: "Meyer", href: "/brands" },
-            { name: "Edward Armah", href: "/brands" },
-            { name: "Johnston & Murphy", href: "/brands" },
-            { name: "Torino Leather Company", href: "/brands" },
-            { name: "Smathers & Branson", href: "/brands" },
-            { name: "Lorenzon Uomo", href: "/brands" },
-            { name: "Saxx", href: "/brands" },
-            { name: "M-Clip", href: "/brands" },
-            { name: "Paul Bentenly", href: "/brands" },
-          ],
-        },
+        // {
+        //   id: "brands",
+        //   name: "Brands",
+        //   items: [
+        //     { name: "Byron", href: "/brands" },
+        //     { name: "L.B.M", href: "/brands" },
+        //     { name: "Stenstroms", href: "/brands" },
+        //     { name: "Stantt", href: "/brands" },
+        //     { name: "Alan Payne", href: "/brands" },
+        //     { name: "Riomar", href: "/brands" },
+        //     { name: "AG", href: "/brands" },
+        //     { name: "Emanuel Berg", href: "/brands" },
+        //     { name: "Calder", href: "/brands" },
+        //     { name: "Johnnie-O", href: "/brands" },
+        //     { name: "Peter Millar", href: "/brands" },
+        //     { name: "Travis Mathew", href: "/brands" },
+        //     { name: "Emauel Berg", href: "/brands" },
+        //     { name: "Meyer", href: "/brands" },
+        //     { name: "Edward Armah", href: "/brands" },
+        //     { name: "Johnston & Murphy", href: "/brands" },
+        //     { name: "Torino Leather Company", href: "/brands" },
+        //     { name: "Smathers & Branson", href: "/brands" },
+        //     { name: "Lorenzon Uomo", href: "/brands" },
+        //     { name: "Saxx", href: "/brands" },
+        //     { name: "M-Clip", href: "/brands" },
+        //     { name: "Paul Bentenly", href: "/brands" },
+        //   ],
+        // },
       ],
     },
   ],
@@ -297,7 +297,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                     <div className="col-span-5">
                                       <div
                                         id="mega-menu"
-                                        className="grid grid-cols-4 gap-x-8 gap-y-10 text-sm"
+                                        className="grid grid-cols-2 gap-x-8 gap-y-10 text-sm"
                                       >
                                         {category.sections.map((section) => (
                                           <div key={section.name}>
@@ -334,8 +334,8 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                     <div className="col-span-1">
                                       <Image
                                         alt="JWR's logo"
-                                        width={200}
-                                        height={200}
+                                        width={150}
+                                        height={150}
                                         src={circlelogo}
                                       />
                                     </div>
@@ -366,7 +366,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                 <Image
                   className="h-10 w-auto lg:h-16"
                   alt="JWR's logo"
-                  src={logo}
+                  src={circlelogo}
                 />
               </Link>
 

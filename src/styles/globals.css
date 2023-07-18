@@ -6,12 +6,16 @@
   :root {
     --header-height: 0;
   }
-  #mega-menu div:nth-child(3) {
+  /* #mega-menu div:nth-child(3) {
     grid-column: span 2 / span 2;
-  }
+  } */
 
-  #Brands-heading + ul {
+  /* #Brands-heading + ul {
     columns: 3;
+  } */
+
+  #mega-menu ul {
+    columns: 2;
   }
 
   .cls-1 {
