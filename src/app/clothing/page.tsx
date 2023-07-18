@@ -150,10 +150,7 @@ const features = [
         name: "Meyer",
         imageSrc: meyer,
       },
-      {
-        name: "AG",
-        imageSrc: ag,
-      },
+
       {
         name: "Peter Millar",
         imageSrc: peter,
@@ -172,10 +169,7 @@ const features = [
         name: "AG",
         imageSrc: ag,
       },
-      {
-        name: "Meyer",
-        imageSrc: meyer,
-      },
+
       {
         name: "Travis Mathew",
         imageSrc: travis,

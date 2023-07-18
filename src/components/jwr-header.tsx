@@ -8,7 +8,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import { cn } from "@/lib/utils"
 import featuredPromotion from "../../public/images/featured-promotion.jpeg"
-import circlelogo from "../../public/images/jwr-logo.png"
+import circlelogo from "../../public/images/jwr-circle-logo.jpg"
 import newArrival from "../../public/images/new-arrival-feature.webp"
 import logo from "../../public/jwr-letters-logo.svg"
 

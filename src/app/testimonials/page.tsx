@@ -1,7 +1,3 @@
-import Image from "next/image"
-
-import jwr11 from "../../../public/images/about-dog.jpg"
-
 export default function AboutPage() {
   return (
     <section className="grow bg-white py-24 ">
@@ -35,6 +31,65 @@ export default function AboutPage() {
                 <div className="text-base">
                   <div className="font-semibold text-primary-900">
                     Will Simmen
+                  </div>
+                  {/* <div className="mt-1  text-primary-500">CEO of Tuple</div> */}
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div className="skewed-border  flex  flex-col p-10 ">
+            {/* <img
+              className="h-12 self-start"
+              src="https://tailwindui.com/img/logos/tuple-logo-gray-900.svg"
+              alt=""
+            /> */}
+            <figure className="flex flex-auto flex-col justify-between">
+              <blockquote className="font-display text-lg leading-8 text-primary-900">
+                <p>
+                  JWR is our go-to place for men&rsquo;s clothes. I can stop in
+                  to shop for our three teenage boys, my father, father-in-law
+                  or my husband&mldr;Joshua always finds exactly what they need
+                  for every day and that special occasion.
+                </p>
+              </blockquote>
+              <figcaption className="mt-6 flex items-center gap-x-6">
+                {/* <img
+                  className="h-14 w-14 rounded-full bg-primary-50"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                /> */}
+                <div className="text-base">
+                  <div className="font-semibold text-primary-900">
+                    Molly Watson
+                  </div>
+                  {/* <div className="mt-1  text-primary-500">CEO of Tuple</div> */}
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div className="skewed-border  flex  flex-col p-10 ">
+            {/* <img
+              className="h-12 self-start"
+              src="https://tailwindui.com/img/logos/tuple-logo-gray-900.svg"
+              alt=""
+            /> */}
+            <figure className="flex flex-auto flex-col justify-between">
+              <blockquote className="font-display text-lg leading-8 text-primary-900">
+                <p>
+                  JWR&rsquo;s has high quality clothing for every occasion.
+                  Joshua offers great customer service and remembered my sizes
+                  and preferences from the first time I visited his store.
+                </p>
+              </blockquote>
+              <figcaption className="mt-6 flex items-center gap-x-6">
+                {/* <img
+                  className="h-14 w-14 rounded-full bg-primary-50"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                /> */}
+                <div className="text-base">
+                  <div className="font-semibold text-primary-900">
+                    Garrett Batten
                   </div>
                   {/* <div className="mt-1  text-primary-500">CEO of Tuple</div> */}
                 </div>
