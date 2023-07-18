@@ -147,7 +147,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   <Image
                     className="h-10 w-auto lg:h-16"
                     alt="JWR's logo"
-                    src={logo}
+                    src={circlelogo}
                   />
                   <button
                     type="button"
@@ -293,8 +293,8 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                               />
                               <div className="relative bg-white">
                                 <div className="container mx-auto">
-                                  <div className="grid grid-cols-6 gap-x-8 gap-y-10 pb-10 pt-4">
-                                    <div className="col-span-5">
+                                  <div className="grid grid-cols-12 gap-x-8 gap-y-10 pb-10 pt-4">
+                                    <div className="col-span-4">
                                       <div
                                         id="mega-menu"
                                         className="grid grid-cols-2 gap-x-8 gap-y-10 text-sm"
@@ -331,11 +331,11 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                         ))}
                                       </div>
                                     </div>
-                                    <div className="col-span-1">
+                                    <div className="col-span-8">
                                       <Image
                                         alt="JWR's logo"
-                                        width={150}
-                                        height={150}
+                                        width={200}
+                                        height={200}
                                         src={circlelogo}
                                       />
                                     </div>

@@ -1,9 +1,6 @@
 "use client"
 
-
 import { useToast } from "@/hooks/use-toast"
-
-
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader2 } from "lucide-react"
 import { useForm } from "react-hook-form"
@@ -91,8 +88,8 @@ export default function ContactPage() {
             </h2>
 
             <p className="mt-6 font-display text-lg leading-8 text-primary-600">
-              We value your feedback, inquiries, and suggestions. At JWR&apos;s, we
-              are committed to providing exceptional customer service and
+              We value your feedback, inquiries, and suggestions. At JWR&apos;s,
+              we are committed to providing exceptional customer service and
               ensuring your shopping experience with us is nothing short of
               excellent. We encourage you to get in touch with us through the
               form aside or any of the following channels:
@@ -108,7 +105,6 @@ export default function ContactPage() {
                     id="Layer_1"
                     viewBox="0 0 28.33 19.62"
                   >
-
                     <path d="M8.31 7.11c-.03.26.06.5.1.75.06.32.14.63.23.94.16.51.33 1.01.54 1.49.17.41.36.81.55 1.22.25.54.54 1.06.82 1.59.23.44.48.86.73 1.29.38.65.77 1.3 1.18 1.93l.96 1.44c.19.28.38.55.56.82.04.06.07.06.11 0 .1-.15.2-.29.3-.43.41-.62.82-1.24 1.24-1.85.21-.32.41-.65.61-.98.18-.29.35-.57.52-.86.23-.41.48-.81.7-1.23.32-.61.67-1.21.95-1.84.28-.64.59-1.27.81-1.93.12-.36.26-.72.34-1.09.05-.21.08-.43.14-.64.1-.35.08-.72.11-1.08.02-.3-.03-.62-.08-.92-.08-.48-.24-.94-.43-1.38-.17-.4-.4-.76-.66-1.1-.18-.25-.39-.48-.61-.68-.25-.23-.52-.45-.81-.65-.47-.32-.99-.53-1.53-.71-.41-.14-.84-.18-1.26-.22-.4-.04-.81 0-1.21.05-.43.05-.84.19-1.25.34-.61.22-1.14.57-1.63.98-.25.22-.5.45-.7.7-.2.25-.4.52-.56.81-.31.53-.51 1.1-.64 1.7-.08.34-.1.69-.13 1.04v.13c.03.13.04.26.04.39Z" />
                     <path
                       d="m8.84 7.12.03-.03-.09-.07.06.1zM8.62 6.68s-.04.01-.05.03c.09.07.17.15.26.24.12-.15-.29-.18-.21-.27ZM8.64 6.63c.06 0-.06-.02-.09-.05.08.06-.02.06.09.05ZM12.39 1.53s-.02 0-.02.01c.01 0 .02 0 .02-.01Z"

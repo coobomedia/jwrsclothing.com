@@ -4,7 +4,7 @@ import { Nunito_Sans, Special_Elite } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 
 import { cn } from "@/lib/utils"
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/toaster"
 
 const ebGaramond = Special_Elite({
   weight: ["400"],
@@ -42,7 +42,6 @@ export default function RootLayout({
     >
       <body className="bg-white">
         {children}
-
         <Toaster />
         <Analytics />
       </body>

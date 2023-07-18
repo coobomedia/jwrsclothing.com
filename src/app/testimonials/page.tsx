@@ -46,11 +46,10 @@ export default function AboutPage() {
             <figure className="flex flex-auto flex-col justify-between">
               <blockquote className="font-display text-lg leading-8 text-primary-900">
                 <p>
-                  &quot;JWR&apos;s is our go-to place for mens clothes. I
-                  can stop in to shop for our three teenage boys, my father,
-                  father-in-law or my husband. Joshua always finds
-                  exactly what they need for every day and that special
-                  occasion.&quot;
+                  &quot;JWR&apos;s is our go-to place for mens clothes. I can
+                  stop in to shop for our three teenage boys, my father,
+                  father-in-law or my husband. Joshua always finds exactly what
+                  they need for every day and that special occasion.&quot;
                 </p>
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-x-6">
@@ -77,10 +76,9 @@ export default function AboutPage() {
             <figure className="flex flex-auto flex-col justify-between">
               <blockquote className="font-display text-lg leading-8 text-primary-900">
                 <p>
-                  &quot;JWR&apos;s has high quality clothing for every
-                  occasion. Joshua offers great customer service and remembered
-                  my sizes and preferences from the first time I visited his
-                  store.&quot;
+                  &quot;JWR&apos;s has high quality clothing for every occasion.
+                  Joshua offers great customer service and remembered my sizes
+                  and preferences from the first time I visited his store.&quot;
                 </p>
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-x-6">
