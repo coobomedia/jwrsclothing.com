@@ -3,7 +3,8 @@
 import { Fragment, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
+import { Dialog, Menu, Popover, Tab, Transition } from "@headlessui/react"
+import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import { cn } from "@/lib/utils"
@@ -13,93 +14,43 @@ import newArrival from "../../public/images/new-arrival-feature.webp"
 import logo from "../../public/jwr-letters-logo.svg"
 
 const navigation = {
-  categories: [
+  sections: [
     {
-      id: "store",
-      name: "Store",
-      featured: [
+      id: "clothing",
+      name: "Clothing",
+      items: [
         {
-          name: "New Arrivals",
-          href: "/contact",
-          imageSrc: newArrival.src,
-          imageAlt:
-            "Models sitting back to back, wearing Basic Tee in primary-900 and bone.",
+          name: "Suits/Sports Coats",
+          href: "/clothing",
         },
-        {
-          name: "Featured Promotion",
-          href: "/contact",
-          imageSrc: featuredPromotion.src,
-          imageAlt:
-            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and primary-900 tees.",
-        },
+        { name: "Dress Shirts", href: "/clothing#dress-shirts" },
+        { name: "Dress Pants", href: "/clothing#dress-pants" },
+        { name: "Sports Shirts", href: "/clothing#sports-shirts" },
+        { name: "Polos", href: "/clothing#polos" },
+        { name: "Casual Pants", href: "/clothing#casual-pants" },
+        { name: "Jeans", href: "/clothing#jeans" },
+        { name: "Shoes", href: "/clothing#shoes" },
       ],
-      sections: [
+    },
+    {
+      id: "accessories",
+      name: "Accessories",
+      items: [
         {
-          id: "clothing",
-          name: "Clothing",
-          items: [
-            {
-              name: "Suits/Sports Coats",
-              href: "/clothing",
-            },
-            { name: "Dress Shirts", href: "/clothing#dress-shirts" },
-            { name: "Dress Pants", href: "/clothing#dress-pants" },
-            { name: "Sports Shirts", href: "/clothing#sports-shirts" },
-            { name: "Polos", href: "/clothing#polos" },
-            { name: "Casual Pants", href: "/clothing#casual-pants" },
-            { name: "Jeans", href: "/clothing#jeans" },
-          ],
+          name: "Ties/Pocket Squares",
+          href: "/accessories",
         },
+        { name: "Belts", href: "/accessories" },
         {
-          id: "accessories",
-          name: "Accessories",
-          items: [
-            {
-              name: "Ties/Pocket Squares",
-              href: "/accessories",
-            },
-            { name: "Shoes", href: "/accessories" },
-            { name: "Belts", href: "/accessories" },
-            {
-              name: "Socks/Underwear",
-              href: "/accessories",
-            },
-            { name: "Money Clips", href: "/accessories" },
-          ],
+          name: "Socks/Underwear",
+          href: "/accessories",
         },
-        // {
-        //   id: "brands",
-        //   name: "Brands",
-        //   items: [
-        //     { name: "Byron", href: "/brands" },
-        //     { name: "L.B.M", href: "/brands" },
-        //     { name: "Stenstroms", href: "/brands" },
-        //     { name: "Stantt", href: "/brands" },
-        //     { name: "Alan Payne", href: "/brands" },
-        //     { name: "Riomar", href: "/brands" },
-        //     { name: "AG", href: "/brands" },
-        //     { name: "Emanuel Berg", href: "/brands" },
-        //     { name: "Calder", href: "/brands" },
-        //     { name: "Johnnie-O", href: "/brands" },
-        //     { name: "Peter Millar", href: "/brands" },
-        //     { name: "Travis Mathew", href: "/brands" },
-        //     { name: "Emauel Berg", href: "/brands" },
-        //     { name: "Meyer", href: "/brands" },
-        //     { name: "Edward Armah", href: "/brands" },
-        //     { name: "Johnston & Murphy", href: "/brands" },
-        //     { name: "Torino Leather Company", href: "/brands" },
-        //     { name: "Smathers & Branson", href: "/brands" },
-        //     { name: "Lorenzon Uomo", href: "/brands" },
-        //     { name: "Saxx", href: "/brands" },
-        //     { name: "M-Clip", href: "/brands" },
-        //     { name: "Paul Bentenly", href: "/brands" },
-        //   ],
-        // },
+        { name: "Money Clips", href: "/accessories" },
       ],
     },
   ],
   pages: [
-    { name: "About", href: "/about" },
+    //{ name: "About", href: "/about" },
     // { name: "Custom", href: "/#custom" },
     { name: "Contact", href: "/contact" },
   ],
@@ -145,7 +96,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
               <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
                 <div className="flex justify-between px-4 py-6 ">
                   <Image
-                    className="h-10 w-auto lg:h-16"
+                    className="h-14 w-auto lg:h-16"
                     alt="JWR's logo"
                     src={circlelogo}
                   />
@@ -174,48 +125,44 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   ))}
                 </div>
 
-                {/* Links */}
+                {/* Mobile Links */}
                 <Tab.Group as="div" className="pt-8">
                   <Tab.Panels as={Fragment}>
-                    {navigation.categories.map((category) => (
-                      <Tab.Panel
-                        key={category.name}
-                        className="space-y-6 px-4 pb-8"
-                      >
-                        {category.sections.map((section) => (
-                          <div key={section.name}>
-                            <p
-                              id={`${category.id}-${section.id}-heading-mobile`}
-                              className=" font-medium tracking-wider text-primary-900"
-                            >
-                              {section.name}
-                            </p>
-                            <ul
-                              role="list"
-                              aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
-                              className="mt-4 flex flex-col space-y-4"
-                            >
-                              {section.items.map((item) => (
-                                <li key={item.name} className="flow-root">
-                                  <Link
-                                    href={item.href}
-                                    className="-m-2 block p-2 text-primary-500"
-                                  >
-                                    {item.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </Tab.Panel>
-                    ))}
+                    <Tab.Panel className="space-y-6 px-4 pb-8">
+                      {navigation.sections.map((section) => (
+                        <div>
+                          <p
+                            id={`${section.id}-heading-mobile`}
+                            className=" font-medium tracking-wider text-primary-900"
+                          >
+                            {section.name}
+                          </p>
+                          <ul
+                            role="list"
+                            aria-labelledby={`${section.id}-heading-mobile`}
+                            className="mt-4 flex flex-col space-y-4"
+                          >
+                            {section.items.map((item) => (
+                              <li key={item.name} className="flow-root">
+                                <Link
+                                  href={item.href}
+                                  className="-m-2 block p-2 text-primary-500"
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </Tab.Panel>
                   </Tab.Panels>
                 </Tab.Group>
 
                 <div className="border-t border-primary-200 px-4 py-6">
                   <Link
-                    href="#"
+                    href="https://www.instagram.com/jwrsclothing/"
+                    target="_blank"
                     className=" text-primary-950 hover:text-primary-900"
                   >
                     <span className="sr-only">Instagram</span>
@@ -257,95 +204,49 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
               </button>
 
               {/* Flyout menus */}
+
               <Popover.Group className="hidden lg:block lg:flex-1 lg:self-stretch">
                 <div className="flex h-full space-x-8">
-                  {navigation.categories.map((category) => (
-                    <Popover key={category.name} className="flex">
-                      {({ open }) => (
-                        <>
-                          <div className="relative flex">
-                            <Popover.Button
-                              className={cn(
-                                open
-                                  ? " text-primary-950"
-                                  : " text-primary-700 hover:text-primary-800",
-                                "relative z-10 -mb-px flex items-center  pt-px  text-sm font-medium  tracking-wider !outline-0 transition-colors duration-200 ease-out"
-                              )}
+                  {navigation.sections.map((section) => (
+                    <Popover className="flex">
+                      <div className="relative flex">
+                        <Popover.Button
+                          className={cn(
+                            open
+                              ? " text-primary-950"
+                              : " text-primary-700 hover:text-primary-800",
+                            "relative z-10 -mb-px flex items-center  pt-px  text-sm font-medium  tracking-wider !outline-0 transition-colors duration-200 ease-out"
+                          )}
+                        >
+                          {section.name}
+                          <ChevronDownIcon
+                            className="h-5 w-5 flex-none text-gray-400"
+                            aria-hidden="true"
+                          />
+                        </Popover.Button>
+                      </div>
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-200"
+                        enterFrom="opacity-0 translate-y-1"
+                        enterTo="opacity-100 translate-y-0"
+                        leave="transition ease-in duration-150"
+                        leaveFrom="opacity-100 translate-y-0"
+                        leaveTo="opacity-0 translate-y-1"
+                      >
+                        <Popover.Panel className="absolute top-full z-10 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
+                          {section.items.map((item) => (
+                            <Link
+                              key={item.name}
+                              href={item.href}
+                              scroll={false}
+                              className="block rounded-lg px-3 py-2 text-sm leading-6 text-gray-900 hover:bg-gray-50"
                             >
-                              {category.name}
-                            </Popover.Button>
-                          </div>
-
-                          <Transition
-                            as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0"
-                            enterTo="opacity-100"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100"
-                            leaveTo="opacity-0"
-                          >
-                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-primary-500">
-                              {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
-                              <div
-                                className="absolute inset-0 top-1/2 bg-white shadow"
-                                aria-hidden="true"
-                              />
-                              <div className="relative bg-white">
-                                <div className="container mx-auto">
-                                  <div className="grid grid-cols-12 gap-x-8 gap-y-10 pb-10 pt-4">
-                                    <div className="col-span-4">
-                                      <div
-                                        id="mega-menu"
-                                        className="grid grid-cols-2 gap-x-8 gap-y-10 text-sm"
-                                      >
-                                        {category.sections.map((section) => (
-                                          <div key={section.name}>
-                                            <p
-                                              id={`${section.name}-heading`}
-                                              className="font-display text-xs font-medium uppercase tracking-wider text-primary-900"
-                                            >
-                                              {section.name}
-                                            </p>
-                                            <ul
-                                              role="list"
-                                              aria-labelledby={`${section.name}-heading`}
-                                              className="mt-6  space-y-6 sm:mt-4 sm:space-y-2"
-                                            >
-                                              {section.items.map((item) => (
-                                                <li
-                                                  key={item.name}
-                                                  className="flex"
-                                                >
-                                                  <Popover.Button
-                                                    as={Link}
-                                                    href={item.href}
-                                                    className="hover:text-primary-800"
-                                                  >
-                                                    {item.name}
-                                                  </Popover.Button>
-                                                </li>
-                                              ))}
-                                            </ul>
-                                          </div>
-                                        ))}
-                                      </div>
-                                    </div>
-                                    <div className="col-span-8">
-                                      <Image
-                                        alt="JWR's logo"
-                                        width={200}
-                                        height={200}
-                                        src={circlelogo}
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </Popover.Panel>
-                          </Transition>
-                        </>
-                      )}
+                              {item.name}
+                            </Link>
+                          ))}
+                        </Popover.Panel>
+                      </Transition>
                     </Popover>
                   ))}
 
@@ -353,6 +254,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                     <Link
                       key={page.name}
                       href={page.href}
+                      scroll={false}
                       className="flex items-center text-sm font-medium  tracking-wider text-primary-700 hover:text-primary-800"
                     >
                       {page.name}
@@ -364,7 +266,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
               {/* Logo */}
               <Link href="/" className="ml-auto">
                 <Image
-                  className="h-10 w-auto lg:h-16"
+                  className="h-14 w-auto lg:h-20"
                   alt="JWR's logo"
                   src={circlelogo}
                 />

@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import Image from "next/image"
 
 import { cn } from "@/lib/utils"
@@ -19,6 +20,7 @@ import meyer from "../../../public/images/meyer.jpg"
 import dressPants from "../../../public/images/meyers-pants-3.jpg"
 import peter from "../../../public/images/peter-millar.webp"
 import polos from "../../../public/images/polos.jpg"
+import shoes from "../../../public/images/shoes-3.jpg"
 import sportsShirts from "../../../public/images/sports-shirts-3.jpg"
 import stantt from "../../../public/images/stantt-color.svg"
 import stenstroms from "../../../public/images/stenstroms-color.png"
@@ -47,8 +49,7 @@ const features = [
         imageSrc: betenly,
       },
     ],
-    imageAlt:
-      "White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.",
+    imageAlt: "Suits and sports coats display on clothing rack in JwR's store.",
   },
   {
     id: "dress-shirts",
@@ -70,7 +71,7 @@ const features = [
         imageSrc: donahue,
       },
     ],
-    imageAlt: "Detail of zipper pull with tan leather and silver rivet.",
+    imageAlt: "Formal dress shirts stacked display in JwR's store.",
   },
   {
     id: "dress-pants",
@@ -88,7 +89,7 @@ const features = [
         imageSrc: betenly,
       },
     ],
-    imageAlt: "Detail of zipper pull with tan leather and silver rivet.",
+    imageAlt: "Man wearing Meyer's dress pants.",
   },
   {
     id: "sports-shirts",
@@ -114,7 +115,7 @@ const features = [
         imageSrc: berg,
       },
     ],
-    imageAlt: "Detail of zipper pull with tan leather and silver rivet.",
+    imageAlt: "Collection of sports shirts display in JwR's store.",
   },
   {
     id: "polos",
@@ -137,7 +138,7 @@ const features = [
         imageSrc: peter,
       },
     ],
-    imageAlt: "Detail of zipper pull with tan leather and silver rivet.",
+    imageAlt: "Assorted polo shirts with various patterns and colors.",
   },
   {
     id: "casual-pants",
@@ -156,7 +157,7 @@ const features = [
         imageSrc: peter,
       },
     ],
-    imageAlt: "Detail of zipper pull with tan leather and silver rivet.",
+    imageAlt: "Casual pants stacks on display table in JwR's store.",
   },
   {
     id: "jeans",
@@ -175,11 +176,41 @@ const features = [
         imageSrc: travis,
       },
     ],
-    imageAlt: "Detail of zipper pull with tan leather and silver rivet.",
+    imageAlt:
+      "Image of a stylish and diverse collection of jeans showcased in JwR's store.",
+  },
+  {
+    id: "shoes",
+    name: "Shoes",
+    description:
+      "Phasellus lobortis mauris felis, ut blandit ex vulputate pretium. Cras eu ligula blandit, sagittis felis eu, feugiat lorem. Nunc dapibus elit at tellus aliquam, sit amet posuere velit tempus.",
+    imageSrc: shoes,
+    brands: [
+      {
+        name: "AG",
+        imageSrc: ag,
+      },
+
+      {
+        name: "Travis Mathew",
+        imageSrc: travis,
+      },
+    ],
+    imageAlt:
+      "Shelf display of diverse range of footwear, including sneakers, boots, heels, and more, in various styles and colors to suit every taste.",
   },
 ]
 
 function ClothingPage() {
+  useEffect(() => {
+    if (window.location.hash) {
+      const element = document.querySelector(window.location.hash)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [])
+
   return (
     <main className="container mx-auto py-10 sm:py-16">
       <div className="space-y-24">

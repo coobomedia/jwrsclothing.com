@@ -1,6 +1,5 @@
 import Image from "next/image"
 
-import jwr11 from "../../../public/images/about-dog.jpg"
 import about from "../../../public/images/about-us.jpg"
 
 export default function AboutPage() {
@@ -42,7 +41,7 @@ export default function AboutPage() {
                 height={768}
                 src={about}
                 alt=""
-                className="skewed-border aspect-[7/5] w-[37rem] max-w-none  bg-primary-50 object-cover"
+                className="border-2 border-black aspect-[7/5] w-[37rem] max-w-none  bg-primary-50 object-cover"
               />
             </div>
             {/* <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">

@@ -71,24 +71,6 @@ export default function CustomFittings() {
                 alt="Custom Fitting Pictures"
               />
             </div>
-            <div className="mt-4 grid grid-cols-2 gap-4 sm:mt-6 sm:gap-6 lg:mt-8 lg:gap-8">
-              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-primary-100">
-                <Image
-                  src={maroon}
-                  // alt="Detail of temperature setting button on kettle bass with digital degree readout."
-                  className="h-full w-full object-cover object-center"
-                  alt="Custom Fitting Pictures"
-                />
-              </div>
-              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-primary-100">
-                <Image
-                  src={fittingCoat}
-                  // alt="Kettle spout pouring boiling water into coffee grounds in pour-over mug."
-                  className="h-full w-full object-cover object-center"
-                  alt="Custom Fitting Pictures"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </div>
