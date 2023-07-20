@@ -3,6 +3,7 @@
 import { Fragment, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Dialog, Menu, Popover, Tab, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
@@ -64,6 +65,8 @@ interface SiteHeaderProps {
 export default function JWRHeader({ position, className }: SiteHeaderProps) {
   const [open, setOpen] = useState(false)
 
+  const route = useRouter()
+
   return (
     <header
       className={cn(position, className, "top-0  z-20 w-full bg-white shadow ")}
@@ -75,9 +78,9 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
             enterFrom="opacity-0"
-            enterTo="opacity-100"
+            enterTo="opacity-50"
             leave="transition-opacity ease-linear duration-300"
-            leaveFrom="opacity-100"
+            leaveFrom="opacity-50"
             leaveTo="opacity-0"
           >
             <div className="bg-opacity/25 fixed inset-0 bg-primary-900" />
@@ -236,14 +239,23 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                       >
                         <Popover.Panel className="absolute top-full z-10 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
                           {section.items.map((item) => (
-                            <Link
+                            // <Link
+                            //   key={item.name}
+                            //   href={item.href}
+                            //   scroll={false}
+                            //   className="block rounded-lg px-3 py-2 text-sm leading-6 text-gray-900 hover:bg-gray-50"
+                            // >
+                            //   {item.name}
+                            // </Link>
+                            <a
+                              onClick={() => {
+                                route.push(item.href)
+                              }}
                               key={item.name}
-                              href={item.href}
-                              scroll={false}
-                              className="block rounded-lg px-3 py-2 text-sm leading-6 text-gray-900 hover:bg-gray-50"
+                              className="block cursor-pointer rounded-lg px-3 py-2 text-sm leading-6 text-gray-900 hover:bg-gray-50"
                             >
                               {item.name}
-                            </Link>
+                            </a>
                           ))}
                         </Popover.Panel>
                       </Transition>
@@ -264,7 +276,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
               </Popover.Group>
 
               {/* Logo */}
-              <Link href="/" className="ml-auto">
+              <Link href="/" scroll={true} className="ml-auto">
                 <Image
                   className="h-14 w-auto lg:h-20"
                   alt="JWR's logo"

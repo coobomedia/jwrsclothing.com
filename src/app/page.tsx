@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Balancer from "react-wrap-balancer"
@@ -50,6 +53,8 @@ const categories = [
 ]
 
 export default function HomePage() {
+  useEffect(() => window.scrollTo(0, 0), [])
+
   return (
     <>
       <JWRHeader className="sticky lg:fixed" />

@@ -202,15 +202,6 @@ const features = [
 ]
 
 function ClothingPage() {
-  useEffect(() => {
-    if (window.location.hash) {
-      const element = document.querySelector(window.location.hash)
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
-      }
-    }
-  }, [])
-
   return (
     <main className="container mx-auto py-10 sm:py-16">
       <div className="space-y-24">
