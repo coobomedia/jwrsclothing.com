@@ -12,6 +12,7 @@ import casualPants from "../../../public/images/casual-pants.jpeg"
 import donahue from "../../../public/images/donahue-color.png"
 import dressShirts from "../../../public/images/dress-shirts.jpg"
 import berg from "../../../public/images/emanuel-berg.png"
+import jm from "../../../public/images/j-m.png"
 import jeans from "../../../public/images/jeans.jpg"
 import johnnie from "../../../public/images/johnnie-o.jpg"
 import lbm from "../../../public/images/lbm-color.svg"
@@ -20,6 +21,7 @@ import meyer from "../../../public/images/meyer.jpg"
 import dressPants from "../../../public/images/meyers-pants-3.jpg"
 import peter from "../../../public/images/peter-millar.webp"
 import polos from "../../../public/images/polos.jpg"
+import sb from "../../../public/images/sb.png"
 import shoes from "../../../public/images/shoes-3.jpg"
 import sportsShirts from "../../../public/images/sports-shirts-3.jpg"
 import stantt from "../../../public/images/stantt-color.svg"
@@ -183,17 +185,17 @@ const features = [
     id: "shoes",
     name: "Shoes",
     description:
-      "Phasellus lobortis mauris felis, ut blandit ex vulputate pretium. Cras eu ligula blandit, sagittis felis eu, feugiat lorem. Nunc dapibus elit at tellus aliquam, sit amet posuere velit tempus.",
+      "Discover timeless style and craftsmanship in our men’s shoe collection, featuring Johnston & Murphy and Smathers & Branson. From handcrafted elegance to statement-making designs, step with confidence and sophistication. Shop now for the finest in men’s footwear at our store.",
     imageSrc: shoes,
     brands: [
       {
-        name: "AG",
-        imageSrc: ag,
+        name: "Johnston & Murphy",
+        imageSrc: jm,
       },
 
       {
-        name: "Travis Mathew",
-        imageSrc: travis,
+        name: "Smathers & Branson",
+        imageSrc: sb,
       },
     ],
     imageAlt:
