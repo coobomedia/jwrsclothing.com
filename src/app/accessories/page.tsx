@@ -7,6 +7,7 @@ import money from "../../../public/images/hero-5.jpeg"
 import jm from "../../../public/images/j-m.png"
 import lu from "../../../public/images/lu.jpg"
 import mclip from "../../../public/images/mclip.png"
+import pocketsquares from "../../../public/images/pocket-squares.jpg"
 import saxx from "../../../public/images/saxx.jpeg"
 import sb from "../../../public/images/sb.png"
 import shoes from "../../../public/images/shoes.jpg"
@@ -21,7 +22,7 @@ const product = {
       alt: "Two each of primary, white, and black shirts laying flat.",
     },
     {
-      src: gator.src,
+      src: pocketsquares.src,
       alt: "Model wearing plain black basic tee.",
     },
     {

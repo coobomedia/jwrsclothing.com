@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  /* :root {
     --header-height: 0;
-  }
+  } */
   /* #mega-menu div:nth-child(3) {
     grid-column: span 2 / span 2;
   } */

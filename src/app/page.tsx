@@ -53,7 +53,7 @@ const categories = [
 ]
 
 export default function HomePage() {
-  useEffect(() => window.scrollTo(0, 0), [])
+  useEffect(() => window.document.scrollingElement?.scrollTo(0, 0), [])
 
   return (
     <>

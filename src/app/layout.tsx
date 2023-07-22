@@ -36,7 +36,7 @@ export default function RootLayout({
       className={cn(
         ebGaramond.variable,
         nunitoSans.variable,
-        "!scroll-smooth font-sans antialiased"
+        "font-sans antialiased"
       )}
       lang="en"
     >

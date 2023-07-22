@@ -24,13 +24,29 @@ const navigation = {
           name: "Suits/Sports Coats",
           href: "/clothing",
         },
-        { name: "Dress Shirts", href: "/clothing#dress-shirts" },
-        { name: "Dress Pants", href: "/clothing#dress-pants" },
-        { name: "Sports Shirts", href: "/clothing#sports-shirts" },
-        { name: "Polos", href: "/clothing#polos" },
-        { name: "Casual Pants", href: "/clothing#casual-pants" },
-        { name: "Jeans", href: "/clothing#jeans" },
-        { name: "Shoes", href: "/clothing#shoes" },
+        {
+          name: "Dress Shirts",
+          href: "/clothing#dressShirts",
+          anchorID: "dressShirts",
+        },
+        {
+          name: "Dress Pants",
+          href: "/clothing#dressPants",
+          anchorID: "dressPants",
+        },
+        {
+          name: "Sports Shirts",
+          href: "/clothing#sportsShirts",
+          anchorID: "sportsShirts",
+        },
+        { name: "Polos", href: "/clothing#polos", anchorID: "polos" },
+        {
+          name: "Casual Pants",
+          href: "/clothing#casual-pants",
+          anchorID: "casual-pants",
+        },
+        { name: "Jeans", href: "/clothing#jeans", anchorID: "jeans" },
+        { name: "Shoes", href: "/clothing#shoes", anchorID: "shoes" },
       ],
     },
     {
@@ -73,7 +89,11 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
     >
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
+        <Dialog
+          as="div"
+          className="relative z-40 lg:hidden"
+          onClose={() => setOpen(false)}
+        >
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -149,6 +169,9 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                               <li key={item.name} className="flow-root">
                                 <Link
                                   href={item.href}
+                                  onClick={() => {
+                                    setOpen(false)
+                                  }}
                                   className="-m-2 block p-2 text-primary-500"
                                 >
                                   {item.name}
@@ -193,11 +216,13 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
       <div className="relative bg-white">
         <nav aria-label="Top" className="container mx-auto py-4">
           <div className="">
-            <div className="flex  items-center">
+            <div className="flex items-center">
               <button
                 type="button"
                 className="rounded-md bg-white p-2 text-primary-400 lg:hidden"
-                onClick={() => setOpen(true)}
+                onClick={() => {
+                  setOpen(true)
+                }}
               >
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon

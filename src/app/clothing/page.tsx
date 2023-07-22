@@ -10,6 +10,7 @@ import byron from "../../../public/images/byron-color.png"
 import calder from "../../../public/images/calder.jpeg"
 import casualPants from "../../../public/images/casual-pants.jpeg"
 import donahue from "../../../public/images/donahue-color.png"
+import dressPants from "../../../public/images/dress-pants.jpg"
 import dressShirts from "../../../public/images/dress-shirts.jpg"
 import berg from "../../../public/images/emanuel-berg.png"
 import jm from "../../../public/images/j-m.png"
@@ -17,8 +18,6 @@ import jeans from "../../../public/images/jeans.jpg"
 import johnnie from "../../../public/images/johnnie-o.jpg"
 import lbm from "../../../public/images/lbm-color.svg"
 import meyer from "../../../public/images/meyer.jpg"
-// import dressPants from "../../../public/images/dress-pants.jpeg"
-import dressPants from "../../../public/images/meyers-pants-3.jpg"
 import peter from "../../../public/images/peter-millar.webp"
 import polos from "../../../public/images/polos.jpg"
 import sb from "../../../public/images/sb.png"
@@ -54,7 +53,7 @@ const features = [
     imageAlt: "Suits and sports coats display on clothing rack in JwR's store.",
   },
   {
-    id: "dress-shirts",
+    id: "dressShirts",
     name: "Dress Shirts",
     description:
       "Suitable for a wide range of occasions, our meticulously constructed dress shirts allow for different styling options so you can express personality in your attire. The elegant craftsmanship ensures a durable dress shirt that prevents bunches and wrinkles, preserving impeccable appearance.",
@@ -76,7 +75,7 @@ const features = [
     imageAlt: "Formal dress shirts stacked display in JwR's store.",
   },
   {
-    id: "dress-pants",
+    id: "dressPants",
     name: "Dress Pants",
     description:
       "Tailored to support a sleek, polished look, our dress pants provide a flattering presentation for whatever the occasion may be. Precise stitching, options for pleats and creases, and a variety of styles will contribute to your elevated look.",
@@ -91,10 +90,10 @@ const features = [
         imageSrc: betenly,
       },
     ],
-    imageAlt: "Man wearing Meyer's dress pants.",
+    imageAlt: "Dress pants on display table in JwR's store.",
   },
   {
-    id: "sports-shirts",
+    id: "sportsShirts",
     name: "Sports Shirts",
     description:
       "Designed for optimal performance and breathability, our sports shirts strike the perfect balance between style and comfort. Whether it be for a fashionable outdoor look or just for freedom of movement, these shirts offer a sporty flair to any occasion.",
