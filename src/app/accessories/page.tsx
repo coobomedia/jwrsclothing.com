@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import belts1 from "../../../public/images/belts-1.jpeg"
+import belts2 from "../../../public/images/belts-2.jpeg"
 import donahue from "../../../public/images/donahue-color.png"
 import armah from "../../../public/images/edward-armah.png"
 import gator from "../../../public/images/gator-cigar.jpg"
@@ -30,7 +32,11 @@ const product = {
       alt: "Model wearing plain white basic tee.",
     },
     {
-      src: shoes.src,
+      src: belts1.src,
+      alt: "Model wearing plain primary basic tee.",
+    },
+    {
+      src: belts2.src,
       alt: "Model wearing plain primary basic tee.",
     },
   ],
@@ -48,10 +54,6 @@ const brands = [
   {
     alt: "Edward Armah",
     imageSrc: armah,
-  },
-  {
-    alt: "Johnston & Murphy",
-    imageSrc: jm,
   },
   {
     alt: "Torino Leather Company",
@@ -86,8 +88,8 @@ function BrandsPage() {
         </div>
 
         {/* Options */}
-        <div className="mt-4 flex items-center lg:row-span-3 lg:mt-0">
-          <div className="relative mx-auto  grid  w-full max-w-xl grid-cols-2 place-items-center  items-center gap-y-8   lg:mx-0 lg:max-w-none">
+        <div className="mt-8 flex items-center lg:row-span-3 lg:mt-0">
+          <div className="relative mx-auto  grid  w-full max-w-xl grid-cols-3 lg:grid-cols-2 place-items-center  items-center gap-y-8 gap-x-6 lg:mx-0 lg:max-w-none">
             {brands.map((brand, index) => (
               <div key={index} className="">
                 <Image
@@ -115,14 +117,7 @@ function BrandsPage() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-16 lg:grid lg:grid-cols-3 lg:gap-x-8">
-        <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-          <img
-            src={product.images[0].src}
-            alt={product.images[0].alt}
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
+      <div className="container mx-auto mt-4 lg:mt-10 lg:grid lg:grid-cols-3 lg:gap-x-8">
         <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
           <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
             <img
@@ -139,12 +134,28 @@ function BrandsPage() {
             />
           </div>
         </div>
-        <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+        <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 overflow-hidden rounded-lg">
           <img
-            src={product.images[3].src}
-            alt={product.images[3].alt}
+            src={product.images[0].src}
+            alt={product.images[0].alt}
             className="h-full w-full object-cover object-center"
           />
+        </div>
+        <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+          <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+            <img
+              src={product.images[3].src}
+              alt={product.images[3].alt}
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
+          <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+            <img
+              src={product.images[4].src}
+              alt={product.images[4].alt}
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
         </div>
       </div>
     </main>

@@ -5,10 +5,11 @@ import Image from "next/image"
 
 import { cn } from "@/lib/utils"
 import ag from "../../../public/images/ag.png"
+import alanPayne from "../../../public/images/alan-payne.jpg"
 import betenly from "../../../public/images/betenly-color.png"
-import byron from "../../../public/images/byron-color.png"
-import calder from "../../../public/images/calder.jpeg"
+import byron from "../../../public/images/byron-logo.jpg"
 import casualPants from "../../../public/images/casual-pants.jpeg"
+import calder from "../../../public/images/cc-logo.jpg"
 import donahue from "../../../public/images/donahue-color.png"
 import dressPants from "../../../public/images/dress-pants.jpg"
 import dressShirts from "../../../public/images/dress-shirts.jpg"
@@ -17,9 +18,11 @@ import jm from "../../../public/images/j-m.png"
 import jeans from "../../../public/images/jeans.jpg"
 import johnnie from "../../../public/images/johnnie-o.jpg"
 import lbm from "../../../public/images/lbm-color.svg"
+import martinDingman from "../../../public/images/martin-dingman.jpg"
 import meyer from "../../../public/images/meyer.jpg"
 import peter from "../../../public/images/peter-millar.webp"
 import polos from "../../../public/images/polos.jpg"
+import rioMar from "../../../public/images/riomar.webp"
 import sb from "../../../public/images/sb.png"
 import shoes from "../../../public/images/shoes-3.jpg"
 import sportsShirts from "../../../public/images/sports-shirts-3.jpg"
@@ -188,13 +191,20 @@ const features = [
     imageSrc: shoes,
     brands: [
       {
+        name: "Alan Payne",
+        imageSrc: alanPayne,
+      },
+      {
+        name: "Martin Dingman",
+        imageSrc: martinDingman,
+      },
+      {
+        name: "Rio Mar",
+        imageSrc: rioMar,
+      },
+      {
         name: "Johnston & Murphy",
         imageSrc: jm,
-      },
-
-      {
-        name: "Smathers & Branson",
-        imageSrc: sb,
       },
     ],
     imageAlt:
@@ -226,14 +236,14 @@ function ClothingPage() {
               <p className="mt-2 font-display text-sm text-primary-500">
                 {feature.description}
               </p>
-              <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-3 items-center gap-6 lg:mx-0 lg:max-w-none ">
+              <div className="mx-auto max-w-xl mt-8 grid w-full lg:grid-cols-2 grid-cols-3 items-center gap-10 lg:mx-0 lg:max-w-none ">
                 {feature.brands.map((brand, index) => (
                   <div
                     key={index}
-                    className="aspect-h-9 aspect-w-16 relative max-w-[6rem]"
+                    className="aspect-h-9 aspect-w-16 relative max-w-[10rem]"
                   >
                     <Image
-                      className="object-contain object-left grayscale"
+                      className="object-contain object-center grayscale"
                       src={brand.imageSrc}
                       alt={brand.name}
                       fill
