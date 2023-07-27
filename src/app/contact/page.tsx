@@ -464,6 +464,11 @@ export default function ContactPage() {
               </button>
             </div>
           </div>
+          <input
+            name="subject"
+            type="hidden"
+            value="New Contact Form submission from jwrsclothing.com"
+          />
         </form>
       </div>
     </div>
