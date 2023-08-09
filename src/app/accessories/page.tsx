@@ -89,7 +89,7 @@ function BrandsPage() {
 
         {/* Options */}
         <div className="mt-8 flex items-center lg:row-span-3 lg:mt-0">
-          <div className="relative mx-auto  grid  w-full max-w-xl grid-cols-3 lg:grid-cols-2 place-items-center  items-center gap-y-8 gap-x-6 lg:mx-0 lg:max-w-none">
+          <div className="relative mx-auto  grid  w-full max-w-xl grid-cols-3 place-items-center items-center  gap-x-6 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {brands.map((brand, index) => (
               <div key={index} className="">
                 <Image
@@ -120,22 +120,25 @@ function BrandsPage() {
       <div className="container mx-auto mt-4 lg:mt-10 lg:grid lg:grid-cols-3 lg:gap-x-8">
         <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
           <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-            <img
+            <Image
+              fill
               src={product.images[1].src}
               alt={product.images[1].alt}
               className="h-full w-full object-cover object-center"
             />
           </div>
           <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-            <img
+            <Image
+              fill
               src={product.images[2].src}
               alt={product.images[2].alt}
               className="h-full w-full object-cover object-center"
             />
           </div>
         </div>
-        <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 overflow-hidden rounded-lg">
-          <img
+        <div className="aspect-h-5 aspect-w-4 overflow-hidden rounded-lg lg:aspect-h-4 lg:aspect-w-3">
+          <Image
+            fill
             src={product.images[0].src}
             alt={product.images[0].alt}
             className="h-full w-full object-cover object-center"
@@ -143,14 +146,16 @@ function BrandsPage() {
         </div>
         <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
           <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-            <img
+            <Image
+              fill
               src={product.images[3].src}
               alt={product.images[3].alt}
               className="h-full w-full object-cover object-center"
             />
           </div>
           <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-            <img
+            <Image
+              fill
               src={product.images[4].src}
               alt={product.images[4].alt}
               className="h-full w-full object-cover object-center"

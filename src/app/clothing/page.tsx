@@ -236,7 +236,7 @@ function ClothingPage() {
               <p className="mt-2 font-display text-sm text-primary-500">
                 {feature.description}
               </p>
-              <div className="mx-auto max-w-xl mt-8 grid w-full lg:grid-cols-2 grid-cols-3 items-center gap-10 lg:mx-0 lg:max-w-none ">
+              <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-3 items-center gap-10 lg:mx-0 lg:max-w-none lg:grid-cols-2 ">
                 {feature.brands.map((brand, index) => (
                   <div
                     key={index}

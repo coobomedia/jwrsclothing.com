@@ -41,7 +41,7 @@ function Hero() {
           <div className="h-full">
             <div className="lg:aspect-auto aspect-[3/2] w-full  overflow-hidden bg-primary-50  lg:absolute lg:inset-0 lg:h-full">
               <Image
-                className="object-cover objectFit-centertop"
+                className="objectFit-centertop object-cover"
                 sizes="50vw"
                 fill
                 src={jwrHero}
