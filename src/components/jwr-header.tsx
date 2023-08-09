@@ -153,7 +153,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   <Tab.Panels as={Fragment}>
                     <Tab.Panel className="space-y-6 px-4 pb-8">
                       {navigation.sections.map((section) => (
-                        <div>
+                        <div key={section.id}>
                           <p
                             id={`${section.id}-heading-mobile`}
                             className=" font-medium tracking-wider text-primary-900"
@@ -276,7 +276,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
               <Popover.Group className="hidden lg:block lg:flex-1 lg:self-stretch">
                 <div className="flex h-full space-x-8">
                   {navigation.sections.map((section) => (
-                    <Popover className="flex">
+                    <Popover key={section.id} className="flex">
                       <div className="relative flex">
                         <Popover.Button
                           className={cn(
