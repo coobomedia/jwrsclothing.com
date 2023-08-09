@@ -2,11 +2,11 @@
 
 import { useToast } from "@/hooks/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Loader2 } from "lucide-react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
 import { cn } from "@/lib/utils"
+import { Loader2 } from "../../../node_modules/lucide-react"
 
 type FormValues = {
   firstName: string
