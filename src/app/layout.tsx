@@ -18,12 +18,33 @@ const nunitoSans = Nunito_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jwrsclothing.com/"),
   title: {
     default: "JwR's Clothing",
     template: "%s | JwR's Clothing",
   },
   description:
     "Elevate your style game with our curated selection of premium menswear.",
+  openGraph: {
+    title: "JwR's Clothing",
+    description:
+      "Elevate your style game with our curated selection of premium menswear.",
+    url: "https://jwrsclothing.com/",
+    siteName: "JwR's Clothing",
+    locale: "en-US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default function RootLayout({

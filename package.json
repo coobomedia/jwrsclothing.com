@@ -27,7 +27,6 @@
     "@vercel/analytics": "^0.1.11",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
-    "contentlayer": "^0.3.1",
     "eslint-plugin-prettier": "^4.2.1",
     "keen-slider": "^6.8.5",
     "lodash.get": "^4.4.2",
