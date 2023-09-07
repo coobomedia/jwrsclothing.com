@@ -21,7 +21,7 @@ export default function AboutPage() {
               move to the Brazos Valley to help start the new store. Shortly
               after Harley’s closed its College Station location, Joshua was
               able to realize his dream of owning his own upscale men’s clothing
-              establishment.
+              establishment..
             </p>
             <p className="mt-6 font-display text-base leading-7 text-primary-600">
               A second-generation men’s clothier, Joshua is dedicated to
